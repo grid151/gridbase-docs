@@ -1,0 +1,99 @@
+---
+title: Order
+---
+
+```json title='order.json'
+{
+  "note": "Place order note",
+  "orderDetails": {
+    "clientFileNumber": "test-order-03032023",
+    "estimatedSettlementDate": "2023-11-17T05:00:00.000Z",
+    "newLoanAmount": "850000.00",
+    "newLoanNumber": "TEST230600116",
+    "newLoanType": "FHA",
+    "newLoanDescription": "Description of loan",
+    "salesPrice": "75000.0"
+  },
+  "parties": {
+    "buyers": [
+      {
+        "address": {
+          "cityDesc": "Orlando",
+          "countyDesc": null,
+          "stateId": "FL",
+          "street": "1 Airport Blvd",
+          "zip": "32827"
+        },
+        "businessName": null,
+        "buyerSellerType": "Individual",
+        "buyerSellerTypeID": 1,
+        "email": "test@gmail.com",
+        "firstName": "John",
+        "isPrimary": true,
+        "isSameAsPropertyAddress": false,
+        "isValidated": false,
+        "lastName": "Doe",
+        "maritalStatus": null,
+        "middleName": null,
+        "phone": "(123) 456-7890",
+        "prefix": null,
+        "socialSecurityNumber": null,
+        "sourceBuyerSellerID": null,
+        "spouse": {
+          "firstName": null,
+          "lastName": null,
+          "middleName": null,
+          "prefix": null,
+          "socialSecurityNumber": null,
+          "suffix": null
+        },
+        "suffix": null,
+        "taxId": null
+      }
+    ],
+    "isSectionStarted": false,
+    "isValidated": false,
+    "lender": null,
+    "listingAgent": null,
+    "mortgageBroker": null,
+    "secondLender": null,
+    "sellers": [],
+    "sellingAgent": null,
+    "settlementAgent": null
+  },
+  "property": {
+    "address": {
+      "fullAddress": null,
+      "cityDesc": "Clarks Summit",
+      "cityId": null,
+      "countyDesc": "Lackawanna",
+      "countyId": null,
+      "direction": null,
+      "isPropertyAddress": true,
+      "landAcreage": null,
+      "number": "2",
+      "stateId": "PA",
+      "street": "2 Cheryl Lane",
+      "streetLine2": null,
+      "streetName": "Cheryl Lane",
+      "suffix": null,
+      "unit": null,
+      "zip": "18411",
+      "parcel": "Test Box",
+      "lot": "Lot 42",
+      "block": "3",
+      "subdivision": "North Lakes"
+    },
+    "isKeyboxInfo": false,
+    "isSectionStarted": false,
+    "isUnincorporated": false,
+    "isValidated": false,
+    "keyboxInfo": null,
+    "propertyType": "Condominium",
+    "propertyUse": null
+  },
+  "system": "ManualEntry",
+  "integrationId": "64b--------------------441",
+  "product": "order"
+}
+```

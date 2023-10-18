@@ -1,0 +1,75 @@
+---
+title: Update
+---
+
+```json title='update.json'
+{
+  "id": "623b2d124e3195227be559f6",
+  "sourceFileNumber": "LOAN0001",
+  "orderDetails": {
+    "clientFileNumber": "LOAN0001",
+    "clientId": 23090001,
+    "newLoanAmount": "400000.0",
+    "newLoanNumber": "",
+    "productTypeId": 38,
+    "salesPrice": 400000,
+    "transactionTypeDesc": "EquityNC"
+  },
+  "parties": {
+    "buyers": [
+      {
+        "address": {
+          "cityDesc": "Forked River",
+          "countyDesc": "1201 Ariel, Forked River, NJ 08731",
+          "stateDesc": "NJ",
+          "stateId": "NJ",
+          "street": "1201 Ariel",
+          "streetLine2": null,
+          "streetName": "Ariel",
+          "suffix": null,
+          "unit": "",
+          "zip": "08731"
+        },
+        "buyerSellerType": "Individual",
+        "buyerSellerTypeID": 1,
+        "email": "example@some.domain",
+        "firstName": "John",
+        "isPrimary": true,
+        "lastName": "Smith",
+        "middleName": "E",
+        "phone": "555-123-4567"
+      }
+    ],
+    "lender": {
+      "partyTypeId": 3,
+      "address": {
+        "cityDesc": "Charlotte",
+        "stateDesc": "NC",
+        "stateId": "NC",
+        "street": "4064 Colony Rd. Morrocroft 2",
+        "unit": "Floor 2",
+        "zip": "28211"
+      },
+      "companyName": "Example Lender",
+      "contactName": "Jane Doe",
+      "Phone": "123-456-7890"
+    },
+    "sellers": []
+  },
+  "property": {
+    "address": {
+      "fullAddress": "1201 Ariel, Forked River, NJ 08731",
+      "cityDesc": "Forked River",
+      "stateDesc": "NJ",
+      "stateId": "NJ",
+      "street": "11201 Ariel",
+      "streetName": "1201 Ariel",
+      "zip": "08731"
+    },
+    "propertyType": "Single Family"
+  },
+  "system": "X1",
+  "product": "decision-report-update",
+  "milestones": []
+}
+```

@@ -1,0 +1,12 @@
+---
+title: Action
+---
+
+```json title='action.json'
+{
+  "orderId": "The GridBase order ID, which looks something like: 636c32237e06a1be811a5715",
+  "clientFileNumber": "Your system's order ID here",
+  "actionEventCode": 123,
+  "actionEventName": "Title Search Requested"
+}
+```

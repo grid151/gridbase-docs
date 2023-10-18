@@ -1,0 +1,21 @@
+---
+title: North Carolina
+---
+
+```json title='north-carolina.json'
+{
+  "TransactionTypeId": 42,
+  "ProductTypeId": 162,
+  "SettlementStatementVersion": "CD",
+  "City": "Apex",
+  "County": "Wake",
+  "State": "NC",
+  "Zip": "27502",
+  "LoanAmount": 500000,
+  "LoanType": "FHA",
+  "SalesPrice": 500000,
+  "OriginalDebtAmount": "500000",
+  "UnpaidPrincipleAmount": 500000,
+  "Endorsements": []
+}
+```

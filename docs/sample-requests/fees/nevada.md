@@ -1,0 +1,21 @@
+---
+title: Nevada
+---
+
+```json title='nevada.json'
+{
+  "TransactionTypeId": 42,
+  "ProductTypeId": 162,
+  "SettlementStatementVersion": "CD",
+  "City": "Las Vegas",
+  "County": "Clark",
+  "State": "NV",
+  "Zip": "89109",
+  "LoanAmount": 500000,
+  "LoanType": "FHA",
+  "SalesPrice": 500000,
+  "OriginalDebtAmount": "500000",
+  "UnpaidPrincipleAmount": 500000,
+  "Endorsements": []
+}
+```

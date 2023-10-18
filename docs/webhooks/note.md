@@ -1,0 +1,12 @@
+---
+title: Note
+---
+
+```json title='note.json'
+{
+  "orderId": "The GridBase order ID, which looks something like: 636c32237e06a1be811a5715",
+  "clientFileNumber": "Your system's order ID here",
+  "noteSubject": "Example note subject",
+  "noteBody": "The contents of the note or comment go here"
+}
+```

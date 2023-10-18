@@ -1,0 +1,21 @@
+---
+title: Georgia
+---
+
+```json title='georgia.json'
+{
+  "TransactionTypeId": 42,
+  "ProductTypeId": 162,
+  "SettlementStatementVersion": "CD",
+  "City": "Roswell",
+  "County": "Fulton",
+  "State": "GA",
+  "Zip": "30076",
+  "LoanAmount": 0,
+  "LoanType": "FHA",
+  "SalesPrice": 500000,
+  "OriginalDebtAmount": "500000",
+  "UnpaidPrincipleAmount": 500000,
+  "Endorsements": ["ALTA 8.1 Environmental Protection Lien (6-17-06)"]
+}
+```

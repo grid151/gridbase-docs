@@ -1,0 +1,149 @@
+---
+title: Postman Collection
+---
+
+```json title='instant-decision-report-postman-collection.json'
+{
+  "info": {
+    "_postman_id": "1a5ed502-994e-4e6c-ad74-f5192b1642e6",
+    "name": "GridBase Instant Decision",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "12980103",
+    "_collection_link": "https://westcorintegration.postman.co/workspace/Westcor-Integration-Workspace~85db81b4-5656-4004-8f06-f2af6104c947/collection/12980103-1a5ed502-994e-4e6c-ad74-f5192b1642e6?action=share&source=collection_link&creator=12980103"
+  },
+  "item": [
+    {
+      "name": "stage",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);\r",
+              "postman.setEnvironmentVariable(\"orderId\", jsonData.id);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-GridBase-Integration",
+            "value": "{{apiKey}}",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"integrationId\": \"63d3262502157e71998e997b\",\r\n    \"orderDetails\": {\r\n        \"clientFileNumber\": \"Tavi-Test-09122023-2\",\r\n        \"newLoanAmount\": 500000,\r\n        \"newLoanNumber\": \"4567890\",\r\n        \"salesPrice\": 500000,\r\n        \"transactionTypeDesc\": \"EquityNC\"\r\n    },\r\n    \"parties\": {\r\n        \"buyers\": [\r\n            {\r\n                \"firstName\": \"Fred\",\r\n                \"middleName\": \"Fred\",\r\n                \"lastName\": \"Burger\"\r\n            }\r\n        ],\r\n        \"contacts\": [],\r\n        \"lender\": {\r\n            \"companyName\": \"Bank of America\"\r\n        },\r\n        \"sellers\": []\r\n    },\r\n    \"product\": \"decision-report\",\r\n    \"property\": {\r\n        \"address\": {\r\n            \"cityDesc\": \"Bakersfield\",\r\n            \"countyDesc\": \"Kern\",\r\n            \"number\": \"3518\",\r\n            \"stateId\": \"CA\",\r\n            \"street\": \"3518 Kaibab Ave\",\r\n            \"streetName\": \"Kaibab Ave\",\r\n            \"zip\": \"93306\"\r\n        },\r\n        \"propertyType\": \"Single Family\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://app.sandbox.gridbase.io/v1/orders/stage",
+          "protocol": "https",
+          "host": ["app", "sandbox", "gridbase", "io"],
+          "path": ["v1", "orders", "stage"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "place",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "https://app.sandbox.gridbase.io/v1/orders/place/{{orderId}}",
+          "protocol": "https",
+          "host": ["app", "sandbox", "gridbase", "io"],
+          "path": ["v1", "orders", "place", "{{orderId}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "generate-report",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "postman.setEnvironmentVariable(\"reportUrl\", responseBody);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"orderId\": \"{{orderId}}\",\r\n    \"reportId\": \"6324d73af55f885d0d71b6a4\",\r\n    \"reportFormat\": \"xml\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://app.sandbox.gridbase.io/v1/core/reports/generate",
+          "protocol": "https",
+          "host": ["app", "sandbox", "gridbase", "io"],
+          "path": ["v1", "core", "reports", "generate"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "view-report",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{reportUrl}}",
+          "host": ["{{reportUrl}}"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
+```

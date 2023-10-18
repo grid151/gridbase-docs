@@ -1,0 +1,21 @@
+---
+title: Ohio
+---
+
+```json title='ohio.json'
+{
+  "TransactionTypeId": 42,
+  "ProductTypeId": 162,
+  "SettlementStatementVersion": "CD",
+  "City": "Akron",
+  "County": "Summit",
+  "State": "OH",
+  "Zip": "44308",
+  "LoanAmount": 500000,
+  "LoanType": "FHA",
+  "SalesPrice": 500000,
+  "OriginalDebtAmount": "500000",
+  "UnpaidPrincipleAmount": 500000,
+  "Endorsements": []
+}
+```

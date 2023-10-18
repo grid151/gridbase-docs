@@ -1,0 +1,54 @@
+---
+title: Stage
+---
+
+```json title='stage.json'
+{
+  "orderDetails": {
+    "clientFileNumber": "Test_0001",
+    "newLoanAmount": "150000.0",
+    "newLoanNumber": "LN243329",
+    "transactionTypeDesc": "EquityNC",
+    "cashoutAmount": "15000.0"
+  },
+  "parties": {
+    "buyers": [
+      {
+        "address": {
+          "street": "3518 Kaibab Ave",
+          "cityDesc": "Bakersfield",
+          "stateId": "CA",
+          "zip": "93306",
+          "number": "3518",
+          "streetName": "Kaibab Ave",
+          "IsPropertyAddress": false
+        },
+        "isPrimary": true,
+        "buyerSellerTypeID": 1,
+        "buyerSellerType": "Individual",
+        "middleName": "Vern",
+        "firstName": "Leonard",
+        "lastName": "Hall",
+        "socialSecurityNumber": "434454543"
+      }
+    ],
+    "lender": {
+      "companyName": "Bank of America"
+    }
+  },
+  "property": {
+    "address": {
+      "cityDesc": "Bakersfield",
+      "number": "3518",
+      "stateId": "CA",
+      "street": "3518 Kaibab Ave",
+      "streetName": "Kaibab Ave",
+      "zip": "93306"
+    },
+    "propertyType": "Single Family"
+  },
+  "system": "X1",
+  "product": "decision-report",
+  "integrationId": "63d3262502157e71998e997b"
+}
+```

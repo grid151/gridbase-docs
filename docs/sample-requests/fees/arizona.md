@@ -1,0 +1,21 @@
+---
+title: Arizona
+---
+
+```json title='arizona.json'
+{
+  "TransactionTypeId": 42,
+  "ProductTypeId": 162,
+  "SettlementStatementVersion": "CD",
+  "City": "Phoenix",
+  "County": "Maricopa",
+  "State": "AZ",
+  "Zip": "85001",
+  "LoanAmount": 500000,
+  "LoanType": "FHA",
+  "SalesPrice": 500000,
+  "OriginalDebtAmount": "500000",
+  "UnpaidPrincipleAmount": 500000,
+  "Endorsements": []
+}
+```

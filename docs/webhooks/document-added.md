@@ -1,0 +1,15 @@
+---
+title: Document Added
+---
+
+```json title='document-added.json'
+{
+  "orderId": "The GridBase order ID, which looks something like: 636c32237e06a1be811a5715",
+  "documents": [
+    {
+      "id": "The GridBase document ID, which looks something like: 636c32237e06a1be811a5715",
+      "fileName": "example.pdf"
+    }
+  ]
+}
+```

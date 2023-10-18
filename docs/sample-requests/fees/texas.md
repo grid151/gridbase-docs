@@ -1,0 +1,21 @@
+---
+title: Texas
+---
+
+```json title='texas.json'
+{
+  "TransactionTypeId": 42,
+  "ProductTypeId": 162,
+  "SettlementStatementVersion": "CD",
+  "City": "Austin",
+  "County": "Austin",
+  "State": "TX",
+  "Zip": "78733",
+  "LoanAmount": 500000,
+  "LoanType": "FHA",
+  "SalesPrice": 500000,
+  "OriginalDebtAmount": "500000",
+  "UnpaidPrincipleAmount": 500000,
+  "Endorsements": []
+}
+```
