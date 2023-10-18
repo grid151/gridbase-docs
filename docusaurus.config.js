@@ -48,7 +48,7 @@ disableVersioning: true
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/grid151/gridbase-samples/tree/main/docs/',
+            'https://github.com/grid151/gridbase-docs/tree/main/',
         },
         theme: {
           // customCss: require.resolve('./src/css/custom.css'),
