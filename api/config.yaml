@@ -1,0 +1,22 @@
+swagger: "2.0"
+info:
+  title: GridBase API Reference
+apis:
+  - url: "https://app.gridbase.io/v1/auth/swagger/v1/swagger.json"
+    paths:
+      include: ["/v1/auth"]
+  - url: "https://app.gridbase.io/v1/core/swagger/v1/swagger.json"
+    paths:
+      include: ["/v1/core"]
+  - url: "https://app.gridbase.io/v1/orders/swagger/v1/swagger.json"
+    paths:
+      include: ["/v1/orders"]
+  - url: "https://app.gridbase.io/v1/documents/swagger/v1/swagger.json"
+    paths:
+      include: ["/v1/documents"]
+  - url: "https://app.gridbase.io/v1/notes/swagger/v1/swagger.json"
+    paths:
+      include: ["/v1/notes"]
+  - url: "https://app.gridbase.io/v1/resware/swagger/v1/swagger.json"
+    paths:
+      include: ["/v1/resware"]
