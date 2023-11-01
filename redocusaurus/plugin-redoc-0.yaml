@@ -476,9 +476,6 @@ paths:
                     id:
                       type: string
                       nullable: true
-                    system:
-                      type: string
-                      nullable: true
                     label:
                       type: string
                       nullable: true
@@ -517,9 +514,6 @@ paths:
                     id:
                       type: string
                       nullable: true
-                    system:
-                      type: string
-                      nullable: true
                     label:
                       type: string
                       nullable: true
@@ -556,9 +550,6 @@ paths:
                   type: object
                   properties:
                     id:
-                      type: string
-                      nullable: true
-                    system:
                       type: string
                       nullable: true
                     label:
@@ -615,9 +606,6 @@ paths:
                     id:
                       type: string
                       nullable: true
-                    system:
-                      type: string
-                      nullable: true
                     label:
                       type: string
                       nullable: true
@@ -656,9 +644,6 @@ paths:
                     id:
                       type: string
                       nullable: true
-                    system:
-                      type: string
-                      nullable: true
                     label:
                       type: string
                       nullable: true
@@ -695,9 +680,6 @@ paths:
                   type: object
                   properties:
                     id:
-                      type: string
-                      nullable: true
-                    system:
                       type: string
                       nullable: true
                     label:
@@ -816,6 +798,9 @@ paths:
                     transactionTypeId:
                       type: integer
                       format: int32
+                    additionalReference:
+                      type: string
+                      nullable: true
                   additionalProperties: false
                 parties:
                   type: object
@@ -1774,6 +1759,9 @@ paths:
                     transactionTypeId:
                       type: integer
                       format: int32
+                    additionalReference:
+                      type: string
+                      nullable: true
                   additionalProperties: false
                 parties:
                   type: object
@@ -2732,6 +2720,9 @@ paths:
                     transactionTypeId:
                       type: integer
                       format: int32
+                    additionalReference:
+                      type: string
+                      nullable: true
                   additionalProperties: false
                 parties:
                   type: object
@@ -3875,6 +3866,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -5780,9 +5774,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -6078,6 +6069,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -7983,9 +7977,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -8281,6 +8272,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -10186,9 +10180,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -10512,6 +10503,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -12417,9 +12411,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -12715,6 +12706,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -14620,9 +14614,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -14918,6 +14909,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -16823,9 +16817,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -17149,6 +17140,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -19054,9 +19048,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -19352,6 +19343,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -21257,9 +21251,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -21555,6 +21546,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -23460,9 +23454,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -23808,6 +23799,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -25713,9 +25707,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -26011,6 +26002,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -27916,9 +27910,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -28214,6 +28205,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -30119,9 +30113,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -30256,6 +30247,9 @@ paths:
                     transactionTypeId:
                       type: integer
                       format: int32
+                    additionalReference:
+                      type: string
+                      nullable: true
                   additionalProperties: false
                 parties:
                   type: object
@@ -31214,6 +31208,9 @@ paths:
                     transactionTypeId:
                       type: integer
                       format: int32
+                    additionalReference:
+                      type: string
+                      nullable: true
                   additionalProperties: false
                 parties:
                   type: object
@@ -32172,6 +32169,9 @@ paths:
                     transactionTypeId:
                       type: integer
                       format: int32
+                    additionalReference:
+                      type: string
+                      nullable: true
                   additionalProperties: false
                 parties:
                   type: object
@@ -33315,6 +33315,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -35220,9 +35223,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -35518,6 +35518,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -37423,9 +37426,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -37721,6 +37721,9 @@ paths:
                       transactionTypeId:
                         type: integer
                         format: int32
+                      additionalReference:
+                        type: string
+                        nullable: true
                     additionalProperties: false
                   parties:
                     type: object
@@ -39626,9 +39629,6 @@ paths:
                       type: object
                       properties:
                         id:
-                          type: string
-                          nullable: true
-                        system:
                           type: string
                           nullable: true
                         label:
@@ -40603,6 +40603,9 @@ paths:
                 clientFileNumber:
                   type: string
                   nullable: true
+                additionalReference:
+                  type: string
+                  nullable: true
                 loanNumber:
                   type: string
                   nullable: true
@@ -40654,6 +40657,9 @@ paths:
                 clientFileNumber:
                   type: string
                   nullable: true
+                additionalReference:
+                  type: string
+                  nullable: true
                 loanNumber:
                   type: string
                   nullable: true
@@ -40703,6 +40709,9 @@ paths:
                   type: string
                   nullable: true
                 clientFileNumber:
+                  type: string
+                  nullable: true
+                additionalReference:
                   type: string
                   nullable: true
                 loanNumber:
@@ -40793,9 +40802,6 @@ paths:
                               id:
                                 type: string
                                 nullable: true
-                              system:
-                                type: string
-                                nullable: true
                               label:
                                 type: string
                                 nullable: true
@@ -41068,6 +41074,9 @@ paths:
                           type: string
                           nullable: true
                         loanType:
+                          type: string
+                          nullable: true
+                        additionalReference:
                           type: string
                           nullable: true
                       additionalProperties: false
@@ -41119,9 +41128,6 @@ paths:
                               id:
                                 type: string
                                 nullable: true
-                              system:
-                                type: string
-                                nullable: true
                               label:
                                 type: string
                                 nullable: true
@@ -41394,6 +41400,9 @@ paths:
                           type: string
                           nullable: true
                         loanType:
+                          type: string
+                          nullable: true
+                        additionalReference:
                           type: string
                           nullable: true
                       additionalProperties: false
@@ -41445,9 +41454,6 @@ paths:
                               id:
                                 type: string
                                 nullable: true
-                              system:
-                                type: string
-                                nullable: true
                               label:
                                 type: string
                                 nullable: true
@@ -41720,6 +41726,9 @@ paths:
                           type: string
                           nullable: true
                         loanType:
+                          type: string
+                          nullable: true
+                        additionalReference:
                           type: string
                           nullable: true
                       additionalProperties: false
@@ -41840,6 +41849,9 @@ paths:
                       format: date-time
                       nullable: true
                   additionalProperties: false
+                additionalReference:
+                  type: string
+                  nullable: true
                 pagination:
                   type: object
                   properties:
@@ -41949,6 +41961,9 @@ paths:
                       format: date-time
                       nullable: true
                   additionalProperties: false
+                additionalReference:
+                  type: string
+                  nullable: true
                 pagination:
                   type: object
                   properties:
@@ -42058,6 +42073,9 @@ paths:
                       format: date-time
                       nullable: true
                   additionalProperties: false
+                additionalReference:
+                  type: string
+                  nullable: true
                 pagination:
                   type: object
                   properties:
@@ -42124,9 +42142,6 @@ paths:
                               id:
                                 type: string
                                 nullable: true
-                              system:
-                                type: string
-                                nullable: true
                               label:
                                 type: string
                                 nullable: true
@@ -42399,6 +42414,9 @@ paths:
                           type: string
                           nullable: true
                         loanType:
+                          type: string
+                          nullable: true
+                        additionalReference:
                           type: string
                           nullable: true
                       additionalProperties: false
@@ -42450,9 +42468,6 @@ paths:
                               id:
                                 type: string
                                 nullable: true
-                              system:
-                                type: string
-                                nullable: true
                               label:
                                 type: string
                                 nullable: true
@@ -42725,6 +42740,9 @@ paths:
                           type: string
                           nullable: true
                         loanType:
+                          type: string
+                          nullable: true
+                        additionalReference:
                           type: string
                           nullable: true
                       additionalProperties: false
@@ -42776,9 +42794,6 @@ paths:
                               id:
                                 type: string
                                 nullable: true
-                              system:
-                                type: string
-                                nullable: true
                               label:
                                 type: string
                                 nullable: true
@@ -43051,6 +43066,9 @@ paths:
                           type: string
                           nullable: true
                         loanType:
+                          type: string
+                          nullable: true
+                        additionalReference:
                           type: string
                           nullable: true
                       additionalProperties: false
@@ -43279,6 +43297,9 @@ paths:
                             readOnly: true
                         additionalProperties: false
                     additionalProperties: false
+                  integrationData:
+                    type: object
+                    additionalProperties: false
                 additionalProperties: false
             application/json:
               schema:
@@ -43364,6 +43385,9 @@ paths:
                             readOnly: true
                         additionalProperties: false
                     additionalProperties: false
+                  integrationData:
+                    type: object
+                    additionalProperties: false
                 additionalProperties: false
             text/json:
               schema:
@@ -43448,6 +43472,9 @@ paths:
                             format: double
                             readOnly: true
                         additionalProperties: false
+                    additionalProperties: false
+                  integrationData:
+                    type: object
                     additionalProperties: false
                 additionalProperties: false
         '400':
@@ -46594,6 +46621,9 @@ paths:
                   sourceFileID:
                     type: integer
                     format: int32
+                  fileNumber:
+                    type: string
+                    nullable: true
                   clientFileNumber:
                     type: string
                     nullable: true
@@ -46640,6 +46670,9 @@ paths:
                   sourceFileID:
                     type: integer
                     format: int32
+                  fileNumber:
+                    type: string
+                    nullable: true
                   clientFileNumber:
                     type: string
                     nullable: true
@@ -46686,6 +46719,9 @@ paths:
                   sourceFileID:
                     type: integer
                     format: int32
+                  fileNumber:
+                    type: string
+                    nullable: true
                   clientFileNumber:
                     type: string
                     nullable: true
