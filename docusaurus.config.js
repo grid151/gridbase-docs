@@ -1,12 +1,11 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const path = require("path");
-const lightCodeTheme = require("prism-react-renderer/themes/nightOwlLight");
-const darkCodeTheme = require("prism-react-renderer/themes/nightOwl");
+import path from "path";
+import { themes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
+export default {
   title: "GridBase Documentation",
   // tagline: '',
   favicon: "img/favicon.png",
@@ -46,7 +45,7 @@ const config = {
   ],
   presets: [
     [
-      "classic",
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -82,7 +81,7 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       // Replace with your project's social card
       navbar: {
         title: "GridBase Docs",
@@ -106,8 +105,9 @@ const config = {
         copyright: `Copyright ${new Date().getFullYear()} Grid151. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: themes.nightOwlLight,
+        darkTheme: themes.nightOwl,
+        additionalLanguages: ["json"],
       },
       liveCodeBlock: {
         /**
@@ -116,9 +116,6 @@ const config = {
          */
         playgroundPosition: "bottom",
       },
-    }),
-
+    },
   stylesheets: ["https://fonts.googleapis.com/icon?family=Material+Icons"],
 };
-
-module.exports = config;

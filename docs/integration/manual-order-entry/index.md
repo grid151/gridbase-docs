@@ -4,7 +4,7 @@ This README file describes several API endpoints for using Manual Order Entry, a
 
 ## Stage Order
 
-To stage an order, submit an HTTP POST request to /v1/orders/stage using the example request.
+To stage an order, submit an HTTP POST request to `/v1/orders/stage` using the example request.
 
 ### Required fields
 
@@ -21,7 +21,7 @@ Here is a [sample request body](order)
 
 ## Update Order
 
-Once staged, you may optionally update the order object by submitting an HTTP PUT requests to /v1/orders/update.
+Once staged, you may optionally update the order object by submitting an HTTP PUT requests to `/v1/orders/update`.
 
 ### Required fields
 
@@ -36,11 +36,11 @@ Here is a [sample request body](order.md)
 
 ## Place Order
 
-Once staged, you can place the order by submitting an HTTP PUT requests to /v1/orders/place/{orderId}.
+Once staged, you can place the order by submitting an HTTP PUT requests to `/v1/orders/place/{orderId}`.
 
 ## Add Note
 
-New notes can be added to a placed order by submitting an HTTP PUT request to /v1/notes/add/{orderId}.
+New notes can be added to a placed order by submitting an HTTP PUT request to `/v1/notes/add/{orderId}`.
 
 ### Required fields
 
@@ -53,7 +53,7 @@ Here is a [sample note request body](note.md)
 
 ## Add Document
 
-New documents can be attached to a placed order by submitting an HTTP POST request to /v1/documents/create/{orderId}.
+New documents can be attached to a placed order by submitting an HTTP POST request to `/v1/documents/create/{orderId}`.
 
 ### Required fields
 
