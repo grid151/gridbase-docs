@@ -4,7 +4,7 @@ info:
 apis:
   - url: "https://app.gridbase.io/v1/core/swagger/v1/swagger.json"
     paths:
-      include: ["/v1/core"]
+      include: ["/v1/core", "/v1/orders", "/v1/auth"]
   - url: "https://app.gridbase.io/v1/documents/swagger/v1/swagger.json"
     paths:
       include: ["/v1/documents"]
