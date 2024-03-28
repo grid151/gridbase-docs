@@ -45533,11 +45533,17 @@ paths:
             text/json:
               schema:
                 type: string
-  /v1/orders/analytics:
+  /v1/orders/analytics/{integrationId}:
     get:
       tags:
         - Order
       summary: Get analytics
+      parameters:
+        - name: integrationId
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
         '200':
           description: Success
@@ -45549,33 +45555,6 @@ paths:
                   id:
                     type: string
                     nullable: true
-                  organizationId:
-                    type: object
-                    properties:
-                      timestamp:
-                        type: integer
-                        format: int32
-                        readOnly: true
-                      machine:
-                        type: integer
-                        format: int32
-                        readOnly: true
-                        deprecated: true
-                      pid:
-                        type: integer
-                        format: int32
-                        readOnly: true
-                        deprecated: true
-                      increment:
-                        type: integer
-                        format: int32
-                        readOnly: true
-                        deprecated: true
-                      creationTime:
-                        type: string
-                        format: date-time
-                        readOnly: true
-                    additionalProperties: false
                   currentStats:
                     type: object
                     properties:
@@ -45907,33 +45886,6 @@ paths:
                   id:
                     type: string
                     nullable: true
-                  organizationId:
-                    type: object
-                    properties:
-                      timestamp:
-                        type: integer
-                        format: int32
-                        readOnly: true
-                      machine:
-                        type: integer
-                        format: int32
-                        readOnly: true
-                        deprecated: true
-                      pid:
-                        type: integer
-                        format: int32
-                        readOnly: true
-                        deprecated: true
-                      increment:
-                        type: integer
-                        format: int32
-                        readOnly: true
-                        deprecated: true
-                      creationTime:
-                        type: string
-                        format: date-time
-                        readOnly: true
-                    additionalProperties: false
                   currentStats:
                     type: object
                     properties:
@@ -46265,33 +46217,6 @@ paths:
                   id:
                     type: string
                     nullable: true
-                  organizationId:
-                    type: object
-                    properties:
-                      timestamp:
-                        type: integer
-                        format: int32
-                        readOnly: true
-                      machine:
-                        type: integer
-                        format: int32
-                        readOnly: true
-                        deprecated: true
-                      pid:
-                        type: integer
-                        format: int32
-                        readOnly: true
-                        deprecated: true
-                      increment:
-                        type: integer
-                        format: int32
-                        readOnly: true
-                        deprecated: true
-                      creationTime:
-                        type: string
-                        format: date-time
-                        readOnly: true
-                    additionalProperties: false
                   currentStats:
                     type: object
                     properties:
@@ -48470,6 +48395,387 @@ paths:
                           type: string
                           nullable: true
                       additionalProperties: false
+                    nullable: true
+                additionalProperties: false
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+            text/json:
+              schema:
+                type: string
+  /v1/orders/seller-net-sheet/calculate:
+    post:
+      tags:
+        - SellerNetSheet
+      summary: Calculate seller net sheet proceeds.
+      requestBody:
+        description: The fee data
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                preparerName:
+                  type: string
+                  nullable: true
+                preparerEmail:
+                  type: string
+                  nullable: true
+                propertyOwner:
+                  type: string
+                  nullable: true
+                address:
+                  type: object
+                  properties:
+                    cityDesc:
+                      type: string
+                      nullable: true
+                    countyDesc:
+                      type: string
+                      nullable: true
+                    stateId:
+                      type: string
+                      nullable: true
+                    street:
+                      type: string
+                      nullable: true
+                    streetLine2:
+                      type: string
+                      nullable: true
+                    zip:
+                      type: string
+                      nullable: true
+                  additionalProperties: false
+                salesPrice:
+                  type: number
+                  format: double
+                salesPrice2:
+                  type: number
+                  format: double
+                  nullable: true
+                salesPrice3:
+                  type: number
+                  format: double
+                  nullable: true
+                mortgagePayoff:
+                  type: number
+                  format: double
+                agentFees:
+                  type: number
+                  format: double
+                agentFeesType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                sellerConcessions:
+                  type: number
+                  format: double
+                sellerConcessionsType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                estateTaxes:
+                  type: number
+                  format: double
+                estateTaxesType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                prepRepairCosts:
+                  type: number
+                  format: double
+                titleInsurancePremium:
+                  type: number
+                  format: double
+                titleAndEscrowFees:
+                  type: number
+                  format: double
+                titleAndEscrowFeesType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                recordingFees:
+                  type: number
+                  format: double
+                recordingTransferFees:
+                  type: number
+                  format: double
+                recordingTransferFeesType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                otherSellerCosts:
+                  type: number
+                  format: double
+              additionalProperties: false
+          text/json:
+            schema:
+              type: object
+              properties:
+                preparerName:
+                  type: string
+                  nullable: true
+                preparerEmail:
+                  type: string
+                  nullable: true
+                propertyOwner:
+                  type: string
+                  nullable: true
+                address:
+                  type: object
+                  properties:
+                    cityDesc:
+                      type: string
+                      nullable: true
+                    countyDesc:
+                      type: string
+                      nullable: true
+                    stateId:
+                      type: string
+                      nullable: true
+                    street:
+                      type: string
+                      nullable: true
+                    streetLine2:
+                      type: string
+                      nullable: true
+                    zip:
+                      type: string
+                      nullable: true
+                  additionalProperties: false
+                salesPrice:
+                  type: number
+                  format: double
+                salesPrice2:
+                  type: number
+                  format: double
+                  nullable: true
+                salesPrice3:
+                  type: number
+                  format: double
+                  nullable: true
+                mortgagePayoff:
+                  type: number
+                  format: double
+                agentFees:
+                  type: number
+                  format: double
+                agentFeesType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                sellerConcessions:
+                  type: number
+                  format: double
+                sellerConcessionsType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                estateTaxes:
+                  type: number
+                  format: double
+                estateTaxesType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                prepRepairCosts:
+                  type: number
+                  format: double
+                titleInsurancePremium:
+                  type: number
+                  format: double
+                titleAndEscrowFees:
+                  type: number
+                  format: double
+                titleAndEscrowFeesType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                recordingFees:
+                  type: number
+                  format: double
+                recordingTransferFees:
+                  type: number
+                  format: double
+                recordingTransferFeesType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                otherSellerCosts:
+                  type: number
+                  format: double
+              additionalProperties: false
+          application/*+json:
+            schema:
+              type: object
+              properties:
+                preparerName:
+                  type: string
+                  nullable: true
+                preparerEmail:
+                  type: string
+                  nullable: true
+                propertyOwner:
+                  type: string
+                  nullable: true
+                address:
+                  type: object
+                  properties:
+                    cityDesc:
+                      type: string
+                      nullable: true
+                    countyDesc:
+                      type: string
+                      nullable: true
+                    stateId:
+                      type: string
+                      nullable: true
+                    street:
+                      type: string
+                      nullable: true
+                    streetLine2:
+                      type: string
+                      nullable: true
+                    zip:
+                      type: string
+                      nullable: true
+                  additionalProperties: false
+                salesPrice:
+                  type: number
+                  format: double
+                salesPrice2:
+                  type: number
+                  format: double
+                  nullable: true
+                salesPrice3:
+                  type: number
+                  format: double
+                  nullable: true
+                mortgagePayoff:
+                  type: number
+                  format: double
+                agentFees:
+                  type: number
+                  format: double
+                agentFeesType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                sellerConcessions:
+                  type: number
+                  format: double
+                sellerConcessionsType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                estateTaxes:
+                  type: number
+                  format: double
+                estateTaxesType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                prepRepairCosts:
+                  type: number
+                  format: double
+                titleInsurancePremium:
+                  type: number
+                  format: double
+                titleAndEscrowFees:
+                  type: number
+                  format: double
+                titleAndEscrowFeesType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                recordingFees:
+                  type: number
+                  format: double
+                recordingTransferFees:
+                  type: number
+                  format: double
+                recordingTransferFeesType:
+                  enum:
+                    - Dollar
+                    - Percentage
+                  type: string
+                otherSellerCosts:
+                  type: number
+                  format: double
+              additionalProperties: false
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                type: object
+                properties:
+                  proceeds1:
+                    type: number
+                    format: double
+                    nullable: true
+                  proceeds2:
+                    type: number
+                    format: double
+                    nullable: true
+                  proceeds3:
+                    type: number
+                    format: double
+                    nullable: true
+                additionalProperties: false
+            application/json:
+              schema:
+                type: object
+                properties:
+                  proceeds1:
+                    type: number
+                    format: double
+                    nullable: true
+                  proceeds2:
+                    type: number
+                    format: double
+                    nullable: true
+                  proceeds3:
+                    type: number
+                    format: double
+                    nullable: true
+                additionalProperties: false
+            text/json:
+              schema:
+                type: object
+                properties:
+                  proceeds1:
+                    type: number
+                    format: double
+                    nullable: true
+                  proceeds2:
+                    type: number
+                    format: double
+                    nullable: true
+                  proceeds3:
+                    type: number
+                    format: double
                     nullable: true
                 additionalProperties: false
         '400':
