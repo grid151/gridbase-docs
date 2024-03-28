@@ -1,4 +1,4 @@
-# How to upgrade your Rewsware connector
+# Connector Upgrades
 
 This guide provides step-by-step instructions on how to upgrade your already installed Resware connector to a newer version. You'll need to have a few pieces of information ready before you begin:
 
