@@ -713,6 +713,10 @@ paths:
                       type: number
                       format: double
                       nullable: true
+                    interestRate:
+                      type: number
+                      format: double
+                      nullable: true
                     newLoanNumber:
                       type: string
                       nullable: true
@@ -814,6 +818,9 @@ paths:
                             type: string
                             nullable: true
                           prefix:
+                            type: string
+                            nullable: true
+                          additionalVesting:
                             type: string
                             nullable: true
                           socialSecurityNumber:
@@ -1135,6 +1142,9 @@ paths:
                             type: string
                             nullable: true
                           prefix:
+                            type: string
+                            nullable: true
+                          additionalVesting:
                             type: string
                             nullable: true
                           socialSecurityNumber:
@@ -1613,8 +1623,8 @@ paths:
                     - Stacx
                     - RamQuest
                     - BlackKnight
-                    - ChatGPT
                     - ManualEntry
+                    - SellerNetSheet
                     - Inkd
                   type: string
                 integrationId:
@@ -1678,6 +1688,10 @@ paths:
                       type: number
                       format: double
                       nullable: true
+                    interestRate:
+                      type: number
+                      format: double
+                      nullable: true
                     newLoanNumber:
                       type: string
                       nullable: true
@@ -1779,6 +1793,9 @@ paths:
                             type: string
                             nullable: true
                           prefix:
+                            type: string
+                            nullable: true
+                          additionalVesting:
                             type: string
                             nullable: true
                           socialSecurityNumber:
@@ -2100,6 +2117,9 @@ paths:
                             type: string
                             nullable: true
                           prefix:
+                            type: string
+                            nullable: true
+                          additionalVesting:
                             type: string
                             nullable: true
                           socialSecurityNumber:
@@ -2578,8 +2598,8 @@ paths:
                     - Stacx
                     - RamQuest
                     - BlackKnight
-                    - ChatGPT
                     - ManualEntry
+                    - SellerNetSheet
                     - Inkd
                   type: string
                 integrationId:
@@ -2643,6 +2663,10 @@ paths:
                       type: number
                       format: double
                       nullable: true
+                    interestRate:
+                      type: number
+                      format: double
+                      nullable: true
                     newLoanNumber:
                       type: string
                       nullable: true
@@ -2744,6 +2768,9 @@ paths:
                             type: string
                             nullable: true
                           prefix:
+                            type: string
+                            nullable: true
+                          additionalVesting:
                             type: string
                             nullable: true
                           socialSecurityNumber:
@@ -3065,6 +3092,9 @@ paths:
                             type: string
                             nullable: true
                           prefix:
+                            type: string
+                            nullable: true
+                          additionalVesting:
                             type: string
                             nullable: true
                           socialSecurityNumber:
@@ -3543,8 +3573,8 @@ paths:
                     - Stacx
                     - RamQuest
                     - BlackKnight
-                    - ChatGPT
                     - ManualEntry
+                    - SellerNetSheet
                     - Inkd
                   type: string
                 integrationId:
@@ -3793,6 +3823,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -3894,6 +3928,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -4215,6 +4252,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -5716,8 +5756,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -6000,6 +6040,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -6101,6 +6145,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -6422,6 +6469,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -7923,8 +7973,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -8207,6 +8257,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -8308,6 +8362,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -8629,6 +8686,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -10130,8 +10190,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -10442,6 +10502,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -10543,6 +10607,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -10864,6 +10931,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -12365,8 +12435,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -12649,6 +12719,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -12750,6 +12824,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -13071,6 +13148,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -14572,8 +14652,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -14856,6 +14936,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -14957,6 +15041,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -15278,6 +15365,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -16779,8 +16869,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -17091,6 +17181,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -17192,6 +17286,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -17513,6 +17610,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -19014,8 +19114,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -19298,6 +19398,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -19399,6 +19503,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -19720,6 +19827,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -21221,8 +21331,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -21505,6 +21615,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -21606,6 +21720,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -21927,6 +22044,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -23428,8 +23548,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -23519,8 +23639,8 @@ paths:
               - Stacx
               - RamQuest
               - BlackKnight
-              - ChatGPT
               - ManualEntry
+              - SellerNetSheet
               - Inkd
             type: string
       responses:
@@ -23762,6 +23882,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -23863,6 +23987,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -24184,6 +24311,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -25685,8 +25815,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -25969,6 +26099,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -26070,6 +26204,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -26391,6 +26528,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -27892,8 +28032,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -28176,6 +28316,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -28277,6 +28421,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -28598,6 +28745,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -30099,8 +30249,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -30222,6 +30372,10 @@ paths:
                       type: number
                       format: double
                       nullable: true
+                    interestRate:
+                      type: number
+                      format: double
+                      nullable: true
                     newLoanNumber:
                       type: string
                       nullable: true
@@ -30323,6 +30477,9 @@ paths:
                             type: string
                             nullable: true
                           prefix:
+                            type: string
+                            nullable: true
+                          additionalVesting:
                             type: string
                             nullable: true
                           socialSecurityNumber:
@@ -30644,6 +30801,9 @@ paths:
                             type: string
                             nullable: true
                           prefix:
+                            type: string
+                            nullable: true
+                          additionalVesting:
                             type: string
                             nullable: true
                           socialSecurityNumber:
@@ -31122,8 +31282,8 @@ paths:
                     - Stacx
                     - RamQuest
                     - BlackKnight
-                    - ChatGPT
                     - ManualEntry
+                    - SellerNetSheet
                     - Inkd
                   type: string
                 integrationId:
@@ -31187,6 +31347,10 @@ paths:
                       type: number
                       format: double
                       nullable: true
+                    interestRate:
+                      type: number
+                      format: double
+                      nullable: true
                     newLoanNumber:
                       type: string
                       nullable: true
@@ -31288,6 +31452,9 @@ paths:
                             type: string
                             nullable: true
                           prefix:
+                            type: string
+                            nullable: true
+                          additionalVesting:
                             type: string
                             nullable: true
                           socialSecurityNumber:
@@ -31609,6 +31776,9 @@ paths:
                             type: string
                             nullable: true
                           prefix:
+                            type: string
+                            nullable: true
+                          additionalVesting:
                             type: string
                             nullable: true
                           socialSecurityNumber:
@@ -32087,8 +32257,8 @@ paths:
                     - Stacx
                     - RamQuest
                     - BlackKnight
-                    - ChatGPT
                     - ManualEntry
+                    - SellerNetSheet
                     - Inkd
                   type: string
                 integrationId:
@@ -32152,6 +32322,10 @@ paths:
                       type: number
                       format: double
                       nullable: true
+                    interestRate:
+                      type: number
+                      format: double
+                      nullable: true
                     newLoanNumber:
                       type: string
                       nullable: true
@@ -32253,6 +32427,9 @@ paths:
                             type: string
                             nullable: true
                           prefix:
+                            type: string
+                            nullable: true
+                          additionalVesting:
                             type: string
                             nullable: true
                           socialSecurityNumber:
@@ -32574,6 +32751,9 @@ paths:
                             type: string
                             nullable: true
                           prefix:
+                            type: string
+                            nullable: true
+                          additionalVesting:
                             type: string
                             nullable: true
                           socialSecurityNumber:
@@ -33052,8 +33232,8 @@ paths:
                     - Stacx
                     - RamQuest
                     - BlackKnight
-                    - ChatGPT
                     - ManualEntry
+                    - SellerNetSheet
                     - Inkd
                   type: string
                 integrationId:
@@ -33302,6 +33482,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -33403,6 +33587,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -33724,6 +33911,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -35225,8 +35415,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -35509,6 +35699,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -35610,6 +35804,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -35931,6 +36128,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -37432,8 +37632,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -37716,6 +37916,10 @@ paths:
                         type: number
                         format: double
                         nullable: true
+                      interestRate:
+                        type: number
+                        format: double
+                        nullable: true
                       newLoanNumber:
                         type: string
                         nullable: true
@@ -37817,6 +38021,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -38138,6 +38345,9 @@ paths:
                               type: string
                               nullable: true
                             prefix:
+                              type: string
+                              nullable: true
+                            additionalVesting:
                               type: string
                               nullable: true
                             socialSecurityNumber:
@@ -39639,8 +39849,8 @@ paths:
                       - Stacx
                       - RamQuest
                       - BlackKnight
-                      - ChatGPT
                       - ManualEntry
+                      - SellerNetSheet
                       - Inkd
                     type: string
                   product:
@@ -39951,6 +40161,9 @@ paths:
                               prefix:
                                 type: string
                                 nullable: true
+                              additionalVesting:
+                                type: string
+                                nullable: true
                               socialSecurityNumber:
                                 type: string
                                 nullable: true
@@ -40054,6 +40267,9 @@ paths:
                                 type: string
                                 nullable: true
                               prefix:
+                                type: string
+                                nullable: true
+                              additionalVesting:
                                 type: string
                                 nullable: true
                               socialSecurityNumber:
@@ -40194,6 +40410,9 @@ paths:
                               prefix:
                                 type: string
                                 nullable: true
+                              additionalVesting:
+                                type: string
+                                nullable: true
                               socialSecurityNumber:
                                 type: string
                                 nullable: true
@@ -40297,6 +40516,9 @@ paths:
                                 type: string
                                 nullable: true
                               prefix:
+                                type: string
+                                nullable: true
+                              additionalVesting:
                                 type: string
                                 nullable: true
                               socialSecurityNumber:
@@ -40437,6 +40659,9 @@ paths:
                               prefix:
                                 type: string
                                 nullable: true
+                              additionalVesting:
+                                type: string
+                                nullable: true
                               socialSecurityNumber:
                                 type: string
                                 nullable: true
@@ -40540,6 +40765,9 @@ paths:
                                 type: string
                                 nullable: true
                               prefix:
+                                type: string
+                                nullable: true
+                              additionalVesting:
                                 type: string
                                 nullable: true
                               socialSecurityNumber:
@@ -40948,6 +41176,9 @@ paths:
                               prefix:
                                 type: string
                                 nullable: true
+                              additionalVesting:
+                                type: string
+                                nullable: true
                               socialSecurityNumber:
                                 type: string
                                 nullable: true
@@ -41051,6 +41282,9 @@ paths:
                                 type: string
                                 nullable: true
                               prefix:
+                                type: string
+                                nullable: true
+                              additionalVesting:
                                 type: string
                                 nullable: true
                               socialSecurityNumber:
@@ -41274,6 +41508,9 @@ paths:
                               prefix:
                                 type: string
                                 nullable: true
+                              additionalVesting:
+                                type: string
+                                nullable: true
                               socialSecurityNumber:
                                 type: string
                                 nullable: true
@@ -41377,6 +41614,9 @@ paths:
                                 type: string
                                 nullable: true
                               prefix:
+                                type: string
+                                nullable: true
+                              additionalVesting:
                                 type: string
                                 nullable: true
                               socialSecurityNumber:
@@ -41600,6 +41840,9 @@ paths:
                               prefix:
                                 type: string
                                 nullable: true
+                              additionalVesting:
+                                type: string
+                                nullable: true
                               socialSecurityNumber:
                                 type: string
                                 nullable: true
@@ -41703,6 +41946,9 @@ paths:
                                 type: string
                                 nullable: true
                               prefix:
+                                type: string
+                                nullable: true
+                              additionalVesting:
                                 type: string
                                 nullable: true
                               socialSecurityNumber:
@@ -42288,6 +42534,9 @@ paths:
                               prefix:
                                 type: string
                                 nullable: true
+                              additionalVesting:
+                                type: string
+                                nullable: true
                               socialSecurityNumber:
                                 type: string
                                 nullable: true
@@ -42391,6 +42640,9 @@ paths:
                                 type: string
                                 nullable: true
                               prefix:
+                                type: string
+                                nullable: true
+                              additionalVesting:
                                 type: string
                                 nullable: true
                               socialSecurityNumber:
@@ -42614,6 +42866,9 @@ paths:
                               prefix:
                                 type: string
                                 nullable: true
+                              additionalVesting:
+                                type: string
+                                nullable: true
                               socialSecurityNumber:
                                 type: string
                                 nullable: true
@@ -42717,6 +42972,9 @@ paths:
                                 type: string
                                 nullable: true
                               prefix:
+                                type: string
+                                nullable: true
+                              additionalVesting:
                                 type: string
                                 nullable: true
                               socialSecurityNumber:
@@ -42940,6 +43198,9 @@ paths:
                               prefix:
                                 type: string
                                 nullable: true
+                              additionalVesting:
+                                type: string
+                                nullable: true
                               socialSecurityNumber:
                                 type: string
                                 nullable: true
@@ -43043,6 +43304,9 @@ paths:
                                 type: string
                                 nullable: true
                               prefix:
+                                type: string
+                                nullable: true
+                              additionalVesting:
                                 type: string
                                 nullable: true
                               socialSecurityNumber:
@@ -48409,573 +48673,6 @@ paths:
             text/json:
               schema:
                 type: string
-  /v1/orders/seller-net-sheet/calculate:
-    post:
-      tags:
-        - SellerNetSheet
-      summary: Calculate seller net sheet proceeds.
-      requestBody:
-        description: The fee data
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                preparerName:
-                  type: string
-                  nullable: true
-                preparerEmail:
-                  type: string
-                  nullable: true
-                propertyOwner:
-                  type: string
-                  nullable: true
-                address:
-                  type: object
-                  properties:
-                    cityDesc:
-                      type: string
-                      nullable: true
-                    countyDesc:
-                      type: string
-                      nullable: true
-                    stateId:
-                      type: string
-                      nullable: true
-                    street:
-                      type: string
-                      nullable: true
-                    streetLine2:
-                      type: string
-                      nullable: true
-                    zip:
-                      type: string
-                      nullable: true
-                  additionalProperties: false
-                salesPrice:
-                  type: number
-                  format: double
-                salesPrice2:
-                  type: number
-                  format: double
-                  nullable: true
-                salesPrice3:
-                  type: number
-                  format: double
-                  nullable: true
-                mortgagePayoff:
-                  type: number
-                  format: double
-                agentFees:
-                  type: number
-                  format: double
-                agentFeesType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                sellerConcessions:
-                  type: number
-                  format: double
-                sellerConcessionsType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                estateTaxes:
-                  type: number
-                  format: double
-                estateTaxesType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                prepRepairCosts:
-                  type: number
-                  format: double
-                titleInsurancePremium:
-                  type: number
-                  format: double
-                titleAndEscrowFees:
-                  type: number
-                  format: double
-                titleAndEscrowFeesType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                recordingFees:
-                  type: number
-                  format: double
-                recordingTransferFees:
-                  type: number
-                  format: double
-                recordingTransferFeesType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                otherSellerCosts:
-                  type: number
-                  format: double
-              additionalProperties: false
-          text/json:
-            schema:
-              type: object
-              properties:
-                preparerName:
-                  type: string
-                  nullable: true
-                preparerEmail:
-                  type: string
-                  nullable: true
-                propertyOwner:
-                  type: string
-                  nullable: true
-                address:
-                  type: object
-                  properties:
-                    cityDesc:
-                      type: string
-                      nullable: true
-                    countyDesc:
-                      type: string
-                      nullable: true
-                    stateId:
-                      type: string
-                      nullable: true
-                    street:
-                      type: string
-                      nullable: true
-                    streetLine2:
-                      type: string
-                      nullable: true
-                    zip:
-                      type: string
-                      nullable: true
-                  additionalProperties: false
-                salesPrice:
-                  type: number
-                  format: double
-                salesPrice2:
-                  type: number
-                  format: double
-                  nullable: true
-                salesPrice3:
-                  type: number
-                  format: double
-                  nullable: true
-                mortgagePayoff:
-                  type: number
-                  format: double
-                agentFees:
-                  type: number
-                  format: double
-                agentFeesType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                sellerConcessions:
-                  type: number
-                  format: double
-                sellerConcessionsType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                estateTaxes:
-                  type: number
-                  format: double
-                estateTaxesType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                prepRepairCosts:
-                  type: number
-                  format: double
-                titleInsurancePremium:
-                  type: number
-                  format: double
-                titleAndEscrowFees:
-                  type: number
-                  format: double
-                titleAndEscrowFeesType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                recordingFees:
-                  type: number
-                  format: double
-                recordingTransferFees:
-                  type: number
-                  format: double
-                recordingTransferFeesType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                otherSellerCosts:
-                  type: number
-                  format: double
-              additionalProperties: false
-          application/*+json:
-            schema:
-              type: object
-              properties:
-                preparerName:
-                  type: string
-                  nullable: true
-                preparerEmail:
-                  type: string
-                  nullable: true
-                propertyOwner:
-                  type: string
-                  nullable: true
-                address:
-                  type: object
-                  properties:
-                    cityDesc:
-                      type: string
-                      nullable: true
-                    countyDesc:
-                      type: string
-                      nullable: true
-                    stateId:
-                      type: string
-                      nullable: true
-                    street:
-                      type: string
-                      nullable: true
-                    streetLine2:
-                      type: string
-                      nullable: true
-                    zip:
-                      type: string
-                      nullable: true
-                  additionalProperties: false
-                salesPrice:
-                  type: number
-                  format: double
-                salesPrice2:
-                  type: number
-                  format: double
-                  nullable: true
-                salesPrice3:
-                  type: number
-                  format: double
-                  nullable: true
-                mortgagePayoff:
-                  type: number
-                  format: double
-                agentFees:
-                  type: number
-                  format: double
-                agentFeesType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                sellerConcessions:
-                  type: number
-                  format: double
-                sellerConcessionsType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                estateTaxes:
-                  type: number
-                  format: double
-                estateTaxesType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                prepRepairCosts:
-                  type: number
-                  format: double
-                titleInsurancePremium:
-                  type: number
-                  format: double
-                titleAndEscrowFees:
-                  type: number
-                  format: double
-                titleAndEscrowFeesType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                recordingFees:
-                  type: number
-                  format: double
-                recordingTransferFees:
-                  type: number
-                  format: double
-                recordingTransferFeesType:
-                  enum:
-                    - Dollar
-                    - Percentage
-                  type: string
-                otherSellerCosts:
-                  type: number
-                  format: double
-              additionalProperties: false
-      responses:
-        '200':
-          description: Success
-          content:
-            text/plain:
-              schema:
-                type: object
-                properties:
-                  proceeds1:
-                    type: number
-                    format: double
-                    nullable: true
-                  proceeds2:
-                    type: number
-                    format: double
-                    nullable: true
-                  proceeds3:
-                    type: number
-                    format: double
-                    nullable: true
-                additionalProperties: false
-            application/json:
-              schema:
-                type: object
-                properties:
-                  proceeds1:
-                    type: number
-                    format: double
-                    nullable: true
-                  proceeds2:
-                    type: number
-                    format: double
-                    nullable: true
-                  proceeds3:
-                    type: number
-                    format: double
-                    nullable: true
-                additionalProperties: false
-            text/json:
-              schema:
-                type: object
-                properties:
-                  proceeds1:
-                    type: number
-                    format: double
-                    nullable: true
-                  proceeds2:
-                    type: number
-                    format: double
-                    nullable: true
-                  proceeds3:
-                    type: number
-                    format: double
-                    nullable: true
-                additionalProperties: false
-        '400':
-          description: Bad Request
-          content:
-            text/plain:
-              schema:
-                type: string
-            application/json:
-              schema:
-                type: string
-            text/json:
-              schema:
-                type: string
-  /v1/orders/seller-net-sheet/save:
-    post:
-      tags:
-        - SellerNetSheet
-      summary: Save seller net sheet data
-      requestBody:
-        description: The seller net sheet data
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                id:
-                  type: string
-                  nullable: true
-                name:
-                  type: string
-                  nullable: true
-                address:
-                  type: object
-                  properties:
-                    cityDesc:
-                      type: string
-                      nullable: true
-                    countyDesc:
-                      type: string
-                      nullable: true
-                    stateId:
-                      type: string
-                      nullable: true
-                    street:
-                      type: string
-                      nullable: true
-                    streetLine2:
-                      type: string
-                      nullable: true
-                    zip:
-                      type: string
-                      nullable: true
-                  additionalProperties: false
-                email:
-                  type: string
-                  nullable: true
-                salesPrice:
-                  type: number
-                  format: double
-                  nullable: true
-                salesPrice2:
-                  type: number
-                  format: double
-                  nullable: true
-                salesPrice3:
-                  type: number
-                  format: double
-                  nullable: true
-                createdDate:
-                  type: string
-                  format: date-time
-              additionalProperties: false
-          text/json:
-            schema:
-              type: object
-              properties:
-                id:
-                  type: string
-                  nullable: true
-                name:
-                  type: string
-                  nullable: true
-                address:
-                  type: object
-                  properties:
-                    cityDesc:
-                      type: string
-                      nullable: true
-                    countyDesc:
-                      type: string
-                      nullable: true
-                    stateId:
-                      type: string
-                      nullable: true
-                    street:
-                      type: string
-                      nullable: true
-                    streetLine2:
-                      type: string
-                      nullable: true
-                    zip:
-                      type: string
-                      nullable: true
-                  additionalProperties: false
-                email:
-                  type: string
-                  nullable: true
-                salesPrice:
-                  type: number
-                  format: double
-                  nullable: true
-                salesPrice2:
-                  type: number
-                  format: double
-                  nullable: true
-                salesPrice3:
-                  type: number
-                  format: double
-                  nullable: true
-                createdDate:
-                  type: string
-                  format: date-time
-              additionalProperties: false
-          application/*+json:
-            schema:
-              type: object
-              properties:
-                id:
-                  type: string
-                  nullable: true
-                name:
-                  type: string
-                  nullable: true
-                address:
-                  type: object
-                  properties:
-                    cityDesc:
-                      type: string
-                      nullable: true
-                    countyDesc:
-                      type: string
-                      nullable: true
-                    stateId:
-                      type: string
-                      nullable: true
-                    street:
-                      type: string
-                      nullable: true
-                    streetLine2:
-                      type: string
-                      nullable: true
-                    zip:
-                      type: string
-                      nullable: true
-                  additionalProperties: false
-                email:
-                  type: string
-                  nullable: true
-                salesPrice:
-                  type: number
-                  format: double
-                  nullable: true
-                salesPrice2:
-                  type: number
-                  format: double
-                  nullable: true
-                salesPrice3:
-                  type: number
-                  format: double
-                  nullable: true
-                createdDate:
-                  type: string
-                  format: date-time
-              additionalProperties: false
-      responses:
-        '200':
-          description: Success
-          content:
-            text/plain:
-              schema:
-                type: boolean
-            application/json:
-              schema:
-                type: boolean
-            text/json:
-              schema:
-                type: boolean
-        '400':
-          description: Bad Request
-          content:
-            text/plain:
-              schema:
-                type: string
-            application/json:
-              schema:
-                type: string
-            text/json:
-              schema:
-                type: string
   /v1/orders/signing/{orderId}:
     post:
       tags:
@@ -53631,6 +53328,21 @@ paths:
             text/json:
               schema:
                 type: string
+  /v1/orders/signing/signing-process/{integrationId}:
+    post:
+      tags:
+        - Signing
+      summary: Initiates a signing process flow.
+      parameters:
+        - name: integrationId
+          in: path
+          description: The signing process integration ID.
+          required: true
+          schema:
+            type: string
+      responses:
+        '202':
+          description: Accepted
   /v1/orders/typemappings/read/{system}:
     get:
       tags:
@@ -53943,7 +53655,7 @@ paths:
       tags:
         - Webhook
       summary: Handles post webhook requests from external system.
-      description: "<br>Keep backwards compatability for Encompass for now, will need to be phased out.\r\n<br>Reads message and headers to validate request."
+      description: "<br>Keep backwards compatibility for Encompass for now, will need to be phased out.\r\n<br>Reads message and headers to validate request."
       parameters:
         - name: system
           in: path
@@ -53962,8 +53674,8 @@ paths:
               - Stacx
               - RamQuest
               - BlackKnight
-              - ChatGPT
               - ManualEntry
+              - SellerNetSheet
               - Inkd
             type: string
       responses:
