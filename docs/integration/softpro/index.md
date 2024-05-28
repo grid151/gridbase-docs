@@ -1,7 +1,7 @@
 
-# SoftPro Integration (Provider Initiated Workflow)
+# SoftPro Integration
 
-This README file describes several API endpoints as part of the Provider Initiated Workflow for integrating with SoftPro, a real estate and title insurance software company. The document provides detailed information on the required fields for each endpoint, including validation rules.
+This README file describes several API endpoints for integrating with SoftPro, a real estate and title insurance software company. The document provides detailed information on the required fields for each endpoint, including validation rules.
 
 ## Stage Order
 
