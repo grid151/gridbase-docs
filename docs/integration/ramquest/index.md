@@ -65,7 +65,7 @@ This README file describes several API endpoints as part of the Provider Initiat
 
 ### Endpoint
 
-`PUT https://app.gridbase.io/v1/ramquest/orders/update`
+`PUT https://app.gridbase.io/v1/orders/update`
 
 ### Required fields and validation
 
