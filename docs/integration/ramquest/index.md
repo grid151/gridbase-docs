@@ -29,7 +29,7 @@ This README file describes several API endpoints as part of the Provider Initiat
 
 ### Request body example
 
-\`\`\`json
+```json
 {
   "orderDetails": {
     "ProductTypeDesc": "Residential",
@@ -59,7 +59,7 @@ This README file describes several API endpoints as part of the Provider Initiat
   "integrationId": "your-integration-id",
   "System": "RamQuest"
 }
-\`\`\`
+```
 
 ## Update Order
 
@@ -87,7 +87,7 @@ This README file describes several API endpoints as part of the Provider Initiat
 
 ### Request body example
 
-\`\`\`json
+```json
 {
   "orderDetails": {
     "ProductTypeDesc": "Residential",
@@ -115,7 +115,7 @@ This README file describes several API endpoints as part of the Provider Initiat
     }
   }
 }
-\`\`\`
+```
 
 ## Add Document
 
@@ -133,13 +133,13 @@ This README file describes several API endpoints as part of the Provider Initiat
 
 ### Request body example
 
-\`\`\`json
+```json
 {
   "fileName": "contract",
   "documentBody": "base64encodedstring",
   "extension": "pdf"
 }
-\`\`\`
+```
 
 ## Add Note
 
@@ -158,14 +158,14 @@ This README file describes several API endpoints as part of the Provider Initiat
 
 ### Request body example
 
-\`\`\`json
+```json
 {
   "noteSubject": "Inspection",
   "noteBody": "The property inspection is scheduled for next week.",
   "description": "Additional note details",
   "documentId": "document-id-123"
 }
-\`\`\`
+```
 
 ## Cancel Order
 
@@ -182,9 +182,9 @@ This README file describes several API endpoints as part of the Provider Initiat
 
 ### Request body example
 
-\`\`\`json
+```json
 {
   "orderId": "63f---------------443413",
   "cancelReason": "Client request"
 }
-\`\`\`
+```
