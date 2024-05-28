@@ -1,7 +1,7 @@
 
-# RamQuest Integration (Provider Initiated Workflow)
+# RamQuest Integration
 
-This README file describes several API endpoints as part of the Provider Initiated Workflow for integrating with RamQuest, a real estate and title insurance software company. The document provides detailed information on the required fields for each endpoint, including validation rules.
+This README file describes several API endpoints for integrating with RamQuest, a real estate and title insurance software company. The document provides detailed information on the required fields for each endpoint, including validation rules.
 
 ## Stage Order
 
