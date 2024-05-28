@@ -29,4 +29,4 @@ Place this token in the bearer token haeder in your tool of choice (such as Post
 - TPS Integrations
   - [Softpro](/integration/softpro)
   - [Resware Connector](/integration/resware/connector-installation)
-  - Ramquest (available, guide coming soon!)
+  - [Ramquest](/integration/ramquest)
