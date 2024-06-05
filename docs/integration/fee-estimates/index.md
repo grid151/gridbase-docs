@@ -1,164 +1,595 @@
-# Fee Estimates
+# Fees API Documentation
 
-This document outlines various API endpoints designed for seamless integration with GridBase Fee Estimates, a powerful tool that offers estimation based on a property and user-provided requirements. Below, you'll find comprehensive insights into the essential fields associated with each individual endpoint. Feel free to refer to this guide as you embark on integrating Fee Estimates into your system. It will ensure a smooth and successful integration process.
+This README file describes several API endpoints for the Fees API. The document provides detailed information on the required fields for each endpoint, including validation rules.
 
-## Get Fee Standards
+## Get Quote
 
-`GET /v1/orders/fees/fee-standards/{feeType}/{state}/{integrationId}`
+### Endpoint
 
-#### Example
+`GET /v1/orders/fees/quote/{orderId}`
 
-`GET /v1/orders/fees/fee-standards/Endorsement/FL/kljsldfjdljfldkjfl`
+### Required fields and validation
 
-### Response Body Example
+| Field Name | Field Description                           | Data Type | Validation               |
+|------------|---------------------------------------------|-----------|--------------------------|
+| orderId    | The identifier of the order                 | string    | Required                 |
+
+### Response example
+
+```json
+{
+  "Succeeded": true,
+  "Value": {
+    "ReportId": "string",
+    "Property": {
+      "FullAddress": "string",
+      "CityDesc": "string",
+      "CountyDesc": "string",
+      "Direction": "string",
+      "IsPropertyAddress": true,
+      "LandAcreage": "string",
+      "LegalDescription": "string",
+      "Number": "string",
+      "StateId": "string",
+      "Street": "string",
+      "StreetLine2": "string",
+      "StreetName": "string",
+      "Suffix": "string",
+      "Unit": "string",
+      "Zip": "string",
+      "Parcel": "string",
+      "Parcel2": "string",
+      "Parcel3": "string",
+      "Parcel4": "string",
+      "Lot": "string",
+      "Block": "string",
+      "Subdivision": "string",
+      "Fips": 0
+    },
+    "Status": "Pending",
+    "CreatedDate": "2023-01-01T00:00:00Z"
+  },
+  "Message": null
+}
+```
+
+## Get Endorsements
+
+### Endpoint
+
+`GET /v1/orders/fees/quote/{orderId}/endorsements`
+
+### Required fields and validation
+
+| Field Name | Field Description                           | Data Type | Validation               |
+|------------|---------------------------------------------|-----------|--------------------------|
+| orderId    | The identifier of the order                 | string    | Required                 |
+
+### Response example
+
+```json
+{
+  "Succeeded": true,
+  "Value": {
+    "Endorsements": [
+      {
+        "Code": "string",
+        "Description": "string",
+        "Amount": 0,
+        "Selected": true
+      }
+    ],
+    "IntegrationId": "string"
+  },
+  "Message": null
+}
+```
+
+## Get States
+
+### Endpoint
+
+`GET /v1/orders/fees/quote/states/{integrationId}`
+
+### Required fields and validation
+
+| Field Name    | Field Description                                    | Data Type | Validation               |
+|---------------|------------------------------------------------------|-----------|--------------------------|
+| integrationId | Integration ID                                       | string    | Required                 |
+
+### Response example
 
 ```json
 [
   {
-    "code": "2000010",
-    "name": "ALTA 18.3-06 - Single Tax Parcel and ID",
-    "category": "OTHER"
-  },
-  {
-    "code": "2000011",
-    "name": "Mortgage Survey Affidavit",
-    "category": "SURVEY"
-  },
-  {
-    "code": "0000001",
-    "name": "Title - ALTA 1 Street Assessments",
-    "category": "OTHER"
-  },
-  {
-    "code": "0000029",
-    "name": "Title - ALTA 10 Assignment",
-    "category": "OTHER"
+    "Abbreviation": "string",
+    "Links": [
+      {
+        "Href": "string",
+        "Rel": "string",
+        "Method": "string"
+      }
+    ]
   }
 ]
 ```
 
 ## Get Questions
 
-`POST /v1/orders/fees/questions`
+### Endpoint
 
-### Required Fields
+`POST /v1/orders/fees/quote/questions`
 
-| Field Name          | Field Description                  | Data Type |
-| ------------------- | ---------------------------------- | --------- |
-| `stateAbbreviation` | Two character state abbreviation   | string    |
-| `countyFips`        | Fips code for the county           | string    |
-| `documentTypes`     | Document Types Refinance, Mortgage | string    |
-| `integrationId`     | Clients unique integration Id      | string    |
+### Required fields and validation
 
-### Request Body Example
+| Field Name          | Field Description                                      | Data Type         | Validation              |
+|---------------------|--------------------------------------------------------|-------------------|-------------------------|
+| StateAbbreviation   | State abbreviation                                     | string            | Required                |
+| DocumentTypes       | List of document types                                 | array of strings  | Required                |
+| RecordingOfficeId   | Recording office ID                                    | string            | Required                |
+| IntegrationId       | Integration ID                                         | string            | Optional                |
+
+### Request body example
 
 ```json
 {
-  "stateAbbreviation": "PA",
-  "countyFips": "42007",
-  "documentTypes": ["Refinance"],
-  "integrationId": "12345"
+  "StateAbbreviation": "string",
+  "DocumentTypes": ["Amendment", "Assignment"],
+  "RecordingOfficeId": "string",
+  "IntegrationId": "string"
 }
 ```
 
-### Response Body Example
+### Response example
 
 ```json
 [
   {
-    "id": "Q15",
-    "description": "Is this a reverse mortgage?",
-    "answer": "false",
-    "questionType": "Bool"
-  },
-  {
-    "id": "Q50",
-    "description": "Is this transaction being recorded electronically?",
-    "answer": "false",
-    "questionType": "Bool"
+    "Id": "string",
+    "Description": "string",
+    "Answer": "string",
+    "QuestionType": "Number"
   }
 ]
 ```
 
-## Request Estimate
+## Request Quote
 
-`POST /v1/orders/fees/quote`
+### Endpoint
 
-### Required Fields
+`POST /v1/orders/fees/quote/request`
 
-| Field Name                 | Field Description                                                                                                                 | Data Type |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| `property.street`          | Property Address                                                                                                                  | string    |
-| `property.cityDesc`        | Property City                                                                                                                     | string    |
-| `property.stateId`         | Property State                                                                                                                    | string    |
-| `property.countyDesc`      | Property County                                                                                                                   | string    |
-| `property.zip`             | Property Zip Code                                                                                                                 | string    |
-| `transacitionType`         | Transaction Type (Purchase, Refinance, Modification)                                                                              | string    |
-| `documentType`             | Fee Document Type (None, Amendment, Assignment, Deed, Modification, Mortgage, PowerOfAttorney, Refinance, Release, Subordination) | string    |
-| `titleAgent.financingType` | Finance Type (Sale, Refinance)                                                                                                    | string    |
-| `titleAgent.policyType`    | Policy Type (New, Reissue)                                                                                                        | string    |
+### Required fields and validation
 
-### Request Body Example
+| Field Name             | Field Description                                          | Data Type         | Validation              |
+|------------------------|------------------------------------------------------------|-------------------|-------------------------|
+| IntegrationId          | Integration ID                                             | string            | Required                |
+| EstimatedClosingDate   | Estimated closing date                                     | DateTime          | Optional                |
+| DocumentTypes          | List of document types                                     | array of strings  | Required                |
+| Mortgage               | Mortgage details                                           | object            | Required                |
+| Property               | Property address and details                               | object            | Required                |
+| Customizations         | Fee customizations                                         | object            | Required                |
+| Questions              | List of fee questions                                      | array of objects  | Optional                |
+| TitleAgent             | Title agent details                                        | object            | Required                |
+| TransactionType        | Transaction type                                           | string            | Required                |
+| RecordingOfficeId      | Recording office ID                                        | string            | Optional                |
+| RecordingOffice        | Recording office name                                      | string            | Optional                |
+
+### Request body example
 
 ```json
 {
-  "integrationId": "12345",
-  "estimatedClosingDate": "2023-08-10T15:30:00Z",
-  "documentTypes": ["Mortgage"],
-  "inspectionService": {
-    "address": "123 Main St",
-    "city": "Sample City",
-    "zip": "12345",
-    "squareFootage": 2000,
-    "yearBuilt": 2000,
-    "lotSize": 0.25,
-    "isInspection": true,
-    "inspectionTypes": [
-      { "key": "Mold", "name": "Mold Inspection", "value": true },
-      { "key": "Asbestos", "name": "Asbestos Inspection", "value": false }
-    ],
-    "numberOfSamples": {
-      "moldAirSamples": 2,
-      "moldSurfaceSamples": 3,
-      "asbestosSamples": 0,
-      "leadPaintSamples": 1,
-      "drywallSamples": 0
+  "IntegrationId": "string",
+  "EstimatedClosingDate": "2023-01-01T00:00:00Z",
+  "DocumentTypes": ["Amendment", "Assignment"],
+  "Mortgage": {
+    "Pages": 0,
+    "NewDebtAmount": 0,
+    "OriginalAmount": 0,
+    "UnpaidBalance": 0
+  },
+  "Property": {
+    "FullAddress": "string",
+    "CityDesc": "string",
+    "CountyDesc": "string",
+    "Direction": "string",
+    "IsPropertyAddress": true,
+    "LandAcreage": "string",
+    "LegalDescription": "string",
+    "Number": "string",
+    "StateId": "string",
+    "Street": "string",
+    "StreetLine2": "string",
+    "StreetName": "string",
+    "Suffix": "string",
+    "Unit": "string",
+    "Zip": "string",
+    "Parcel": "string",
+    "Parcel2": "string",
+    "Parcel3": "string",
+    "Parcel4": "string",
+    "Lot": "string",
+    "Block": "string",
+    "Subdivision": "string",
+    "Fips": 0
+  },
+  "Customizations": {
+    "Assignment": {
+      "Pages": 0,
+      "Amount": 0
+    },
+    "Deed": {
+      "Pages": 0,
+      "Amount": 0
+    },
+    "Release": {
+      "Pages": 0,
+      "Amount": 0
+    },
+    "Subordination": {
+      "Pages": 0,
+      "Amount": 0
+    },
+    "PowerOfAttorney": {
+      "Pages": 0,
+      "Amount": 0
     }
   },
-  "mortgage": {
-    "pages": 15,
-    "newDebtAmount": 250000,
-    "originalAmount": 300000,
-    "unpaidBalance": 200000
-  },
-  "property": {
-    "streetAddress": "456 Elm St",
-    "city": "Sample City",
-    "state": "CA",
-    "zip": "54321"
-  },
-  "customizations": {
-    "assignment": { "Pages": 2, "Amount": 100 },
-    "deed": { "Pages": 3, "Amount": 150 },
-    "release": { "Pages": 1, "Amount": 75 },
-    "subordination": { "Pages": null, "Amount": 200 },
-    "powerOfAttorney": { "Pages": null, "Amount": 50 }
-  },
-  "questions": [
-    { "id": "Q1", "answer": "Yes", "questionType": "Bool" },
-    { "id": "Q2", "answer": "12345", "questionType": "Number" }
+  "Questions": [
+    {
+      "Id": "string",
+      "Answer": "string",
+      "QuestionType": "Number"
+    }
   ],
-  "titleAgent": {
-    "titleVendor": "Sample Title Company",
-    "city": "Sample City",
-    "financingType": "Sale",
-    "policyType": "New",
-    "useSimultaneousRates": true,
-    "loanAmount": 200000,
-    "purchaseAmount": 300000
+  "TitleAgent": {
+    "FinancingType": "Sale",
+    "PolicyType": "New",
+    "LoanType": "string",
+    "LoanAmount": 0,
+    "PurchaseAmount": 0,
+    "PriorPolicyAmount": 0,
+    "YearsSinceLastPolicy": 0
   },
-  "transactionType": "Purchase",
-  "useItemizedSettlementFees": true,
-  "endorsements": ["Endorsement1", "Endorsement2"]
+  "TransactionType": "Purchase",
+  "RecordingOfficeId": "string",
+  "RecordingOffice": "string"
 }
+```
+
+### Response example
+
+```json
+{
+  "ReportId": "string",
+  "Property": {
+    "FullAddress": "string",
+    "CityDesc": "string",
+    "CountyDesc": "string",
+    "Direction": "string",
+    "IsPropertyAddress": true,
+    "LandAcreage": "string",
+    "LegalDescription": "string",
+    "Number": "string",
+    "StateId": "string",
+    "Street": "string",
+    "StreetLine2": "string",
+    "StreetName": "string",
+    "Suffix": "string",
+    "Unit": "string",
+    "Zip": "string",
+    "Parcel": "string",
+    "Parcel2": "string",
+    "Parcel3": "string",
+    "Parcel4": "string",
+    "Lot": "string",
+    "Block": "string",
+    "Subdivision": "string",
+    "Fips": 0
+  },
+  "Status": "Pending",
+  "CreatedDate": "2023-01-01T00:00:00Z"
+}
+```
+
+## Basic Search
+
+### Endpoint
+
+`POST /v1/orders/fees/quote/search`
+
+### Required fields and validation
+
+| Field Name    | Field Description                 | Data Type         | Validation              |
+|---------------|-----------------------------------|-------------------|-------------------------|
+| IntegrationId | Integration ID                    | string            | Required                |
+| Address       | Address to search                 | string            | Optional                |
+| Pagination    | Pagination details                | object            | Required                |
+
+### Request body example
+
+```json
+{
+  "IntegrationId": "string",
+  "Address": "string",
+  "Pagination": {
+    "PageNo": 1,
+    "PageSize": 20,
+    "SortBy": "string",
+    "IsSortAsc": true
+  }
+}
+```
+
+### Response example
+
+```json
+{
+  "Count": 1,
+  "Quotes": [
+    {
+      "GridBaseOrderId": "string",
+      "
+
+FullAddress": "string",
+      "Street": "string",
+      "City": "string",
+      "State": "string",
+      "Zip": "string",
+      "CreatedBy": "string",
+      "Status": "Pending",
+      "CreatedDate": "2023-01-01T00:00:00Z",
+      "ClosingDate": "2023-01-01T00:00:00Z"
+    }
+  ]
+}
+```
+
+## Advanced Search
+
+### Endpoint
+
+`POST /v1/orders/fees/quote/search/advanced`
+
+### Required fields and validation
+
+| Field Name      | Field Description                 | Data Type         | Validation              |
+|-----------------|-----------------------------------|-------------------|-------------------------|
+| IntegrationId   | Integration ID                    | string            | Required                |
+| Dates           | Date range search criteria        | object            | Optional                |
+| PropertyAddress | Property address search criteria  | object            | Optional                |
+| Pagination      | Pagination details                | object            | Required                |
+
+### Request body example
+
+```json
+{
+  "IntegrationId": "string",
+  "Dates": {
+    "CreatedDateFrom": "2023-01-01T00:00:00Z",
+    "CreatedDateTo": "2023-01-01T00:00:00Z",
+    "ClosingDateFrom": "2023-01-01T00:00:00Z",
+    "ClosingDateTo": "2023-01-01T00:00:00Z"
+  },
+  "PropertyAddress": {
+    "City": "string",
+    "County": "string",
+    "StateId": "string",
+    "Street": "string",
+    "Zip": "string"
+  },
+  "Pagination": {
+    "PageNo": 1,
+    "PageSize": 20,
+    "SortBy": "string",
+    "IsSortAsc": true
+  }
+}
+```
+
+### Response example
+
+```json
+{
+  "Count": 1,
+  "Quotes": [
+    {
+      "GridBaseOrderId": "string",
+      "FullAddress": "string",
+      "Street": "string",
+      "City": "string",
+      "State": "string",
+      "Zip": "string",
+      "CreatedBy": "string",
+      "Status": "Pending",
+      "CreatedDate": "2023-01-01T00:00:00Z",
+      "ClosingDate": "2023-01-01T00:00:00Z"
+    }
+  ]
+}
+```
+
+## Complete Quote
+
+### Endpoint
+
+`POST /v1/orders/fees/quote/complete`
+
+### Required fields and validation
+
+| Field Name     | Field Description                   | Data Type        | Validation               |
+|----------------|-------------------------------------|------------------|--------------------------|
+| OrderId        | Order ID                            | string           | Required                 |
+| Endorsements   | List of endorsements                | array of objects | Optional                 |
+
+### Request body example
+
+```json
+{
+  "OrderId": "string",
+  "Endorsements": [
+    {
+      "EndorsementId": "string",
+      "Selected": true
+    }
+  ]
+}
+```
+
+### Response example
+
+```json
+{
+  "Succeeded": true,
+  "Message": null
+}
+```
+
+## Accept Changes
+
+### Endpoint
+
+`POST /v1/orders/fees/quote/changes/accept`
+
+### Required fields and validation
+
+| Field Name     | Field Description                   | Data Type        | Validation               |
+|----------------|-------------------------------------|------------------|--------------------------|
+| OrderId        | Order ID                            | string           | Required                 |
+| Changes        | Changes to be applied               | object           | Required                 |
+
+### Request body example
+
+```json
+{
+  "OrderId": "string",
+  "Changes": {
+    "ChangeId": "string",
+    "ChangeType": "string"
+  }
+}
+```
+
+### Response example
+
+```json
+{
+  "Succeeded": true,
+  "Message": null
+}
+```
+
+## Discard Changes
+
+### Endpoint
+
+`POST /v1/orders/fees/quote/{orderId}/changes/discard`
+
+### Required fields and validation
+
+| Field Name | Field Description                        | Data Type | Validation               |
+|------------|------------------------------------------|-----------|--------------------------|
+| orderId    | The identifier of the order              | string    | Required                 |
+
+### Response example
+
+```json
+{
+  "Succeeded": true,
+  "Message": null
+}
+```
+
+## Get Changes
+
+### Endpoint
+
+`POST /v1/orders/fees/quote/changes`
+
+### Required fields and validation
+
+| Field Name | Field Description                          | Data Type | Validation               |
+|------------|--------------------------------------------|-----------|--------------------------|
+| OrderId    | Order ID                                   | string    | Required                 |
+
+### Request body example
+
+```json
+{
+  "OrderId": "string"
+}
+```
+
+### Response example
+
+```json
+{
+  "Succeeded": true,
+  "Value": {
+    "Changes": [
+      {
+        "ChangeId": "string",
+        "ChangeType": "string",
+        "Details": "string"
+      }
+    ]
+  },
+  "Message": null
+}
+```
+
+## Get Recording Offices
+
+### Endpoint
+
+`POST /v1/orders/fees/quote/recording-offices`
+
+### Required fields and validation
+
+| Field Name        | Field Description                           | Data Type | Validation               |
+|-------------------|---------------------------------------------|-----------|--------------------------|
+| StateAbbreviation | State abbreviation                          | string    | Required                 |
+| CountyFips        | County FIPS code                            | string    | Required                 |
+| IntegrationId     | Integration ID                              | string    | Optional                 |
+
+### Request body example
+
+```json
+{
+  "StateAbbreviation": "string",
+  "CountyFips": "string",
+  "IntegrationId": "string"
+}
+```
+
+### Response example
+
+```json
+[
+  {
+    "Id": "string",
+    "Name": "string",
+    "State": "string",
+    "County": "string",
+    "Fips": "string",
+    "Questions": [
+      {
+        "Id": "string",
+        "Description": "string",
+        "Answer": "string",
+        "QuestionType": "Number"
+      }
+    ],
+    "OfficeDetail": {
+      "Detail": "string"
+    },
+    "Links": [
+      {
+        "Href": "string",
+        "Rel": "string",
+        "Method": "string"
+      }
+    ]
+  }
+]
 ```
