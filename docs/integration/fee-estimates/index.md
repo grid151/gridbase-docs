@@ -500,3 +500,52 @@ FullAddress": "string",
   }
 ]
 ```
+
+## Types
+
+### GridBaseFeeFinancingType
+
+Represents the financing type for fees.
+
+| Value       | Description |
+|-------------|-------------|
+| `Sale`      | The sale    |
+| `Refinance` | The refinance|
+
+### GridBaseFeePolicyType
+
+Represents the policy type for fees.
+
+| Value         | Description       |
+|---------------|-------------------|
+| `New`         | The new           |
+| `Reissue`     | The reissue       |
+| `Simultaneous`| The simultaneous  |
+
+### FeeDocumentType
+
+Represents the document type for fees.
+
+| Value            | Description           |
+|------------------|-----------------------|
+| `None`           | The none              |
+| `Amendment`      | The amendment         |
+| `Assignment`     | The assignment        |
+| `Deed`           | The deed              |
+| `Modification`   | The modification      |
+| `Mortgage`       | The mortgage          |
+| `PowerOfAttorney`| The power of attorney |
+| `Refinance`      | The refinance         |
+| `Release`        | The release           |
+| `Subordination`  | The subordination     |
+
+### FeeTransactionType
+
+Represents the transaction type for fees.
+
+| Value          | Description      |
+|----------------|------------------|
+| `Purchase`     | The purchase     |
+| `Refinance`    | The refinance    |
+| `Modification` | The modification |
+
