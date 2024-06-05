@@ -2,6 +2,145 @@
 
 This README file describes several API endpoints for the Fees API. The document provides detailed information on the required fields for each endpoint, including validation rules.
 
+## Request Quote
+
+### Endpoint
+
+`POST /v1/orders/fees/quote/request`
+
+### Required fields and validation
+
+| Field Name             | Field Description                                          | Data Type         | Validation              |
+|------------------------|------------------------------------------------------------|-------------------|-------------------------|
+| IntegrationId          | Integration ID                                             | string            | Required                |
+| EstimatedClosingDate   | Estimated closing date                                     | DateTime          | Optional                |
+| DocumentTypes          | List of document types                                     | array of strings  | Required                |
+| Mortgage               | Mortgage details                                           | object            | Required                |
+| Property               | Property address and details                               | object            | Required                |
+| Customizations         | Fee customizations                                         | object            | Required                |
+| Questions              | List of fee questions                                      | array of objects  | Optional                |
+| TitleAgent             | Title agent details                                        | object            | Required                |
+| TransactionType        | Transaction type                                           | string            | Required                |
+| RecordingOfficeId      | Recording office ID                                        | string            | Optional                |
+| RecordingOffice        | Recording office name                                      | string            | Optional                |
+
+### Request body example
+
+```json
+{
+  "IntegrationId": "string",
+  "EstimatedClosingDate": "2023-01-01T00:00:00Z",
+  "DocumentTypes": ["Amendment", "Assignment"],
+  "Mortgage": {
+    "Pages": 0,
+    "NewDebtAmount": 0,
+    "OriginalAmount": 0,
+    "UnpaidBalance": 0
+  },
+  "Property": {
+    "FullAddress": "string",
+    "CityDesc": "string",
+    "CountyDesc": "string",
+    "Direction": "string",
+    "IsPropertyAddress": true,
+    "LandAcreage": "string",
+    "LegalDescription": "string",
+    "Number": "string",
+    "StateId": "string",
+    "Street": "string",
+    "StreetLine2": "string",
+    "StreetName": "string",
+    "Suffix": "string",
+    "Unit": "string",
+    "Zip": "string",
+    "Parcel": "string",
+    "Parcel2": "string",
+    "Parcel3": "string",
+    "Parcel4": "string",
+    "Lot": "string",
+    "Block": "string",
+    "Subdivision": "string",
+    "Fips": 0
+  },
+  "Customizations": {
+    "Assignment": {
+      "Pages": 0,
+      "Amount": 0
+    },
+    "Deed": {
+      "Pages": 0,
+      "Amount": 0
+    },
+    "Release": {
+      "Pages": 0,
+      "Amount": 0
+    },
+    "Subordination": {
+      "Pages": 0,
+      "Amount": 0
+    },
+    "PowerOfAttorney": {
+      "Pages": 0,
+      "Amount": 0
+    }
+  },
+  "Questions": [
+    {
+      "Id": "string",
+      "Answer": "string",
+      "QuestionType": "Number"
+    }
+  ],
+  "TitleAgent": {
+    "FinancingType": "Sale",
+    "PolicyType": "New",
+    "LoanType": "string",
+    "LoanAmount": 0,
+    "PurchaseAmount": 0,
+    "PriorPolicyAmount": 0,
+    "YearsSinceLastPolicy": 0
+  },
+  "TransactionType": "Purchase",
+  "RecordingOfficeId": "string",
+  "RecordingOffice": "string"
+}
+```
+
+### Response example
+
+```json
+{
+  "ReportId": "string",
+  "Property": {
+    "FullAddress": "string",
+    "CityDesc": "string",
+    "CountyDesc": "string",
+    "Direction": "string",
+    "IsPropertyAddress": true,
+    "LandAcreage": "string",
+    "LegalDescription": "string",
+    "Number": "string",
+    "StateId": "string",
+    "Street": "string",
+    "StreetLine2": "string",
+    "StreetName": "string",
+    "Suffix": "string",
+    "Unit": "string",
+    "Zip": "string",
+    "Parcel": "string",
+    "Parcel2": "string",
+    "Parcel3": "string",
+    "Parcel4": "string",
+    "Lot": "string",
+    "Block": "string",
+    "Subdivision": "string",
+    "Fips": 0
+  },
+  "Status": "Pending",
+  "CreatedDate": "2023-01-01T00:00:00Z"
+}
+```
+
 ## Get Quote
 
 ### Endpoint
@@ -151,145 +290,6 @@ This README file describes several API endpoints for the Fees API. The document 
     "QuestionType": "Number"
   }
 ]
-```
-
-## Request Quote
-
-### Endpoint
-
-`POST /v1/orders/fees/quote/request`
-
-### Required fields and validation
-
-| Field Name             | Field Description                                          | Data Type         | Validation              |
-|------------------------|------------------------------------------------------------|-------------------|-------------------------|
-| IntegrationId          | Integration ID                                             | string            | Required                |
-| EstimatedClosingDate   | Estimated closing date                                     | DateTime          | Optional                |
-| DocumentTypes          | List of document types                                     | array of strings  | Required                |
-| Mortgage               | Mortgage details                                           | object            | Required                |
-| Property               | Property address and details                               | object            | Required                |
-| Customizations         | Fee customizations                                         | object            | Required                |
-| Questions              | List of fee questions                                      | array of objects  | Optional                |
-| TitleAgent             | Title agent details                                        | object            | Required                |
-| TransactionType        | Transaction type                                           | string            | Required                |
-| RecordingOfficeId      | Recording office ID                                        | string            | Optional                |
-| RecordingOffice        | Recording office name                                      | string            | Optional                |
-
-### Request body example
-
-```json
-{
-  "IntegrationId": "string",
-  "EstimatedClosingDate": "2023-01-01T00:00:00Z",
-  "DocumentTypes": ["Amendment", "Assignment"],
-  "Mortgage": {
-    "Pages": 0,
-    "NewDebtAmount": 0,
-    "OriginalAmount": 0,
-    "UnpaidBalance": 0
-  },
-  "Property": {
-    "FullAddress": "string",
-    "CityDesc": "string",
-    "CountyDesc": "string",
-    "Direction": "string",
-    "IsPropertyAddress": true,
-    "LandAcreage": "string",
-    "LegalDescription": "string",
-    "Number": "string",
-    "StateId": "string",
-    "Street": "string",
-    "StreetLine2": "string",
-    "StreetName": "string",
-    "Suffix": "string",
-    "Unit": "string",
-    "Zip": "string",
-    "Parcel": "string",
-    "Parcel2": "string",
-    "Parcel3": "string",
-    "Parcel4": "string",
-    "Lot": "string",
-    "Block": "string",
-    "Subdivision": "string",
-    "Fips": 0
-  },
-  "Customizations": {
-    "Assignment": {
-      "Pages": 0,
-      "Amount": 0
-    },
-    "Deed": {
-      "Pages": 0,
-      "Amount": 0
-    },
-    "Release": {
-      "Pages": 0,
-      "Amount": 0
-    },
-    "Subordination": {
-      "Pages": 0,
-      "Amount": 0
-    },
-    "PowerOfAttorney": {
-      "Pages": 0,
-      "Amount": 0
-    }
-  },
-  "Questions": [
-    {
-      "Id": "string",
-      "Answer": "string",
-      "QuestionType": "Number"
-    }
-  ],
-  "TitleAgent": {
-    "FinancingType": "Sale",
-    "PolicyType": "New",
-    "LoanType": "string",
-    "LoanAmount": 0,
-    "PurchaseAmount": 0,
-    "PriorPolicyAmount": 0,
-    "YearsSinceLastPolicy": 0
-  },
-  "TransactionType": "Purchase",
-  "RecordingOfficeId": "string",
-  "RecordingOffice": "string"
-}
-```
-
-### Response example
-
-```json
-{
-  "ReportId": "string",
-  "Property": {
-    "FullAddress": "string",
-    "CityDesc": "string",
-    "CountyDesc": "string",
-    "Direction": "string",
-    "IsPropertyAddress": true,
-    "LandAcreage": "string",
-    "LegalDescription": "string",
-    "Number": "string",
-    "StateId": "string",
-    "Street": "string",
-    "StreetLine2": "string",
-    "StreetName": "string",
-    "Suffix": "string",
-    "Unit": "string",
-    "Zip": "string",
-    "Parcel": "string",
-    "Parcel2": "string",
-    "Parcel3": "string",
-    "Parcel4": "string",
-    "Lot": "string",
-    "Block": "string",
-    "Subdivision": "string",
-    "Fips": 0
-  },
-  "Status": "Pending",
-  "CreatedDate": "2023-01-01T00:00:00Z"
-}
 ```
 
 ## Basic Search
