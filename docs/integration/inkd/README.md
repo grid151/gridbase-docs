@@ -7,9 +7,6 @@ This repository contains Inkd integration API data, a third-party API service us
 Setup
 Implement the required payload messages into your project.
 
-# Workflow
-[Title Order eSigning Flow](Title%20Order%20eSigning%20Flow.vsdx)
-
 # Methods
 All Inkd API requests are encapsated in the following end point (Reference https://app.gridbase.io/v1/reference#tag/Signing):
 
