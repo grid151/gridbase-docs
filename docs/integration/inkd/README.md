@@ -1,5 +1,5 @@
 
-# Overview
+# Ink'd Signings
 This repository contains Inkd integration API data, a third-party API service used to document workflow with legally-binding and tamper-proof digital signing, notarization, and document delivery between lender and title provider. This integration provides a seamless way to interact with Inkd using the GridBase API.
 
 
