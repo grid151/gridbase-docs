@@ -26,7 +26,7 @@ All Inkd API requests are encapsated in the following end point (Reference https
 Required Integration Specific Fields:
 
 * **IntegrationId**
-* **TransactionID**
+* **TransactionID**: Unique identifier for loan number, format expected {VendorId}-{LoanNumber}-{TitleId}. Note that vendorId is unique but can be any value, titleId is unique but can also be any value. Loan Number is used by Inkd as a reference ID.
 * **VendorOrderIdentifier:** 
 
 # Ready To Schedule:
