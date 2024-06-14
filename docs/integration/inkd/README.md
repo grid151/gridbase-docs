@@ -12,11 +12,13 @@ All Inkd API requests are encapsated in the following end point (Reference https
 
 * **[ReadyToSchedule](#ready-to-schedule):** Read to Schedule.
 * **[ScheduleConfirmed](#schedule-confirmed):** Schedule Confirmed.
+* **[ReadyToRescheduleSigning](#ready-to-reschedule-signing):** Ready To Reschedule Signing
 * **[RescheduleConfirmed](#reschedule-confirmed):** Reschedule Confirmed.
 * **[NotaryAssigned](#notary-assigned):** Notary Assigned.
 * **[ClosingPackageApprovedByVendor](#closing-package-approved-by-vendor):** Closing Package Approved By Vendor.
 * **[ClosingPackageDeliveredByLender](#closing-package-delivered-by-lender):** Closing Package Delivered By Lender.
 * **[ExecutedDocsUploaded](#executed-docs-uploaded):** Executed Docs Uploaded.
+* **[ExecutedDocsDelivered](#executed-docs-delivered):** Executed Docs Delivered
 * **[eSignedCompleted](#electronic-signed-completed):** Electronic Signed Completed.
 * **[CancelAllDocs](#cancel-all-docs):** Cancel All Docs.
 * **[CancelOrder](#cancel-order):** Cancel Order.
@@ -396,6 +398,250 @@ Example:
 	</DEAL_SETS>
 </MESSAGE>
 ````
+# Ready To Reschedule Signing
+
+* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+## Usage
+Ready To Reschedule Signing
+
+ReadyToRescheduleSigning
+Example:
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MESSAGE xmlns:vtp="http://www.archwellsolutions.com/schema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.mismo.org/residential/2009/schemas" MISMOReferenceModelIdentifier="3.4">
+	<ABOUT_VERSIONS>
+		<ABOUT_VERSION SequenceNumber="1">
+			<CreatedDatetime DisplayTimeZoneText="UTC-04:00">2023-08-24T15:57:41-04:00</CreatedDatetime>
+			<DataVersionIdentifier IdentifierOwnerURI="urn:lender.com:2013:ApplicationID">Lakewood</DataVersionIdentifier>
+			<DataVersionName>SourceSystem</DataVersionName>
+		</ABOUT_VERSION>
+		<ABOUT_VERSION SequenceNumber="2">
+			<CreatedDatetime DisplayTimeZoneText="UTC-04:00">2023-08-24T15:57:41-04:00</CreatedDatetime>
+			<DataVersionIdentifier IdentifierOwnerURI="urn:lender.com:2013:EnvironmentID">PROD</DataVersionIdentifier>
+			<DataVersionName>SourceEnvironment</DataVersionName>
+		</ABOUT_VERSION>
+	</ABOUT_VERSIONS>
+	<DEAL_SETS>
+		<DEAL_SET>
+			<DEALS>
+				<DEAL>
+					<LOANS>
+						<LOAN>
+							<LOAN_COMMENTS>
+								<LOAN_COMMENT SequenceNumber="1">
+									<LoanCommentText>Closing Scheduled Date:2023-08-29; Closing Scheduled Time:11:00 AM; Closing Scheduled TimeZone:ET; Closing Location:26 Green Ave,Subject Property,Hempstead,NY-11550; Borrower Contact Phone Number:6464760894,7185251883; Loan Closer Name:Jaci Rufus; FulfillmentCenter:FHMC</LoanCommentText>
+								</LOAN_COMMENT>
+							</LOAN_COMMENTS>
+							<TERMS_OF_LOAN>
+								<LoanPurposeType>Refinance</LoanPurposeType>
+							</TERMS_OF_LOAN>
+							<EXTENSION>
+								<OTHER>
+									<vtp:Transaction_Information xmlns:fmc="http://intg.freedommortgage.com/schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+										<vtp:CreatedBy>303</vtp:CreatedBy>
+										<vtp:EventId>ReadyToRescheduleSigning</vtp:EventId>
+										<vtp:TransactionID>303-0151835931-1100578476</vtp:TransactionID>
+										<vtp:UserName>bpmadmin</vtp:UserName>
+										<vtp:VendorOrderIdentifier>1013</vtp:VendorOrderIdentifier>
+									</vtp:Transaction_Information>
+									<vtp:MortgageDoc_Information xmlns:fmc="http://intg.freedommortgage.com/schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+										<vtp:MortgagePageCount>20</vtp:MortgagePageCount>
+										<vtp:DeedPageCount>3</vtp:DeedPageCount>
+									</vtp:MortgageDoc_Information>
+								</OTHER>
+							</EXTENSION>
+						</LOAN>
+					</LOANS>
+					<PARTIES>
+						<PARTY SequenceNumber="1" xlink:label="PARTY1">
+							<INDIVIDUAL>
+								<CONTACT_POINTS>
+									<CONTACT_POINT SequenceNumber="1">
+										<CONTACT_POINT_EMAIL>
+											<ContactPointEmailValue>carminac727@gmail.com</ContactPointEmailValue>
+										</CONTACT_POINT_EMAIL>
+										<CONTACT_POINT_DETAIL>
+											<ContactPointRoleType>Other</ContactPointRoleType>
+											<ContactPointRoleTypeOtherDescription>Personal email</ContactPointRoleTypeOtherDescription>
+										</CONTACT_POINT_DETAIL>
+									</CONTACT_POINT>
+									<CONTACT_POINT SequenceNumber="2">
+										<CONTACT_POINT_TELEPHONE>
+											<ContactPointTelephoneValue>6464760894</ContactPointTelephoneValue>
+										</CONTACT_POINT_TELEPHONE>
+										<CONTACT_POINT_DETAIL>
+											<ContactPointRoleType>Home</ContactPointRoleType>
+										</CONTACT_POINT_DETAIL>
+									</CONTACT_POINT>
+									<CONTACT_POINT SequenceNumber="3">
+										<CONTACT_POINT_TELEPHONE>
+											<ContactPointTelephoneValue>7185251883</ContactPointTelephoneValue>
+										</CONTACT_POINT_TELEPHONE>
+										<CONTACT_POINT_DETAIL>
+											<ContactPointRoleType>Work</ContactPointRoleType>
+										</CONTACT_POINT_DETAIL>
+									</CONTACT_POINT>
+								</CONTACT_POINTS>
+								<NAME>
+									<FirstName>Carmina</FirstName>
+									<FullName>Carmina Castro-Sioson</FullName>
+									<LastName>Castro-Sioson</LastName>
+									<MiddleName/>
+								</NAME>
+							</INDIVIDUAL>
+							<ADDRESSES>
+								<ADDRESS>
+									<AddressLineText>26 Green Ave</AddressLineText>
+									<AddressType>Mailing</AddressType>
+									<CityName>HEMPSTEAD</CityName>
+									<PostalCode>11550</PostalCode>
+									<StateCode>NY</StateCode>
+								</ADDRESS>
+							</ADDRESSES>
+							<ROLES>
+								<ROLE SequenceNumber="1" xlink:label="PARTY1_ROLE1">
+									<ROLE_DETAIL>
+										<PartyRoleType>Borrower</PartyRoleType>
+									</ROLE_DETAIL>
+								</ROLE>
+							</ROLES>
+						</PARTY>
+						<PARTY SequenceNumber="2" xlink:label="PARTY2">
+							<INDIVIDUAL>
+								<CONTACT_POINTS>
+									<CONTACT_POINT SequenceNumber="1">
+										<CONTACT_POINT_EMAIL>
+											<ContactPointEmailValue>carminac727@gmail.com</ContactPointEmailValue>
+										</CONTACT_POINT_EMAIL>
+										<CONTACT_POINT_DETAIL>
+											<ContactPointRoleType>Other</ContactPointRoleType>
+											<ContactPointRoleTypeOtherDescription>Personal email</ContactPointRoleTypeOtherDescription>
+										</CONTACT_POINT_DETAIL>
+									</CONTACT_POINT>
+									<CONTACT_POINT SequenceNumber="2">
+										<CONTACT_POINT_TELEPHONE>
+											<ContactPointTelephoneValue>6464760894</ContactPointTelephoneValue>
+										</CONTACT_POINT_TELEPHONE>
+										<CONTACT_POINT_DETAIL>
+											<ContactPointRoleType>Home</ContactPointRoleType>
+										</CONTACT_POINT_DETAIL>
+									</CONTACT_POINT>
+								</CONTACT_POINTS>
+								<NAME>
+									<FirstName>Teody</FirstName>
+									<FullName>Teody Sioson</FullName>
+									<LastName>Sioson</LastName>
+									<MiddleName/>
+								</NAME>
+							</INDIVIDUAL>
+							<ADDRESSES>
+								<ADDRESS>
+									<AddressLineText>26 Green Ave</AddressLineText>
+									<AddressType>Mailing</AddressType>
+									<CityName>HEMPSTEAD</CityName>
+									<PostalCode>11550</PostalCode>
+									<StateCode>NY</StateCode>
+								</ADDRESS>
+							</ADDRESSES>
+							<ROLES>
+								<ROLE SequenceNumber="1" xlink:label="PARTY2_ROLE1">
+									<ROLE_DETAIL>
+										<PartyRoleType>Borrower</PartyRoleType>
+									</ROLE_DETAIL>
+								</ROLE>
+							</ROLES>
+						</PARTY>
+						<PARTY SequenceNumber="3" xlink:label="PARTY3">
+							<INDIVIDUAL>
+								<CONTACT_POINTS>
+									<CONTACT_POINT SequenceNumber="1">
+										<CONTACT_POINT_EMAIL>
+											<ContactPointEmailValue>Jaci.Rufus@FreedomMortgage.com</ContactPointEmailValue>
+										</CONTACT_POINT_EMAIL>
+										<CONTACT_POINT_DETAIL>
+											<ContactPointRoleType>Work</ContactPointRoleType>
+										</CONTACT_POINT_DETAIL>
+									</CONTACT_POINT>
+									<CONTACT_POINT SequenceNumber="2">
+										<CONTACT_POINT_TELEPHONE>
+											<ContactPointTelephoneValue>8002203333</ContactPointTelephoneValue>
+										</CONTACT_POINT_TELEPHONE>
+										<CONTACT_POINT_DETAIL>
+											<ContactPointRoleType>Home</ContactPointRoleType>
+										</CONTACT_POINT_DETAIL>
+									</CONTACT_POINT>
+								</CONTACT_POINTS>
+								<NAME>
+									<FirstName>Jaci</FirstName>
+									<FullName>Jaci Rufus</FullName>
+									<LastName>Rufus</LastName>
+								</NAME>
+							</INDIVIDUAL>
+							<ADDRESSES>
+								<ADDRESS>
+									<AddressLineText>907 Pleasant Valley Avenue Suite 3</AddressLineText>
+									<AddressType>Mailing</AddressType>
+									<CityName>Mount Laurel</CityName>
+									<PostalCode>08054</PostalCode>
+									<StateCode>NJ</StateCode>
+								</ADDRESS>
+							</ADDRESSES>
+							<ROLES>
+								<ROLE SequenceNumber="1" xlink:label="PARTY3_ROLE1">
+									<FULFILLMENT_PARTY>
+										<FulfillmentPartyRoleType>FHMC</FulfillmentPartyRoleType>
+									</FULFILLMENT_PARTY>
+									<ROLE_DETAIL>
+										<PartyRoleType>LoanCloser</PartyRoleType>
+									</ROLE_DETAIL>
+								</ROLE>
+							</ROLES>
+						</PARTY>
+					</PARTIES>
+					<SERVICES>
+						<SERVICE SequenceNumber="1" xlink:label="SERVICE1">
+							<CLOSING>
+								<CLOSING_LOCATIONS>
+									<CLOSING_LOCATION SequenceNumber="1">
+										<ADDRESS>
+											<AddressAdditionalLineText/>
+											<AddressLineText>26 Green Ave</AddressLineText>
+											<CityName>Hempstead</CityName>
+											<PostalCode>11550</PostalCode>
+											<StateCode>NY</StateCode>
+										</ADDRESS>
+										<CLOSING_LOCATION_DETAIL>
+											<ClosingEventLocationType>Other</ClosingEventLocationType>
+											<ClosingEventLocationTypeOtherDescription>Subject Property</ClosingEventLocationTypeOtherDescription>
+										</CLOSING_LOCATION_DETAIL>
+									</CLOSING_LOCATION>
+								</CLOSING_LOCATIONS>
+								<CLOSING_REQUEST>
+									<CLOSING_REQUEST_DETAIL>
+										<ClosingScheduledDatetime DisplayTimeZoneText="UTC-04:00">2023-08-29T11:00:00-04:00</ClosingScheduledDatetime>
+									</CLOSING_REQUEST_DETAIL>
+								</CLOSING_REQUEST>
+							</CLOSING>
+							<SERVICE_PRODUCT>
+								<SERVICE_PRODUCT_REQUEST>
+									<SERVICE_PRODUCT_NAMES>
+										<SERVICE_PRODUCT_NAME>
+											<SERVICE_PRODUCT_NAME_DETAIL>
+												<ServiceProductNameIdentifier>200146487868</ServiceProductNameIdentifier>
+											</SERVICE_PRODUCT_NAME_DETAIL>
+										</SERVICE_PRODUCT_NAME>
+									</SERVICE_PRODUCT_NAMES>
+								</SERVICE_PRODUCT_REQUEST>
+							</SERVICE_PRODUCT>
+						</SERVICE>
+					</SERVICES>
+				</DEAL>
+			</DEALS>
+		</DEAL_SET>
+	</DEAL_SETS>
+</MESSAGE>
+````
+
 # Reschedule Confirmed:
 
 * **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
@@ -801,6 +1047,74 @@ Example:
 	</DOCUMENT_SETS>
 </MESSAGE>
 ````
+
+# Executed Docs Delivered
+
+* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+## Usage
+Executed Docs Delivered
+
+ExecutedDocsDelivered
+Example:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<MESSAGE xmlns="http://www.mismo.org/residential/2009/schemas" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:vtp="http://www.archwellsolutions.com/schema" MISMOReferenceModelIdentifier="3.4">
+	<ABOUT_VERSIONS>
+		<ABOUT_VERSION SequenceNumber="1">
+			<CreatedDatetime DisplayTimeZoneText="UTC-4:00">2024-03-21T13:31:38-04:00</CreatedDatetime>
+			<DataVersionIdentifier IdentifierOwnerURI="urn:lender.com:2013:ApplicationID">SSS</DataVersionIdentifier>
+			<DataVersionName>SourceSystem</DataVersionName>
+		</ABOUT_VERSION>
+		<ABOUT_VERSION SequenceNumber="2">
+			<CreatedDatetime DisplayTimeZoneText="UTC-4:00">2024-03-21T13:31:38-04:00</CreatedDatetime>
+			<DataVersionIdentifier IdentifierOwnerURI="urn:lender.com:2013:EnvironmentID">Stage</DataVersionIdentifier>
+			<DataVersionName>SourceEnvironment</DataVersionName>
+		</ABOUT_VERSION>
+	</ABOUT_VERSIONS>
+	<DEAL_SETS>
+		<DEAL_SET>
+			<DEALS>
+				<DEAL>
+					<LOANS>
+						<LOAN>
+							<LOAN_COMMENTS>
+								<LOAN_COMMENT SequenceNumber="1">
+									<LoanCommentText>Closing Package Executed successfully</LoanCommentText>
+								</LOAN_COMMENT>
+							</LOAN_COMMENTS>
+							<EXTENSION>
+								<OTHER>
+									<vtp:Transaction_Information>
+										<vtp:EventId>ExecutedDocsDelivered</vtp:EventId>
+										<vtp:TransactionID>4-0107409781-1100401844</vtp:TransactionID>
+										<vtp:VendorOrderIdentifier>161643</vtp:VendorOrderIdentifier>
+									</vtp:Transaction_Information>
+								</OTHER>
+							</EXTENSION>
+						</LOAN>
+					</LOANS>
+					<SERVICES>
+						<SERVICE SequenceNumber="1" xlink:label="SERVICE1">
+							<SERVICE_PRODUCT>
+								<SERVICE_PRODUCT_REQUEST>
+									<SERVICE_PRODUCT_NAMES>
+										<SERVICE_PRODUCT_NAME>
+											<SERVICE_PRODUCT_NAME_DETAIL>
+												<ServiceProductNameIdentifier>2001808546</ServiceProductNameIdentifier>
+											</SERVICE_PRODUCT_NAME_DETAIL>
+										</SERVICE_PRODUCT_NAME>
+									</SERVICE_PRODUCT_NAMES>
+								</SERVICE_PRODUCT_REQUEST>
+							</SERVICE_PRODUCT>
+						</SERVICE>
+					</SERVICES>
+				</DEAL>
+			</DEALS>
+		</DEAL_SET>
+	</DEAL_SETS>
+</MESSAGE>
+````
+
 # Electronic Signed Completed
 
 * **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
