@@ -11,7 +11,7 @@ export default {
   favicon: "img/favicon.png",
 
   // Set the production url of your site here
-  url: "https://app.gridbase.io",
+  url: "https://grid151.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/gridbase-docs/",
@@ -67,6 +67,7 @@ export default {
         config: path.join(__dirname, "redocly.yaml"),
         specs: [
           {
+            id: "gridbase-api",
             spec: "api/swagger.json",
             route: "/api",
           },
