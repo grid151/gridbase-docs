@@ -1,42 +1,46 @@
-
 # Ink'd Signings
+
 This repository contains Inkd integration API data, a third-party API service used to document workflow with legally-binding and tamper-proof digital signing, notarization, and document delivery between lender and title provider. This integration provides a seamless way to interact with Inkd using the GridBase API.
 
-
 # How to use
+
 Setup
 Implement the required payload messages into your project.
 
 # Methods
+
 All Inkd API requests are encapsated in the following end point (Reference https://app.gridbase.io/v1/reference#tag/Signing):
 
-* **[ReadyToSchedule](#ready-to-schedule):** Read to Schedule.
-* **[ScheduleConfirmed](#schedule-confirmed):** Schedule Confirmed.
-* **[ReadyToRescheduleSigning](#ready-to-reschedule-signing):** Ready To Reschedule Signing
-* **[RescheduleConfirmed](#reschedule-confirmed):** Reschedule Confirmed.
-* **[NotaryAssigned](#notary-assigned):** Notary Assigned.
-* **[ClosingPackageApprovedByVendor](#closing-package-approved-by-vendor):** Closing Package Approved By Vendor.
-* **[ClosingPackageDeliveredByLender](#closing-package-delivered-by-lender):** Closing Package Delivered By Lender.
-* **[ExecutedDocsUploaded](#executed-docs-uploaded):** Executed Docs Uploaded.
-* **[ExecutedDocsDelivered](#executed-docs-delivered):** Executed Docs Delivered
-* **[eSignedCompleted](#electronic-signed-completed):** Electronic Signed Completed.
-* **[CancelAllDocs](#cancel-all-docs):** Cancel All Docs.
-* **[CancelOrder](#cancel-order):** Cancel Order.
+- **[ReadyToSchedule](#ready-to-schedule):** Read to Schedule.
+- **[ScheduleConfirmed](#schedule-confirmed):** Schedule Confirmed.
+- **[ReadyToRescheduleSigning](#ready-to-reschedule-signing):** Ready To Reschedule Signing
+- **[RescheduleConfirmed](#reschedule-confirmed):** Reschedule Confirmed.
+- **[NotaryAssigned](#notary-assigned):** Notary Assigned.
+- **[ClosingPackageApprovedByVendor](#closing-package-approved-by-vendor):** Closing Package Approved By Vendor.
+- **[ClosingPackageDeliveredByLender](#closing-package-delivered-by-lender):** Closing Package Delivered By Lender.
+- **[ExecutedDocsUploaded](#executed-docs-uploaded):** Executed Docs Uploaded.
+- **[ExecutedDocsDelivered](#executed-docs-delivered):** Executed Docs Delivered
+- **[eSignedCompleted](#electronic-signed-completed):** Electronic Signed Completed.
+- **[CancelAllDocs](#cancel-all-docs):** Cancel All Docs.
+- **[CancelOrder](#cancel-order):** Cancel Order.
 
 Required Integration Specific Fields:
 
-* **IntegrationId**
-* **TransactionID**: Unique identifier for loan number, format expected {VendorId}-{LoanNumber}-{TitleId}. Note that vendorId is unique but can be any value, titleId is unique but can also be any value. Loan Number is used by Inkd as a reference ID.
-* **VendorOrderIdentifier:** 
+- **IntegrationId**
+- **TransactionID**: Unique identifier for loan number, format expected `{VendorId}-{LoanNumber}-{TitleId}`. Note that vendorId is unique but can be any value, titleId is unique but can also be any value. Loan Number is used by Inkd as a reference ID.
+- **VendorOrderIdentifier:**
 
 # Ready To Schedule:
 
-* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+- **API Endpoint:** https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+
 ## Usage
+
 Ready to schedule.
 
 ReadyToSchedule
 Example:
+
 ```xml
 <MESSAGE xmlns="http://www.mismo.org/residential/2009/schemas" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:vtp="http://www.archwellsolutions.com/schema" xmlns:fmc="http://intg.freedommortgage.com/schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MISMOReferenceModelIdentifier="3.4">
 	<ABOUT_VERSIONS>
@@ -276,15 +280,19 @@ Example:
 		</DEAL_SET>
 	</DEAL_SETS>
 </MESSAGE>
-````
+```
+
 # Schedule Confirmed:
 
-* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+- **API Endpoint:** https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+
 ## Usage
+
 Schedule Confirmed
 
 ScheduleConfirmed
 Example:
+
 ```xml
 <MESSAGE xmlns:vtp="http://www.archwellsolutions.com/schema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.mismo.org/residential/2009/schemas" MISMOReferenceModelIdentifier="3.4">
 	<ABOUT_VERSIONS>
@@ -397,15 +405,19 @@ Example:
 		</DEAL_SET>
 	</DEAL_SETS>
 </MESSAGE>
-````
+```
+
 # Ready To Reschedule Signing
 
-* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+- **API Endpoint:** https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+
 ## Usage
+
 Ready To Reschedule Signing
 
 ReadyToRescheduleSigning
 Example:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <MESSAGE xmlns:vtp="http://www.archwellsolutions.com/schema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.mismo.org/residential/2009/schemas" MISMOReferenceModelIdentifier="3.4">
@@ -640,26 +652,32 @@ Example:
 		</DEAL_SET>
 	</DEAL_SETS>
 </MESSAGE>
-````
+```
 
 # Reschedule Confirmed:
 
-* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+- **API Endpoint:** https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+
 ## Usage
+
 Reschedule Confirmed
 
 RescheduleConfirmed
 Example:
+
 - See ScheduledConfirmed
 
 # Notary Assigned:
 
-* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+- **API Endpoint:** https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+
 ## Usage
+
 Notary Assigned
 
 NotaryAssigned
 Example:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <MESSAGE xmlns:vtp="http://www.archwellsolutions.com/schema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.mismo.org/residential/2009/schemas" MISMOReferenceModelIdentifier="3.4">
@@ -760,16 +778,19 @@ Example:
 		</DEAL_SET>
 	</DEAL_SETS>
 </MESSAGE>
-````
+```
 
 # Closing Package Approved By Vendor
 
-* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+- **API Endpoint:** https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+
 ## Usage
+
 Closing Package Approved By Vendor
 
 ClosingPackageApprovedByVendor
 Example:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <MESSAGE xmlns:vtp="http://www.archwellsolutions.com/schema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.mismo.org/residential/2009/schemas" MISMOReferenceModelIdentifier="3.4">
@@ -836,12 +857,15 @@ Example:
 
 # Closing Package Delivered By Lender
 
-* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+- **API Endpoint:** https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+
 ## Usage
+
 Closing Package Delivered By Lender
 
 ClosingPackageDeliveredByLender
 Example:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MESSAGE xmlns="http://www.mismo.org/residential/2009/schemas" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:vtp="http://www.archwellsolutions.com/schema" MISMOReferenceModelIdentifier="3.4">
@@ -958,12 +982,15 @@ Example:
 
 # Executed Docs Uploaded
 
-* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+- **API Endpoint:** https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+
 ## Usage
+
 Executed Docs Uploaded
 
 ExecutedDocsUploaded
 Example:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <MESSAGE xmlns:vtp="http://www.archwellsolutions.com/schema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.mismo.org/residential/2009/schemas" MISMOReferenceModelIdentifier="3.4">
@@ -1046,16 +1073,19 @@ Example:
 		</DOCUMENT_SET>
 	</DOCUMENT_SETS>
 </MESSAGE>
-````
+```
 
 # Executed Docs Delivered
 
-* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+- **API Endpoint:** https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+
 ## Usage
+
 Executed Docs Delivered
 
 ExecutedDocsDelivered
 Example:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MESSAGE xmlns="http://www.mismo.org/residential/2009/schemas" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:vtp="http://www.archwellsolutions.com/schema" MISMOReferenceModelIdentifier="3.4">
@@ -1113,16 +1143,19 @@ Example:
 		</DEAL_SET>
 	</DEAL_SETS>
 </MESSAGE>
-````
+```
 
 # Electronic Signed Completed
 
-* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+- **API Endpoint:** https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+
 ## Usage
+
 Electronic Signed Completed
 
 eSignedCompleted
 Example:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MESSAGE xmlns="http://www.mismo.org/residential/2009/schemas" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:vtp="http://www.archwellsolutions.com/schema" MISMOReferenceModelIdentifier="3.4">
@@ -1613,12 +1646,15 @@ Example:
 
 # Cancel All Docs
 
-* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+- **API Endpoint:** https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+
 ## Usage
+
 Cancel All Docs
 
 CancelAllDocs
 Example:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <MESSAGE xmlns:vtp="http://www.archwellsolutions.com/schema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.mismo.org/residential/2009/schemas" MISMOReferenceModelIdentifier="3.4">
@@ -1677,16 +1713,19 @@ Example:
 		</DEAL_SET>
 	</DEAL_SETS>
 </MESSAGE>
-````
+```
 
 # Cancel Order
 
-* **API Endpoint:**  https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+- **API Endpoint:** https://app.gridbase.io/v1/orders/signing/signing-process/{IntegrationId}
+
 ## Usage
+
 Cancel Order
 
 CancelOrder
 Example:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <MESSAGE xmlns:vtp="http://www.archwellsolutions.com/schema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.mismo.org/residential/2009/schemas" MISMOReferenceModelIdentifier="3.4">
@@ -1790,7 +1829,8 @@ Example:
 		</DEAL_SET>
 	</DEAL_SETS>
 </MESSAGE>
-````
+```
 
 # Summary
+
 TBD
