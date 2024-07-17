@@ -669,6 +669,19 @@ paths:
                 note:
                   type: string
                   nullable: true
+                placementNotes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subject:
+                        type: string
+                        nullable: true
+                      body:
+                        type: string
+                        nullable: true
+                    additionalProperties: false
+                  nullable: true
                 orderDetails:
                   type: object
                   properties:
@@ -1644,6 +1657,19 @@ paths:
                 note:
                   type: string
                   nullable: true
+                placementNotes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subject:
+                        type: string
+                        nullable: true
+                      body:
+                        type: string
+                        nullable: true
+                    additionalProperties: false
+                  nullable: true
                 orderDetails:
                   type: object
                   properties:
@@ -2618,6 +2644,19 @@ paths:
                   nullable: true
                 note:
                   type: string
+                  nullable: true
+                placementNotes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subject:
+                        type: string
+                        nullable: true
+                      body:
+                        type: string
+                        nullable: true
+                    additionalProperties: false
                   nullable: true
                 orderDetails:
                   type: object
@@ -3597,6 +3636,19 @@ paths:
                     nullable: true
                   note:
                     type: string
+                    nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
                     nullable: true
                   notes:
                     type: array
@@ -5815,6 +5867,19 @@ paths:
                   note:
                     type: string
                     nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
+                    nullable: true
                   notes:
                     type: array
                     items:
@@ -8031,6 +8096,19 @@ paths:
                     nullable: true
                   note:
                     type: string
+                    nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
                     nullable: true
                   notes:
                     type: array
@@ -10277,6 +10355,19 @@ paths:
                   note:
                     type: string
                     nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
+                    nullable: true
                   notes:
                     type: array
                     items:
@@ -12494,6 +12585,19 @@ paths:
                   note:
                     type: string
                     nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
+                    nullable: true
                   notes:
                     type: array
                     items:
@@ -14710,6 +14814,19 @@ paths:
                     nullable: true
                   note:
                     type: string
+                    nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
                     nullable: true
                   notes:
                     type: array
@@ -16956,6 +17073,19 @@ paths:
                   note:
                     type: string
                     nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
+                    nullable: true
                   notes:
                     type: array
                     items:
@@ -19173,6 +19303,19 @@ paths:
                   note:
                     type: string
                     nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
+                    nullable: true
                   notes:
                     type: array
                     items:
@@ -21389,6 +21532,19 @@ paths:
                     nullable: true
                   note:
                     type: string
+                    nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
                     nullable: true
                   notes:
                     type: array
@@ -23657,6 +23813,19 @@ paths:
                   note:
                     type: string
                     nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
+                    nullable: true
                   notes:
                     type: array
                     items:
@@ -25874,6 +26043,19 @@ paths:
                   note:
                     type: string
                     nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
+                    nullable: true
                   notes:
                     type: array
                     items:
@@ -28090,6 +28272,19 @@ paths:
                     nullable: true
                   note:
                     type: string
+                    nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
                     nullable: true
                   notes:
                     type: array
@@ -30328,6 +30523,19 @@ paths:
                 note:
                   type: string
                   nullable: true
+                placementNotes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subject:
+                        type: string
+                        nullable: true
+                      body:
+                        type: string
+                        nullable: true
+                    additionalProperties: false
+                  nullable: true
                 orderDetails:
                   type: object
                   properties:
@@ -31303,6 +31511,19 @@ paths:
                 note:
                   type: string
                   nullable: true
+                placementNotes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subject:
+                        type: string
+                        nullable: true
+                      body:
+                        type: string
+                        nullable: true
+                    additionalProperties: false
+                  nullable: true
                 orderDetails:
                   type: object
                   properties:
@@ -32277,6 +32498,19 @@ paths:
                   nullable: true
                 note:
                   type: string
+                  nullable: true
+                placementNotes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subject:
+                        type: string
+                        nullable: true
+                      body:
+                        type: string
+                        nullable: true
+                    additionalProperties: false
                   nullable: true
                 orderDetails:
                   type: object
@@ -33256,6 +33490,19 @@ paths:
                     nullable: true
                   note:
                     type: string
+                    nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
                     nullable: true
                   notes:
                     type: array
@@ -35474,6 +35721,19 @@ paths:
                   note:
                     type: string
                     nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
+                    nullable: true
                   notes:
                     type: array
                     items:
@@ -37690,6 +37950,19 @@ paths:
                     nullable: true
                   note:
                     type: string
+                    nullable: true
+                  placementNotes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subject:
+                          type: string
+                          nullable: true
+                        body:
+                          type: string
+                          nullable: true
+                      additionalProperties: false
                     nullable: true
                   notes:
                     type: array

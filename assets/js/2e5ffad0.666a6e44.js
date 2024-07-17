@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgridbase_docs=self.webpackChunkgridbase_docs||[]).push([[5947],{82065:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-redoc","id":"gridbase-api"}')}}]);
