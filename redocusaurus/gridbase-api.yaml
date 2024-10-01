@@ -3770,6 +3770,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -3821,6 +3825,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -4823,6 +4831,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -5019,6 +5036,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -5732,6 +5753,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -6000,6 +6025,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -6051,6 +6080,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -7053,6 +7086,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -7249,6 +7291,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -7962,6 +8008,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -8230,6 +8280,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -8281,6 +8335,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -9283,6 +9341,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -9479,6 +9546,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -10192,6 +10263,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -10488,6 +10563,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -10539,6 +10618,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -11541,6 +11624,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -11737,6 +11829,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -12450,6 +12546,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -12718,6 +12818,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -12769,6 +12873,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -13771,6 +13879,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -13967,6 +14084,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -14680,6 +14801,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -14948,6 +15073,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -14999,6 +15128,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -16001,6 +16134,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -16197,6 +16339,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -16910,6 +17056,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -17206,6 +17356,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -17257,6 +17411,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -18259,6 +18417,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -18455,6 +18622,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -19168,6 +19339,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -19436,6 +19611,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -19487,6 +19666,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -20489,6 +20672,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -20685,6 +20877,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -21398,6 +21594,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -21666,6 +21866,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -21717,6 +21921,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -22719,6 +22927,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -22915,6 +23132,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -23628,6 +23849,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -23946,6 +24171,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -23997,6 +24226,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -24999,6 +25232,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -25195,6 +25437,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -25908,6 +26154,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -26176,6 +26426,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -26227,6 +26481,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -27229,6 +27487,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -27425,6 +27692,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -28138,6 +28409,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -28406,6 +28681,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -28457,6 +28736,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -29459,6 +29742,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -29655,6 +29947,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -30368,6 +30664,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -33624,6 +33924,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -33675,6 +33979,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -34677,6 +34985,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -34873,6 +35190,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -35586,6 +35907,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -35854,6 +36179,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -35905,6 +36234,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -36907,6 +37240,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -37103,6 +37445,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -37816,6 +38162,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -38084,6 +38434,10 @@ paths:
                               externalId:
                                 type: string
                                 nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
+                                nullable: true
                             additionalProperties: false
                           nullable: true
                         fileActionsID:
@@ -38135,6 +38489,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -39137,6 +39495,15 @@ paths:
                         actionID:
                           type: integer
                           format: int32
+                        requireNote:
+                          type: integer
+                          format: int32
+                        requireNoteReceive:
+                          type: integer
+                          format: int32
+                        notePromptString:
+                          type: string
+                          nullable: true
                         displayName:
                           type: string
                           nullable: true
@@ -39333,6 +39700,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -40046,6 +40417,10 @@ paths:
                                       nullable: true
                                     externalId:
                                       type: string
+                                      nullable: true
+                                    disbursementDate:
+                                      type: string
+                                      format: date-time
                                       nullable: true
                                   additionalProperties: false
                                 nullable: true
@@ -44074,6 +44449,15 @@ paths:
                     actionID:
                       type: integer
                       format: int32
+                    requireNote:
+                      type: integer
+                      format: int32
+                    requireNoteReceive:
+                      type: integer
+                      format: int32
+                    notePromptString:
+                      type: string
+                      nullable: true
                     displayName:
                       type: string
                       nullable: true
@@ -44270,6 +44654,10 @@ paths:
                                   nullable: true
                                 externalId:
                                   type: string
+                                  nullable: true
+                                disbursementDate:
+                                  type: string
+                                  format: date-time
                                   nullable: true
                               additionalProperties: false
                             nullable: true
@@ -44297,6 +44685,15 @@ paths:
                     actionID:
                       type: integer
                       format: int32
+                    requireNote:
+                      type: integer
+                      format: int32
+                    requireNoteReceive:
+                      type: integer
+                      format: int32
+                    notePromptString:
+                      type: string
+                      nullable: true
                     displayName:
                       type: string
                       nullable: true
@@ -44493,6 +44890,10 @@ paths:
                                   nullable: true
                                 externalId:
                                   type: string
+                                  nullable: true
+                                disbursementDate:
+                                  type: string
+                                  format: date-time
                                   nullable: true
                               additionalProperties: false
                             nullable: true
@@ -44520,6 +44921,15 @@ paths:
                     actionID:
                       type: integer
                       format: int32
+                    requireNote:
+                      type: integer
+                      format: int32
+                    requireNoteReceive:
+                      type: integer
+                      format: int32
+                    notePromptString:
+                      type: string
+                      nullable: true
                     displayName:
                       type: string
                       nullable: true
@@ -44716,6 +45126,10 @@ paths:
                                   nullable: true
                                 externalId:
                                   type: string
+                                  nullable: true
+                                disbursementDate:
+                                  type: string
+                                  format: date-time
                                   nullable: true
                               additionalProperties: false
                             nullable: true
@@ -47121,6 +47535,15 @@ paths:
                   displayName:
                     type: string
                     nullable: true
+                  requireNote:
+                    type: integer
+                    format: int32
+                  requireNoteReceive:
+                    type: integer
+                    format: int32
+                  notePromptString:
+                    type: string
+                    nullable: true
                   canStart:
                     type: boolean
                   startDue:
@@ -47170,6 +47593,15 @@ paths:
                   displayName:
                     type: string
                     nullable: true
+                  requireNote:
+                    type: integer
+                    format: int32
+                  requireNoteReceive:
+                    type: integer
+                    format: int32
+                  notePromptString:
+                    type: string
+                    nullable: true
                   canStart:
                     type: boolean
                   startDue:
@@ -47217,6 +47649,15 @@ paths:
                     type: integer
                     format: int32
                   displayName:
+                    type: string
+                    nullable: true
+                  requireNote:
+                    type: integer
+                    format: int32
+                  requireNoteReceive:
+                    type: integer
+                    format: int32
+                  notePromptString:
                     type: string
                     nullable: true
                   canStart:
@@ -49362,6 +49803,10 @@ paths:
                             externalId:
                               type: string
                               nullable: true
+                            disbursementDate:
+                              type: string
+                              format: date-time
+                              nullable: true
                           additionalProperties: false
                         nullable: true
                       fileActionsID:
@@ -49799,6 +50244,10 @@ paths:
                             externalId:
                               type: string
                               nullable: true
+                            disbursementDate:
+                              type: string
+                              format: date-time
+                              nullable: true
                           additionalProperties: false
                         nullable: true
                       fileActionsID:
@@ -50235,6 +50684,10 @@ paths:
                               nullable: true
                             externalId:
                               type: string
+                              nullable: true
+                            disbursementDate:
+                              type: string
+                              format: date-time
                               nullable: true
                           additionalProperties: false
                         nullable: true
@@ -50431,6 +50884,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   nullable: true
                 fileActionsID:
@@ -50565,6 +51022,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   nullable: true
                 fileActionsID:
@@ -50698,6 +51159,10 @@ paths:
                         nullable: true
                       externalId:
                         type: string
+                        nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
                         nullable: true
                     additionalProperties: false
                   nullable: true
@@ -51273,6 +51738,10 @@ paths:
                                 externalId:
                                   type: string
                                   nullable: true
+                                disbursementDate:
+                                  type: string
+                                  format: date-time
+                                  nullable: true
                               additionalProperties: false
                             nullable: true
                           fileActionsID:
@@ -51712,6 +52181,10 @@ paths:
                                 externalId:
                                   type: string
                                   nullable: true
+                                disbursementDate:
+                                  type: string
+                                  format: date-time
+                                  nullable: true
                               additionalProperties: false
                             nullable: true
                           fileActionsID:
@@ -52150,6 +52623,10 @@ paths:
                                   nullable: true
                                 externalId:
                                   type: string
+                                  nullable: true
+                                disbursementDate:
+                                  type: string
+                                  format: date-time
                                   nullable: true
                               additionalProperties: false
                             nullable: true
@@ -52615,6 +53092,10 @@ paths:
                             externalId:
                               type: string
                               nullable: true
+                            disbursementDate:
+                              type: string
+                              format: date-time
+                              nullable: true
                           additionalProperties: false
                         nullable: true
                       fileActionsID:
@@ -53052,6 +53533,10 @@ paths:
                             externalId:
                               type: string
                               nullable: true
+                            disbursementDate:
+                              type: string
+                              format: date-time
+                              nullable: true
                           additionalProperties: false
                         nullable: true
                       fileActionsID:
@@ -53488,6 +53973,10 @@ paths:
                               nullable: true
                             externalId:
                               type: string
+                              nullable: true
+                            disbursementDate:
+                              type: string
+                              format: date-time
                               nullable: true
                           additionalProperties: false
                         nullable: true
@@ -54038,6 +54527,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   documents:
                     type: array
@@ -54074,6 +54567,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -54116,6 +54613,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   documents:
                     type: array
@@ -54152,6 +54653,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -54194,6 +54699,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   documents:
                     type: array
@@ -54230,6 +54739,10 @@ paths:
                           nullable: true
                         externalId:
                           type: string
+                          nullable: true
+                        disbursementDate:
+                          type: string
+                          format: date-time
                           nullable: true
                       additionalProperties: false
                     nullable: true
@@ -54301,6 +54814,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   nullable: true
               additionalProperties: false
@@ -54356,6 +54873,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   nullable: true
               additionalProperties: false
@@ -54410,6 +54931,10 @@ paths:
                         nullable: true
                       externalId:
                         type: string
+                        nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
                         nullable: true
                     additionalProperties: false
                   nullable: true
@@ -54654,6 +55179,10 @@ paths:
                     externalId:
                       type: string
                       nullable: true
+                    disbursementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
                   additionalProperties: false
             application/json:
               schema:
@@ -54692,6 +55221,10 @@ paths:
                     externalId:
                       type: string
                       nullable: true
+                    disbursementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
                   additionalProperties: false
             text/json:
               schema:
@@ -54729,6 +55262,10 @@ paths:
                       nullable: true
                     externalId:
                       type: string
+                      nullable: true
+                    disbursementDate:
+                      type: string
+                      format: date-time
                       nullable: true
                   additionalProperties: false
   /v1/documents/download-url/{orderId}/{documentId}:
@@ -55014,6 +55551,10 @@ paths:
                   externalId:
                     type: string
                     nullable: true
+                  disbursementDate:
+                    type: string
+                    format: date-time
+                    nullable: true
                 additionalProperties: false
             application/json:
               schema:
@@ -55050,6 +55591,10 @@ paths:
                   externalId:
                     type: string
                     nullable: true
+                  disbursementDate:
+                    type: string
+                    format: date-time
+                    nullable: true
                 additionalProperties: false
             text/json:
               schema:
@@ -55085,6 +55630,10 @@ paths:
                     nullable: true
                   externalId:
                     type: string
+                    nullable: true
+                  disbursementDate:
+                    type: string
+                    format: date-time
                     nullable: true
                 additionalProperties: false
   /v1/documents/note/curative/{orderId}:
@@ -55221,6 +55770,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   nullable: true
                 fileActionsID:
@@ -55355,6 +55908,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   nullable: true
                 fileActionsID:
@@ -55488,6 +56045,10 @@ paths:
                         nullable: true
                       externalId:
                         type: string
+                        nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
                         nullable: true
                     additionalProperties: false
                   nullable: true
@@ -55630,6 +56191,10 @@ paths:
                             externalId:
                               type: string
                               nullable: true
+                            disbursementDate:
+                              type: string
+                              format: date-time
+                              nullable: true
                           additionalProperties: false
                         nullable: true
                       fileActionsID:
@@ -55764,6 +56329,10 @@ paths:
                                 nullable: true
                               externalId:
                                 type: string
+                                nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
                                 nullable: true
                             additionalProperties: false
                           nullable: true
@@ -55910,6 +56479,10 @@ paths:
                             externalId:
                               type: string
                               nullable: true
+                            disbursementDate:
+                              type: string
+                              format: date-time
+                              nullable: true
                           additionalProperties: false
                         nullable: true
                       fileActionsID:
@@ -56044,6 +56617,10 @@ paths:
                                 nullable: true
                               externalId:
                                 type: string
+                                nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
                                 nullable: true
                             additionalProperties: false
                           nullable: true
@@ -56190,6 +56767,10 @@ paths:
                             externalId:
                               type: string
                               nullable: true
+                            disbursementDate:
+                              type: string
+                              format: date-time
+                              nullable: true
                           additionalProperties: false
                         nullable: true
                       fileActionsID:
@@ -56324,6 +56905,10 @@ paths:
                                 nullable: true
                               externalId:
                                 type: string
+                                nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
                                 nullable: true
                             additionalProperties: false
                           nullable: true
@@ -56482,6 +57067,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   nullable: true
                 fileActionsID:
@@ -56616,6 +57205,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   nullable: true
                 fileActionsID:
@@ -56749,6 +57342,10 @@ paths:
                         nullable: true
                       externalId:
                         type: string
+                        nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
                         nullable: true
                     additionalProperties: false
                   nullable: true
@@ -56891,6 +57488,10 @@ paths:
                             externalId:
                               type: string
                               nullable: true
+                            disbursementDate:
+                              type: string
+                              format: date-time
+                              nullable: true
                           additionalProperties: false
                         nullable: true
                       fileActionsID:
@@ -57025,6 +57626,10 @@ paths:
                                 nullable: true
                               externalId:
                                 type: string
+                                nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
                                 nullable: true
                             additionalProperties: false
                           nullable: true
@@ -57171,6 +57776,10 @@ paths:
                             externalId:
                               type: string
                               nullable: true
+                            disbursementDate:
+                              type: string
+                              format: date-time
+                              nullable: true
                           additionalProperties: false
                         nullable: true
                       fileActionsID:
@@ -57305,6 +57914,10 @@ paths:
                                 nullable: true
                               externalId:
                                 type: string
+                                nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
                                 nullable: true
                             additionalProperties: false
                           nullable: true
@@ -57451,6 +58064,10 @@ paths:
                             externalId:
                               type: string
                               nullable: true
+                            disbursementDate:
+                              type: string
+                              format: date-time
+                              nullable: true
                           additionalProperties: false
                         nullable: true
                       fileActionsID:
@@ -57585,6 +58202,10 @@ paths:
                                 nullable: true
                               externalId:
                                 type: string
+                                nullable: true
+                              disbursementDate:
+                                type: string
+                                format: date-time
                                 nullable: true
                             additionalProperties: false
                           nullable: true
@@ -57743,6 +58364,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   nullable: true
                 fileActionsID:
@@ -57877,6 +58502,10 @@ paths:
                       externalId:
                         type: string
                         nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
+                        nullable: true
                     additionalProperties: false
                   nullable: true
                 fileActionsID:
@@ -58010,6 +58639,10 @@ paths:
                         nullable: true
                       externalId:
                         type: string
+                        nullable: true
+                      disbursementDate:
+                        type: string
+                        format: date-time
                         nullable: true
                     additionalProperties: false
                   nullable: true
