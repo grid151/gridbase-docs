@@ -4,7 +4,7 @@ This guide will walk you through the installation and configuration of the GridB
 
 You can download the **GridBase** plugin here:
 
-[GridBase Plugin](./proceeds-calculator.zip)
+[GridBase Plugin](./seller-netsheet-plugin.zip)
 
 ---
 
