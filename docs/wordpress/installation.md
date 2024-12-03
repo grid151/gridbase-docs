@@ -6,7 +6,7 @@ title: Installation
 This guide will walk you through the installation and configuration of the GridBase WordPress plugin. Follow the steps below to install the plugin, configure it, and start using it on your website.
 
 You can download the **GridBase** plugin here:
-[GridBase Plugin](./seller-netsheet-plugin.zip)
+[GridBase Plugin](./gridbase-plugin.zip)
 
 ---
 
