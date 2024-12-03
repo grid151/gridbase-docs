@@ -1,4 +1,6 @@
-
+---
+title: Custom CSS
+---
 # How to Apply Custom CSS to Your WordPress Theme
 
 If you want to customize the look and feel of the seller net sheet plugin on your WordPress site, follow these steps to apply custom CSS:
