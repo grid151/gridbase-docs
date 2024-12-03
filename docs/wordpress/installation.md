@@ -1,4 +1,6 @@
-
+---
+title: Installation
+---
 # GridBase WordPress Plugin Installation Guide
 
 This guide will walk you through the installation and configuration of the GridBase WordPress plugin. Follow the steps below to install the plugin, configure it, and start using it on your website.
