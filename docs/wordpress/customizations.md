@@ -20,147 +20,200 @@ If you want to customize the look and feel of the seller net sheet plugin on you
 ## Step 4: Copy and Paste the Custom CSS Code
 1. Copy the following CSS code:
 
-    ```css
-    /* Container and general spacing */
-    #seller_netsheet.seller-net-sheet.container {
-        padding: 20px;
-        background-color: #f8f9fa; /* Light background for container */
-        border: 1px solid #dee2e6; /* Border around the container */
-        border-radius: 8px; /* Rounded corners */
-    }
+```css
+#seller_netsheet.seller-net-sheet.container {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for container */
+    border: 1px solid #dee2e6; /* Border around the container */
+    border-radius: 8px; /* Rounded corners */
+}
 
-    #seller_netsheet .mt-4 {
-        margin-top: 1.5rem !important;
-    }
+#seller_netsheet .mt-3 {
+    margin-top: 1rem !important;
+}
 
-    #seller_netsheet .mb-3 {
-        margin-bottom: 1rem !important;
-    }
+#seller_netsheet .mt-4 {
+    margin-top: 1.5rem !important;
+}
 
-    #seller_netsheet .mb-4 {
-        margin-bottom: 1.5rem !important;
-    }
+#seller_netsheet .mb-3 {
+    margin-bottom: 1rem !important;
+}
 
-    /* Header styles */
-    #seller_netsheet .section-header h3 {
-        font-size: 1.5rem;
-        color: #343a40; /* Darker text color */
-        border-bottom: 2px solid #007bff; /* Underline with primary color */
-        padding-bottom: 5px;
-    }
+#seller_netsheet .mb-4 {
+    margin-bottom: 1.5rem !important;
+}
 
-    /* Form labels and inputs */
-    #seller_netsheet .form-label {
-        font-weight: 500;
-        color: #495057; /* Slightly dark text color */
-    }
+#seller_netsheet .mb-5 {
+    margin-bottom: 2rem !important;
+}
 
-    #seller_netsheet .form-control {
-        border-radius: 5px;
-        border: 1px solid #ced4da;
-        padding: 10px;
-    }
+/* Typography */
+#seller_netsheet h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #343a40; /* Darker text color */
+}
 
-    /* Select inputs */
-    #seller_netsheet .form-select {
-        border-radius: 5px;
-        border: 1px solid #ced4da;
-        padding: 10px;
-    }
+#seller_netsheet .text-sm {
+    font-size: 0.875rem;
+}
 
-    /* Input groups */
-    #seller_netsheet .input-group {
-        display: flex;
-        align-items: center;
-    }
+#seller_netsheet .fw-bold {
+    font-weight: 700 !important;
+}
 
-    #seller_netsheet .input-group input {
-        flex: 1;
-    }
+#seller_netsheet .text-center {
+    text-align: center;
+}
 
-    /* Buttons */
-    #seller_netsheet .btn {
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
+#seller_netsheet .text-md-start {
+    text-align: left;
+}
 
-    #seller_netsheet .btn-primary {
-        background-color: #007bff;
-        border-color: #007bff;
-        color: #fff;
-    }
+#seller_netsheet .text-md-end {
+    text-align: right;
+}
 
-    #seller_netsheet .btn-primary:hover {
-        background-color: #0056b3;
-        border-color: #004085;
-    }
+/* Card */
+#seller_netsheet .card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
 
-    #seller_netsheet .btn-secondary {
-        background-color: #6c757d;
-        border-color: #6c757d;
-        color: #fff;
-    }
+#seller_netsheet .card-header {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
 
-    #seller_netsheet .btn-secondary:hover {
-        background-color: #5a6268;
-        border-color: #545b62;
-    }
+#seller_netsheet .card-body {
+    padding: 1rem;
+}
 
-    /* Grid and layout */
-    #seller_netsheet .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
-    }
+/* Table */
+#seller_netsheet .table-responsive {
+    overflow-x: auto;
+}
 
-    #seller_netsheet .col-md-12,
-    #seller_netsheet .col-md-6,
-    #seller_netsheet .col-md-8,
-    #seller_netsheet .col-sm-6 {
-        position: relative;
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
+#seller_netsheet table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
 
-    #seller_netsheet .col-md-12 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+#seller_netsheet th,
+#seller_netsheet td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
 
-    #seller_netsheet .col-md-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
+#seller_netsheet th {
+    font-weight: 700;
+    text-align: left;
+}
 
-    #seller_netsheet .col-md-8 {
-        flex: 0 0 66.66667%;
-        max-width: 66.66667%;
-    }
+/* Buttons */
+#seller_netsheet .btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
 
-    #seller_netsheet .col-sm-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
+#seller_netsheet .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
 
-    #seller_netsheet .d-grid {
-        display: grid;
-    }
+#seller_netsheet .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
 
-    #seller_netsheet .gap-2 {
-        grid-gap: 0.5rem;
-    }
+#seller_netsheet .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+}
 
-    #seller_netsheet .d-md-flex {
-        display: flex;
-    }
+#seller_netsheet .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
 
-    #seller_netsheet .justify-content-md-end {
-        justify-content: flex-end;
-    }
-    ```
+/* Grid and layout */
+#seller_netsheet .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#seller_netsheet .col-12,
+#seller_netsheet .col-md-4,
+#seller_netsheet .col-md-8,
+#seller_netsheet .col-lg-3,
+#seller_netsheet .col-lg-6 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#seller_netsheet .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+#seller_netsheet .col-md-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+
+#seller_netsheet .col-md-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+
+#seller_netsheet .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+#seller_netsheet .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+#seller_netsheet .d-grid {
+    display: grid;
+}
+
+#seller_netsheet .gap-2 {
+    grid-gap: 0.5rem;
+}
+
+#seller_netsheet .d-md-flex {
+    display: flex;
+}
+
+#seller_netsheet .justify-content-md-end {
+    justify-content: flex-end;
+}
+
+/* Misc */
+#seller_netsheet .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+#seller_netsheet .text-muted {
+    color: #6c757d !important;
+}
+```
 
 2. Paste the copied CSS code into the **Additional CSS** section in the Customizer.
 
