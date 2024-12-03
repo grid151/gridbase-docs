@@ -45,7 +45,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -153,7 +153,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -218,7 +218,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -358,7 +358,7 @@ paths:
             format: int32
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -404,7 +404,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -534,7 +534,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -655,7 +655,7 @@ paths:
       tags:
         - Order
       summary: Stage Order
-      description: "<br>When staging an order, property validation will take place. The two possible options for passing address validation are listed below.\r\n            <para>If both options are populated, \"FullAddress\" validation will be the default option.<list type=\"bullet\">Populate the \"FullAddress\" field within the Property object for a free form address validation.</list><list type=\"bullet\">Populate \"CityDesc\", \"StateId\", \"Street\", \"Zip\" for a parsed address validation. (County will be resolved in this case)</list></para>"
+      description: "\nWhen staging an order, property validation will take place. The two possible options for passing address validation are listed below.\r\n            <para>If both options are populated, \"FullAddress\" validation will be the default option.<list type=\"bullet\">Populate the \"FullAddress\" field within the Property object for a free form address validation.</list><list type=\"bullet\">Populate \"CityDesc\", \"StateId\", \"Street\", \"Zip\" for a parsed address validation. (County will be resolved in this case)</list></para>"
       requestBody:
         description: The new Order.
         content:
@@ -1623,6 +1623,36 @@ paths:
                       type: string
                       nullable: true
                   additionalProperties: false
+                additionalServices:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      serviceId:
+                        type: string
+                        nullable: true
+                      serviceName:
+                        type: string
+                        nullable: true
+                      note:
+                        type: string
+                        nullable: true
+                      sentDate:
+                        type: string
+                        format: date-time
+                        nullable: true
+                      receivedDate:
+                        type: string
+                        format: date-time
+                        nullable: true
+                      sentStatus:
+                        enum:
+                          - 0
+                          - 1
+                        type: integer
+                        format: int32
+                    additionalProperties: false
+                  nullable: true
                 system:
                   enum:
                     - None
@@ -1639,6 +1669,7 @@ paths:
                     - ManualEntry
                     - SellerNetSheet
                     - Inkd
+                    - BuyerCostEstimate
                   type: string
                 integrationId:
                   type: string
@@ -2611,6 +2642,36 @@ paths:
                       type: string
                       nullable: true
                   additionalProperties: false
+                additionalServices:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      serviceId:
+                        type: string
+                        nullable: true
+                      serviceName:
+                        type: string
+                        nullable: true
+                      note:
+                        type: string
+                        nullable: true
+                      sentDate:
+                        type: string
+                        format: date-time
+                        nullable: true
+                      receivedDate:
+                        type: string
+                        format: date-time
+                        nullable: true
+                      sentStatus:
+                        enum:
+                          - 0
+                          - 1
+                        type: integer
+                        format: int32
+                    additionalProperties: false
+                  nullable: true
                 system:
                   enum:
                     - None
@@ -2627,6 +2688,7 @@ paths:
                     - ManualEntry
                     - SellerNetSheet
                     - Inkd
+                    - BuyerCostEstimate
                   type: string
                 integrationId:
                   type: string
@@ -3599,6 +3661,36 @@ paths:
                       type: string
                       nullable: true
                   additionalProperties: false
+                additionalServices:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      serviceId:
+                        type: string
+                        nullable: true
+                      serviceName:
+                        type: string
+                        nullable: true
+                      note:
+                        type: string
+                        nullable: true
+                      sentDate:
+                        type: string
+                        format: date-time
+                        nullable: true
+                      receivedDate:
+                        type: string
+                        format: date-time
+                        nullable: true
+                      sentStatus:
+                        enum:
+                          - 0
+                          - 1
+                        type: integer
+                        format: int32
+                    additionalProperties: false
+                  nullable: true
                 system:
                   enum:
                     - None
@@ -3615,6 +3707,7 @@ paths:
                     - ManualEntry
                     - SellerNetSheet
                     - Inkd
+                    - BuyerCostEstimate
                   type: string
                 integrationId:
                   type: string
@@ -5836,6 +5929,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -5878,9 +5972,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
             application/json:
               schema:
@@ -8091,6 +8223,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -8133,9 +8266,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
             text/json:
               schema:
@@ -10346,6 +10517,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -10388,9 +10560,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
         '400':
           description: Bad Request
@@ -10418,7 +10628,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -12629,6 +12839,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -12671,9 +12882,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
             application/json:
               schema:
@@ -14884,6 +15133,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -14926,9 +15176,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
             text/json:
               schema:
@@ -17139,6 +17427,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -17181,9 +17470,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
         '400':
           description: Bad Request
@@ -17211,7 +17538,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -19422,6 +19749,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -19464,9 +19792,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
             application/json:
               schema:
@@ -21677,6 +22043,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -21719,9 +22086,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
             text/json:
               schema:
@@ -23932,6 +24337,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -23974,9 +24380,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
         '400':
           description: Bad Request
@@ -24023,10 +24467,11 @@ paths:
               - ManualEntry
               - SellerNetSheet
               - Inkd
+              - BuyerCostEstimate
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -26237,6 +26682,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -26279,9 +26725,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
             application/json:
               schema:
@@ -28492,6 +28976,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -28534,9 +29019,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
             text/json:
               schema:
@@ -30747,6 +31270,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -30789,9 +31313,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
         '400':
           description: Bad Request
@@ -31777,6 +32339,36 @@ paths:
                       type: string
                       nullable: true
                   additionalProperties: false
+                additionalServices:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      serviceId:
+                        type: string
+                        nullable: true
+                      serviceName:
+                        type: string
+                        nullable: true
+                      note:
+                        type: string
+                        nullable: true
+                      sentDate:
+                        type: string
+                        format: date-time
+                        nullable: true
+                      receivedDate:
+                        type: string
+                        format: date-time
+                        nullable: true
+                      sentStatus:
+                        enum:
+                          - 0
+                          - 1
+                        type: integer
+                        format: int32
+                    additionalProperties: false
+                  nullable: true
                 system:
                   enum:
                     - None
@@ -31793,6 +32385,7 @@ paths:
                     - ManualEntry
                     - SellerNetSheet
                     - Inkd
+                    - BuyerCostEstimate
                   type: string
                 integrationId:
                   type: string
@@ -32765,6 +33358,36 @@ paths:
                       type: string
                       nullable: true
                   additionalProperties: false
+                additionalServices:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      serviceId:
+                        type: string
+                        nullable: true
+                      serviceName:
+                        type: string
+                        nullable: true
+                      note:
+                        type: string
+                        nullable: true
+                      sentDate:
+                        type: string
+                        format: date-time
+                        nullable: true
+                      receivedDate:
+                        type: string
+                        format: date-time
+                        nullable: true
+                      sentStatus:
+                        enum:
+                          - 0
+                          - 1
+                        type: integer
+                        format: int32
+                    additionalProperties: false
+                  nullable: true
                 system:
                   enum:
                     - None
@@ -32781,6 +33404,7 @@ paths:
                     - ManualEntry
                     - SellerNetSheet
                     - Inkd
+                    - BuyerCostEstimate
                   type: string
                 integrationId:
                   type: string
@@ -33753,6 +34377,36 @@ paths:
                       type: string
                       nullable: true
                   additionalProperties: false
+                additionalServices:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      serviceId:
+                        type: string
+                        nullable: true
+                      serviceName:
+                        type: string
+                        nullable: true
+                      note:
+                        type: string
+                        nullable: true
+                      sentDate:
+                        type: string
+                        format: date-time
+                        nullable: true
+                      receivedDate:
+                        type: string
+                        format: date-time
+                        nullable: true
+                      sentStatus:
+                        enum:
+                          - 0
+                          - 1
+                        type: integer
+                        format: int32
+                    additionalProperties: false
+                  nullable: true
                 system:
                   enum:
                     - None
@@ -33769,6 +34423,7 @@ paths:
                     - ManualEntry
                     - SellerNetSheet
                     - Inkd
+                    - BuyerCostEstimate
                   type: string
                 integrationId:
                   type: string
@@ -33779,7 +34434,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -35990,6 +36645,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -36032,9 +36688,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
             application/json:
               schema:
@@ -38245,6 +38939,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -38287,9 +38982,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
             text/json:
               schema:
@@ -40500,6 +41233,7 @@ paths:
                       - ManualEntry
                       - SellerNetSheet
                       - Inkd
+                      - BuyerCostEstimate
                     type: string
                   product:
                     type: string
@@ -40542,9 +41276,47 @@ paths:
                           nullable: true
                       additionalProperties: false
                     nullable: true
+                  additionalServices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        serviceId:
+                          type: string
+                          nullable: true
+                        serviceName:
+                          type: string
+                          nullable: true
+                        note:
+                          type: string
+                          nullable: true
+                        sentDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        receivedDate:
+                          type: string
+                          format: date-time
+                          nullable: true
+                        sentStatus:
+                          enum:
+                            - 0
+                            - 1
+                          type: integer
+                          format: int32
+                      additionalProperties: false
+                    nullable: true
                   organizationId:
                     type: string
                     nullable: true
+                  integrationData:
+                    type: object
+                    properties:
+                      integrationId:
+                        type: string
+                        nullable: true
+                        readOnly: true
+                    additionalProperties: false
                 additionalProperties: false
         '400':
           description: Bad Request
@@ -40601,7 +41373,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -40718,7 +41490,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -41653,7 +42425,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -43011,7 +43783,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -44035,7 +44807,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -44072,7 +44844,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -44109,7 +44881,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -44169,68 +44941,8 @@ paths:
                       shouldRedeliver:
                         type: boolean
                       delay:
-                        type: object
-                        properties:
-                          ticks:
-                            type: integer
-                            format: int64
-                          days:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          hours:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          milliseconds:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          microseconds:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          nanoseconds:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          minutes:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          seconds:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          totalDays:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalHours:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalMilliseconds:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalMicroseconds:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalNanoseconds:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalMinutes:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalSeconds:
-                            type: number
-                            format: double
-                            readOnly: true
-                        additionalProperties: false
+                        type: string
+                        format: date-span
                     additionalProperties: false
                   integrationData:
                     type: object
@@ -44257,68 +44969,8 @@ paths:
                       shouldRedeliver:
                         type: boolean
                       delay:
-                        type: object
-                        properties:
-                          ticks:
-                            type: integer
-                            format: int64
-                          days:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          hours:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          milliseconds:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          microseconds:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          nanoseconds:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          minutes:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          seconds:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          totalDays:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalHours:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalMilliseconds:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalMicroseconds:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalNanoseconds:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalMinutes:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalSeconds:
-                            type: number
-                            format: double
-                            readOnly: true
-                        additionalProperties: false
+                        type: string
+                        format: date-span
                     additionalProperties: false
                   integrationData:
                     type: object
@@ -44345,68 +44997,8 @@ paths:
                       shouldRedeliver:
                         type: boolean
                       delay:
-                        type: object
-                        properties:
-                          ticks:
-                            type: integer
-                            format: int64
-                          days:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          hours:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          milliseconds:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          microseconds:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          nanoseconds:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          minutes:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          seconds:
-                            type: integer
-                            format: int32
-                            readOnly: true
-                          totalDays:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalHours:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalMilliseconds:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalMicroseconds:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalNanoseconds:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalMinutes:
-                            type: number
-                            format: double
-                            readOnly: true
-                          totalSeconds:
-                            type: number
-                            format: double
-                            readOnly: true
-                        additionalProperties: false
+                        type: string
+                        format: date-span
                     additionalProperties: false
                   integrationData:
                     type: object
@@ -44438,7 +45030,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -45223,7 +45815,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -45378,7 +45970,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -45496,7 +46088,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -45891,7 +46483,7 @@ paths:
             format: int32
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -45970,7 +46562,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -46413,7 +47005,7 @@ paths:
             format: int32
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -46497,7 +47089,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -47511,7 +48103,7 @@ paths:
       summary: Get actions associated with user
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -47750,7 +48342,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -47917,7 +48509,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -48026,7 +48618,7 @@ paths:
       tags:
         - Order
       summary: Estimate Fees
-      description: "<br>Estimates fees for a given set of parameters. Property validation will take place based on the provided request.\r\n<list type=\"bullet\">Populate the `GetFeesRequest` object with the necessary parameters for estimation.</list>\r\n<list type=\"bullet\">Provide the `integrationId` to query for estimates associated with a specific integration.</list>"
+      description: "\nEstimates fees for a given set of parameters. Property validation will take place based on the provided request.\r\n<list type=\"bullet\">Populate the `GetFeesRequest` object with the necessary parameters for estimation.</list>\r\n<list type=\"bullet\">Provide the `integrationId` to query for estimates associated with a specific integration.</list>"
       parameters:
         - name: integrationId
           in: path
@@ -48270,7 +48862,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -48592,7 +49184,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -48830,7 +49422,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -49133,7 +49725,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -49375,6 +49967,399 @@ paths:
                       additionalProperties: false
                     nullable: true
                 additionalProperties: false
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+            text/json:
+              schema:
+                type: string
+  /v1/orders/{orderId}/integration/data:
+    get:
+      tags:
+        - Order
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: object
+                additionalProperties: false
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+            text/json:
+              schema:
+                type: object
+                additionalProperties: false
+  /v1/orders/{orderId}/integration:
+    get:
+      tags:
+        - Order
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: object
+                properties:
+                  integrationId:
+                    type: string
+                    nullable: true
+                    readOnly: true
+                additionalProperties: false
+            application/json:
+              schema:
+                type: object
+                properties:
+                  integrationId:
+                    type: string
+                    nullable: true
+                    readOnly: true
+                additionalProperties: false
+            text/json:
+              schema:
+                type: object
+                properties:
+                  integrationId:
+                    type: string
+                    nullable: true
+                    readOnly: true
+                additionalProperties: false
+  /v1/orders/additional-services/{orderId}:
+    post:
+      tags:
+        - Order
+      summary: Adds additional services to order
+      parameters:
+        - name: orderId
+          in: path
+          description: ''
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  serviceId:
+                    type: string
+                    nullable: true
+                  serviceName:
+                    type: string
+                    nullable: true
+                  note:
+                    type: string
+                    nullable: true
+                  sentDate:
+                    type: string
+                    format: date-time
+                    nullable: true
+                  receivedDate:
+                    type: string
+                    format: date-time
+                    nullable: true
+                  sentStatus:
+                    enum:
+                      - 0
+                      - 1
+                    type: integer
+                    format: int32
+                additionalProperties: false
+          text/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  serviceId:
+                    type: string
+                    nullable: true
+                  serviceName:
+                    type: string
+                    nullable: true
+                  note:
+                    type: string
+                    nullable: true
+                  sentDate:
+                    type: string
+                    format: date-time
+                    nullable: true
+                  receivedDate:
+                    type: string
+                    format: date-time
+                    nullable: true
+                  sentStatus:
+                    enum:
+                      - 0
+                      - 1
+                    type: integer
+                    format: int32
+                additionalProperties: false
+          application/*+json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  serviceId:
+                    type: string
+                    nullable: true
+                  serviceName:
+                    type: string
+                    nullable: true
+                  note:
+                    type: string
+                    nullable: true
+                  sentDate:
+                    type: string
+                    format: date-time
+                    nullable: true
+                  receivedDate:
+                    type: string
+                    format: date-time
+                    nullable: true
+                  sentStatus:
+                    enum:
+                      - 0
+                      - 1
+                    type: integer
+                    format: int32
+                additionalProperties: false
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    serviceId:
+                      type: string
+                      nullable: true
+                    serviceName:
+                      type: string
+                      nullable: true
+                    note:
+                      type: string
+                      nullable: true
+                    sentDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    receivedDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    sentStatus:
+                      enum:
+                        - 0
+                        - 1
+                      type: integer
+                      format: int32
+                  additionalProperties: false
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    serviceId:
+                      type: string
+                      nullable: true
+                    serviceName:
+                      type: string
+                      nullable: true
+                    note:
+                      type: string
+                      nullable: true
+                    sentDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    receivedDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    sentStatus:
+                      enum:
+                        - 0
+                        - 1
+                      type: integer
+                      format: int32
+                  additionalProperties: false
+            text/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    serviceId:
+                      type: string
+                      nullable: true
+                    serviceName:
+                      type: string
+                      nullable: true
+                    note:
+                      type: string
+                      nullable: true
+                    sentDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    receivedDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    sentStatus:
+                      enum:
+                        - 0
+                        - 1
+                      type: integer
+                      format: int32
+                  additionalProperties: false
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+            text/json:
+              schema:
+                type: string
+    get:
+      tags:
+        - Order
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    serviceId:
+                      type: string
+                      nullable: true
+                    serviceName:
+                      type: string
+                      nullable: true
+                    note:
+                      type: string
+                      nullable: true
+                    sentDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    receivedDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    sentStatus:
+                      enum:
+                        - 0
+                        - 1
+                      type: integer
+                      format: int32
+                  additionalProperties: false
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    serviceId:
+                      type: string
+                      nullable: true
+                    serviceName:
+                      type: string
+                      nullable: true
+                    note:
+                      type: string
+                      nullable: true
+                    sentDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    receivedDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    sentStatus:
+                      enum:
+                        - 0
+                        - 1
+                      type: integer
+                      format: int32
+                  additionalProperties: false
+            text/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    serviceId:
+                      type: string
+                      nullable: true
+                    serviceName:
+                      type: string
+                      nullable: true
+                    note:
+                      type: string
+                      nullable: true
+                    sentDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    receivedDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    sentStatus:
+                      enum:
+                        - 0
+                        - 1
+                      type: integer
+                      format: int32
+                  additionalProperties: false
         '400':
           description: Bad Request
           content:
@@ -54016,7 +55001,7 @@ paths:
               additionalProperties: false
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -54067,7 +55052,7 @@ paths:
             format: int32
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -54118,7 +55103,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -54272,7 +55257,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -54417,7 +55402,7 @@ paths:
       tags:
         - Webhook
       summary: Handles post webhook requests from external system.
-      description: "<br>Keep backwards compatibility for Encompass for now, will need to be phased out.\r\n<br>Reads message and headers to validate request."
+      description: "\nKeep backwards compatibility for Encompass for now, will need to be phased out.\r\n\nReads message and headers to validate request."
       parameters:
         - name: system
           in: path
@@ -54439,6 +55424,7 @@ paths:
               - ManualEntry
               - SellerNetSheet
               - Inkd
+              - BuyerCostEstimate
             type: string
       responses:
         '202':
@@ -54487,7 +55473,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -55140,7 +56126,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -55288,7 +56274,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -55363,7 +56349,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -55432,7 +56418,7 @@ paths:
       summary: Gets document types.
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -55514,7 +56500,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Success
+          description: OK
           content:
             text/plain:
               schema:
@@ -58717,3 +59703,47 @@ paths:
       responses:
         '202':
           description: Accepted
+  /v1/documents/cpl-validation:
+    post:
+      tags:
+        - Documents
+      summary: Validate cpl document
+      requestBody:
+        description: The cpl data
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                documentId:
+                  type: integer
+                  format: int32
+                fileId:
+                  type: integer
+                  format: int32
+              additionalProperties: false
+          text/json:
+            schema:
+              type: object
+              properties:
+                documentId:
+                  type: integer
+                  format: int32
+                fileId:
+                  type: integer
+                  format: int32
+              additionalProperties: false
+          application/*+json:
+            schema:
+              type: object
+              properties:
+                documentId:
+                  type: integer
+                  format: int32
+                fileId:
+                  type: integer
+                  format: int32
+              additionalProperties: false
+      responses:
+        '200':
+          description: OK
