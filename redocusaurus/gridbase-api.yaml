@@ -663,105 +663,30 @@ paths:
             schema:
               type: object
               properties:
-                id:
+                integrationId:
                   type: string
                   nullable: true
-                note:
+                system:
+                  enum:
+                    - None
+                    - Resware
+                    - AtClose
+                    - Softpro
+                    - eAgency
+                    - Closepin
+                    - Encompass
+                    - X1
+                    - Stacx
+                    - RamQuest
+                    - BlackKnight
+                    - ManualEntry
+                    - SellerNetSheet
+                    - Inkd
+                    - BuyerCostEstimate
+                  type: string
+                product:
                   type: string
                   nullable: true
-                placementNotes:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      subject:
-                        type: string
-                        nullable: true
-                      body:
-                        type: string
-                        nullable: true
-                    additionalProperties: false
-                  nullable: true
-                orderDetails:
-                  type: object
-                  properties:
-                    additionalAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    earnestMoney:
-                      type: number
-                      format: double
-                      nullable: true
-                    cashoutAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    clientFileNumber:
-                      type: string
-                      nullable: true
-                    clientId:
-                      type: integer
-                      format: int32
-                      nullable: true
-                    estimatedSettlementDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    disbursementDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    closedDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    isAllPartiesAttending:
-                      type: boolean
-                    isSectionStarted:
-                      type: boolean
-                    isValidated:
-                      type: boolean
-                    newLoanAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    interestRate:
-                      type: number
-                      format: double
-                      nullable: true
-                    newLoanNumber:
-                      type: string
-                      nullable: true
-                    newLoanType:
-                      type: string
-                      nullable: true
-                    newLoanPurpose:
-                      type: string
-                      nullable: true
-                    newLoanDescription:
-                      type: string
-                      nullable: true
-                    productTypeDesc:
-                      type: string
-                      nullable: true
-                    productTypeId:
-                      type: integer
-                      format: int32
-                    salesPrice:
-                      type: number
-                      format: double
-                      nullable: true
-                    transactionTypeDesc:
-                      type: string
-                      nullable: true
-                    transactionTypeId:
-                      type: integer
-                      format: int32
-                    additionalReference:
-                      type: string
-                      nullable: true
-                  additionalProperties: false
                 parties:
                   type: object
                   properties:
@@ -1623,6 +1548,89 @@ paths:
                       type: string
                       nullable: true
                   additionalProperties: false
+                note:
+                  type: string
+                  nullable: true
+                orderDetails:
+                  type: object
+                  properties:
+                    additionalAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    earnestMoney:
+                      type: number
+                      format: double
+                      nullable: true
+                    cashoutAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    clientFileNumber:
+                      type: string
+                      nullable: true
+                    clientId:
+                      type: integer
+                      format: int32
+                      nullable: true
+                    estimatedSettlementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    disbursementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    closedDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    isAllPartiesAttending:
+                      type: boolean
+                    isSectionStarted:
+                      type: boolean
+                    isValidated:
+                      type: boolean
+                    newLoanAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    interestRate:
+                      type: number
+                      format: double
+                      nullable: true
+                    newLoanNumber:
+                      type: string
+                      nullable: true
+                    newLoanType:
+                      type: string
+                      nullable: true
+                    newLoanPurpose:
+                      type: string
+                      nullable: true
+                    newLoanDescription:
+                      type: string
+                      nullable: true
+                    productTypeDesc:
+                      type: string
+                      nullable: true
+                    productTypeId:
+                      type: integer
+                      format: int32
+                    salesPrice:
+                      type: number
+                      format: double
+                      nullable: true
+                    transactionTypeDesc:
+                      type: string
+                      nullable: true
+                    transactionTypeId:
+                      type: integer
+                      format: int32
+                    additionalReference:
+                      type: string
+                      nullable: true
+                  additionalProperties: false
                 additionalServices:
                   type: array
                   items:
@@ -1653,134 +1661,48 @@ paths:
                         format: int32
                     additionalProperties: false
                   nullable: true
-                system:
-                  enum:
-                    - None
-                    - Resware
-                    - AtClose
-                    - Softpro
-                    - eAgency
-                    - Closepin
-                    - Encompass
-                    - X1
-                    - Stacx
-                    - RamQuest
-                    - BlackKnight
-                    - ManualEntry
-                    - SellerNetSheet
-                    - Inkd
-                    - BuyerCostEstimate
-                  type: string
-                integrationId:
-                  type: string
-                  nullable: true
-                product:
-                  type: string
+                placementNotes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subject:
+                        type: string
+                        nullable: true
+                      body:
+                        type: string
+                        nullable: true
+                    additionalProperties: false
                   nullable: true
               additionalProperties: false
           text/json:
             schema:
               type: object
               properties:
-                id:
+                integrationId:
                   type: string
                   nullable: true
-                note:
+                system:
+                  enum:
+                    - None
+                    - Resware
+                    - AtClose
+                    - Softpro
+                    - eAgency
+                    - Closepin
+                    - Encompass
+                    - X1
+                    - Stacx
+                    - RamQuest
+                    - BlackKnight
+                    - ManualEntry
+                    - SellerNetSheet
+                    - Inkd
+                    - BuyerCostEstimate
+                  type: string
+                product:
                   type: string
                   nullable: true
-                placementNotes:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      subject:
-                        type: string
-                        nullable: true
-                      body:
-                        type: string
-                        nullable: true
-                    additionalProperties: false
-                  nullable: true
-                orderDetails:
-                  type: object
-                  properties:
-                    additionalAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    earnestMoney:
-                      type: number
-                      format: double
-                      nullable: true
-                    cashoutAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    clientFileNumber:
-                      type: string
-                      nullable: true
-                    clientId:
-                      type: integer
-                      format: int32
-                      nullable: true
-                    estimatedSettlementDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    disbursementDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    closedDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    isAllPartiesAttending:
-                      type: boolean
-                    isSectionStarted:
-                      type: boolean
-                    isValidated:
-                      type: boolean
-                    newLoanAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    interestRate:
-                      type: number
-                      format: double
-                      nullable: true
-                    newLoanNumber:
-                      type: string
-                      nullable: true
-                    newLoanType:
-                      type: string
-                      nullable: true
-                    newLoanPurpose:
-                      type: string
-                      nullable: true
-                    newLoanDescription:
-                      type: string
-                      nullable: true
-                    productTypeDesc:
-                      type: string
-                      nullable: true
-                    productTypeId:
-                      type: integer
-                      format: int32
-                    salesPrice:
-                      type: number
-                      format: double
-                      nullable: true
-                    transactionTypeDesc:
-                      type: string
-                      nullable: true
-                    transactionTypeId:
-                      type: integer
-                      format: int32
-                    additionalReference:
-                      type: string
-                      nullable: true
-                  additionalProperties: false
                 parties:
                   type: object
                   properties:
@@ -2642,6 +2564,89 @@ paths:
                       type: string
                       nullable: true
                   additionalProperties: false
+                note:
+                  type: string
+                  nullable: true
+                orderDetails:
+                  type: object
+                  properties:
+                    additionalAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    earnestMoney:
+                      type: number
+                      format: double
+                      nullable: true
+                    cashoutAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    clientFileNumber:
+                      type: string
+                      nullable: true
+                    clientId:
+                      type: integer
+                      format: int32
+                      nullable: true
+                    estimatedSettlementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    disbursementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    closedDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    isAllPartiesAttending:
+                      type: boolean
+                    isSectionStarted:
+                      type: boolean
+                    isValidated:
+                      type: boolean
+                    newLoanAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    interestRate:
+                      type: number
+                      format: double
+                      nullable: true
+                    newLoanNumber:
+                      type: string
+                      nullable: true
+                    newLoanType:
+                      type: string
+                      nullable: true
+                    newLoanPurpose:
+                      type: string
+                      nullable: true
+                    newLoanDescription:
+                      type: string
+                      nullable: true
+                    productTypeDesc:
+                      type: string
+                      nullable: true
+                    productTypeId:
+                      type: integer
+                      format: int32
+                    salesPrice:
+                      type: number
+                      format: double
+                      nullable: true
+                    transactionTypeDesc:
+                      type: string
+                      nullable: true
+                    transactionTypeId:
+                      type: integer
+                      format: int32
+                    additionalReference:
+                      type: string
+                      nullable: true
+                  additionalProperties: false
                 additionalServices:
                   type: array
                   items:
@@ -2672,134 +2677,48 @@ paths:
                         format: int32
                     additionalProperties: false
                   nullable: true
-                system:
-                  enum:
-                    - None
-                    - Resware
-                    - AtClose
-                    - Softpro
-                    - eAgency
-                    - Closepin
-                    - Encompass
-                    - X1
-                    - Stacx
-                    - RamQuest
-                    - BlackKnight
-                    - ManualEntry
-                    - SellerNetSheet
-                    - Inkd
-                    - BuyerCostEstimate
-                  type: string
-                integrationId:
-                  type: string
-                  nullable: true
-                product:
-                  type: string
+                placementNotes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subject:
+                        type: string
+                        nullable: true
+                      body:
+                        type: string
+                        nullable: true
+                    additionalProperties: false
                   nullable: true
               additionalProperties: false
           application/*+json:
             schema:
               type: object
               properties:
-                id:
+                integrationId:
                   type: string
                   nullable: true
-                note:
+                system:
+                  enum:
+                    - None
+                    - Resware
+                    - AtClose
+                    - Softpro
+                    - eAgency
+                    - Closepin
+                    - Encompass
+                    - X1
+                    - Stacx
+                    - RamQuest
+                    - BlackKnight
+                    - ManualEntry
+                    - SellerNetSheet
+                    - Inkd
+                    - BuyerCostEstimate
+                  type: string
+                product:
                   type: string
                   nullable: true
-                placementNotes:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      subject:
-                        type: string
-                        nullable: true
-                      body:
-                        type: string
-                        nullable: true
-                    additionalProperties: false
-                  nullable: true
-                orderDetails:
-                  type: object
-                  properties:
-                    additionalAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    earnestMoney:
-                      type: number
-                      format: double
-                      nullable: true
-                    cashoutAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    clientFileNumber:
-                      type: string
-                      nullable: true
-                    clientId:
-                      type: integer
-                      format: int32
-                      nullable: true
-                    estimatedSettlementDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    disbursementDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    closedDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    isAllPartiesAttending:
-                      type: boolean
-                    isSectionStarted:
-                      type: boolean
-                    isValidated:
-                      type: boolean
-                    newLoanAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    interestRate:
-                      type: number
-                      format: double
-                      nullable: true
-                    newLoanNumber:
-                      type: string
-                      nullable: true
-                    newLoanType:
-                      type: string
-                      nullable: true
-                    newLoanPurpose:
-                      type: string
-                      nullable: true
-                    newLoanDescription:
-                      type: string
-                      nullable: true
-                    productTypeDesc:
-                      type: string
-                      nullable: true
-                    productTypeId:
-                      type: integer
-                      format: int32
-                    salesPrice:
-                      type: number
-                      format: double
-                      nullable: true
-                    transactionTypeDesc:
-                      type: string
-                      nullable: true
-                    transactionTypeId:
-                      type: integer
-                      format: int32
-                    additionalReference:
-                      type: string
-                      nullable: true
-                  additionalProperties: false
                 parties:
                   type: object
                   properties:
@@ -3661,6 +3580,89 @@ paths:
                       type: string
                       nullable: true
                   additionalProperties: false
+                note:
+                  type: string
+                  nullable: true
+                orderDetails:
+                  type: object
+                  properties:
+                    additionalAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    earnestMoney:
+                      type: number
+                      format: double
+                      nullable: true
+                    cashoutAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    clientFileNumber:
+                      type: string
+                      nullable: true
+                    clientId:
+                      type: integer
+                      format: int32
+                      nullable: true
+                    estimatedSettlementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    disbursementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    closedDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    isAllPartiesAttending:
+                      type: boolean
+                    isSectionStarted:
+                      type: boolean
+                    isValidated:
+                      type: boolean
+                    newLoanAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    interestRate:
+                      type: number
+                      format: double
+                      nullable: true
+                    newLoanNumber:
+                      type: string
+                      nullable: true
+                    newLoanType:
+                      type: string
+                      nullable: true
+                    newLoanPurpose:
+                      type: string
+                      nullable: true
+                    newLoanDescription:
+                      type: string
+                      nullable: true
+                    productTypeDesc:
+                      type: string
+                      nullable: true
+                    productTypeId:
+                      type: integer
+                      format: int32
+                    salesPrice:
+                      type: number
+                      format: double
+                      nullable: true
+                    transactionTypeDesc:
+                      type: string
+                      nullable: true
+                    transactionTypeId:
+                      type: integer
+                      format: int32
+                    additionalReference:
+                      type: string
+                      nullable: true
+                  additionalProperties: false
                 additionalServices:
                   type: array
                   items:
@@ -3691,29 +3693,18 @@ paths:
                         format: int32
                     additionalProperties: false
                   nullable: true
-                system:
-                  enum:
-                    - None
-                    - Resware
-                    - AtClose
-                    - Softpro
-                    - eAgency
-                    - Closepin
-                    - Encompass
-                    - X1
-                    - Stacx
-                    - RamQuest
-                    - BlackKnight
-                    - ManualEntry
-                    - SellerNetSheet
-                    - Inkd
-                    - BuyerCostEstimate
-                  type: string
-                integrationId:
-                  type: string
-                  nullable: true
-                product:
-                  type: string
+                placementNotes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subject:
+                        type: string
+                        nullable: true
+                      body:
+                        type: string
+                        nullable: true
+                    additionalProperties: false
                   nullable: true
               additionalProperties: false
       responses:
@@ -31382,102 +31373,30 @@ paths:
                 id:
                   type: string
                   nullable: true
-                note:
+                integrationId:
                   type: string
                   nullable: true
-                placementNotes:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      subject:
-                        type: string
-                        nullable: true
-                      body:
-                        type: string
-                        nullable: true
-                    additionalProperties: false
+                system:
+                  enum:
+                    - None
+                    - Resware
+                    - AtClose
+                    - Softpro
+                    - eAgency
+                    - Closepin
+                    - Encompass
+                    - X1
+                    - Stacx
+                    - RamQuest
+                    - BlackKnight
+                    - ManualEntry
+                    - SellerNetSheet
+                    - Inkd
+                    - BuyerCostEstimate
+                  type: string
+                product:
+                  type: string
                   nullable: true
-                orderDetails:
-                  type: object
-                  properties:
-                    additionalAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    earnestMoney:
-                      type: number
-                      format: double
-                      nullable: true
-                    cashoutAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    clientFileNumber:
-                      type: string
-                      nullable: true
-                    clientId:
-                      type: integer
-                      format: int32
-                      nullable: true
-                    estimatedSettlementDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    disbursementDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    closedDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    isAllPartiesAttending:
-                      type: boolean
-                    isSectionStarted:
-                      type: boolean
-                    isValidated:
-                      type: boolean
-                    newLoanAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    interestRate:
-                      type: number
-                      format: double
-                      nullable: true
-                    newLoanNumber:
-                      type: string
-                      nullable: true
-                    newLoanType:
-                      type: string
-                      nullable: true
-                    newLoanPurpose:
-                      type: string
-                      nullable: true
-                    newLoanDescription:
-                      type: string
-                      nullable: true
-                    productTypeDesc:
-                      type: string
-                      nullable: true
-                    productTypeId:
-                      type: integer
-                      format: int32
-                    salesPrice:
-                      type: number
-                      format: double
-                      nullable: true
-                    transactionTypeDesc:
-                      type: string
-                      nullable: true
-                    transactionTypeId:
-                      type: integer
-                      format: int32
-                    additionalReference:
-                      type: string
-                      nullable: true
-                  additionalProperties: false
                 parties:
                   type: object
                   properties:
@@ -32339,6 +32258,89 @@ paths:
                       type: string
                       nullable: true
                   additionalProperties: false
+                note:
+                  type: string
+                  nullable: true
+                orderDetails:
+                  type: object
+                  properties:
+                    additionalAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    earnestMoney:
+                      type: number
+                      format: double
+                      nullable: true
+                    cashoutAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    clientFileNumber:
+                      type: string
+                      nullable: true
+                    clientId:
+                      type: integer
+                      format: int32
+                      nullable: true
+                    estimatedSettlementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    disbursementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    closedDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    isAllPartiesAttending:
+                      type: boolean
+                    isSectionStarted:
+                      type: boolean
+                    isValidated:
+                      type: boolean
+                    newLoanAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    interestRate:
+                      type: number
+                      format: double
+                      nullable: true
+                    newLoanNumber:
+                      type: string
+                      nullable: true
+                    newLoanType:
+                      type: string
+                      nullable: true
+                    newLoanPurpose:
+                      type: string
+                      nullable: true
+                    newLoanDescription:
+                      type: string
+                      nullable: true
+                    productTypeDesc:
+                      type: string
+                      nullable: true
+                    productTypeId:
+                      type: integer
+                      format: int32
+                    salesPrice:
+                      type: number
+                      format: double
+                      nullable: true
+                    transactionTypeDesc:
+                      type: string
+                      nullable: true
+                    transactionTypeId:
+                      type: integer
+                      format: int32
+                    additionalReference:
+                      type: string
+                      nullable: true
+                  additionalProperties: false
                 additionalServices:
                   type: array
                   items:
@@ -32369,29 +32371,18 @@ paths:
                         format: int32
                     additionalProperties: false
                   nullable: true
-                system:
-                  enum:
-                    - None
-                    - Resware
-                    - AtClose
-                    - Softpro
-                    - eAgency
-                    - Closepin
-                    - Encompass
-                    - X1
-                    - Stacx
-                    - RamQuest
-                    - BlackKnight
-                    - ManualEntry
-                    - SellerNetSheet
-                    - Inkd
-                    - BuyerCostEstimate
-                  type: string
-                integrationId:
-                  type: string
-                  nullable: true
-                product:
-                  type: string
+                placementNotes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subject:
+                        type: string
+                        nullable: true
+                      body:
+                        type: string
+                        nullable: true
+                    additionalProperties: false
                   nullable: true
               additionalProperties: false
           text/json:
@@ -32401,102 +32392,30 @@ paths:
                 id:
                   type: string
                   nullable: true
-                note:
+                integrationId:
                   type: string
                   nullable: true
-                placementNotes:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      subject:
-                        type: string
-                        nullable: true
-                      body:
-                        type: string
-                        nullable: true
-                    additionalProperties: false
+                system:
+                  enum:
+                    - None
+                    - Resware
+                    - AtClose
+                    - Softpro
+                    - eAgency
+                    - Closepin
+                    - Encompass
+                    - X1
+                    - Stacx
+                    - RamQuest
+                    - BlackKnight
+                    - ManualEntry
+                    - SellerNetSheet
+                    - Inkd
+                    - BuyerCostEstimate
+                  type: string
+                product:
+                  type: string
                   nullable: true
-                orderDetails:
-                  type: object
-                  properties:
-                    additionalAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    earnestMoney:
-                      type: number
-                      format: double
-                      nullable: true
-                    cashoutAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    clientFileNumber:
-                      type: string
-                      nullable: true
-                    clientId:
-                      type: integer
-                      format: int32
-                      nullable: true
-                    estimatedSettlementDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    disbursementDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    closedDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    isAllPartiesAttending:
-                      type: boolean
-                    isSectionStarted:
-                      type: boolean
-                    isValidated:
-                      type: boolean
-                    newLoanAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    interestRate:
-                      type: number
-                      format: double
-                      nullable: true
-                    newLoanNumber:
-                      type: string
-                      nullable: true
-                    newLoanType:
-                      type: string
-                      nullable: true
-                    newLoanPurpose:
-                      type: string
-                      nullable: true
-                    newLoanDescription:
-                      type: string
-                      nullable: true
-                    productTypeDesc:
-                      type: string
-                      nullable: true
-                    productTypeId:
-                      type: integer
-                      format: int32
-                    salesPrice:
-                      type: number
-                      format: double
-                      nullable: true
-                    transactionTypeDesc:
-                      type: string
-                      nullable: true
-                    transactionTypeId:
-                      type: integer
-                      format: int32
-                    additionalReference:
-                      type: string
-                      nullable: true
-                  additionalProperties: false
                 parties:
                   type: object
                   properties:
@@ -33358,6 +33277,89 @@ paths:
                       type: string
                       nullable: true
                   additionalProperties: false
+                note:
+                  type: string
+                  nullable: true
+                orderDetails:
+                  type: object
+                  properties:
+                    additionalAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    earnestMoney:
+                      type: number
+                      format: double
+                      nullable: true
+                    cashoutAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    clientFileNumber:
+                      type: string
+                      nullable: true
+                    clientId:
+                      type: integer
+                      format: int32
+                      nullable: true
+                    estimatedSettlementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    disbursementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    closedDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    isAllPartiesAttending:
+                      type: boolean
+                    isSectionStarted:
+                      type: boolean
+                    isValidated:
+                      type: boolean
+                    newLoanAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    interestRate:
+                      type: number
+                      format: double
+                      nullable: true
+                    newLoanNumber:
+                      type: string
+                      nullable: true
+                    newLoanType:
+                      type: string
+                      nullable: true
+                    newLoanPurpose:
+                      type: string
+                      nullable: true
+                    newLoanDescription:
+                      type: string
+                      nullable: true
+                    productTypeDesc:
+                      type: string
+                      nullable: true
+                    productTypeId:
+                      type: integer
+                      format: int32
+                    salesPrice:
+                      type: number
+                      format: double
+                      nullable: true
+                    transactionTypeDesc:
+                      type: string
+                      nullable: true
+                    transactionTypeId:
+                      type: integer
+                      format: int32
+                    additionalReference:
+                      type: string
+                      nullable: true
+                  additionalProperties: false
                 additionalServices:
                   type: array
                   items:
@@ -33388,29 +33390,18 @@ paths:
                         format: int32
                     additionalProperties: false
                   nullable: true
-                system:
-                  enum:
-                    - None
-                    - Resware
-                    - AtClose
-                    - Softpro
-                    - eAgency
-                    - Closepin
-                    - Encompass
-                    - X1
-                    - Stacx
-                    - RamQuest
-                    - BlackKnight
-                    - ManualEntry
-                    - SellerNetSheet
-                    - Inkd
-                    - BuyerCostEstimate
-                  type: string
-                integrationId:
-                  type: string
-                  nullable: true
-                product:
-                  type: string
+                placementNotes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subject:
+                        type: string
+                        nullable: true
+                      body:
+                        type: string
+                        nullable: true
+                    additionalProperties: false
                   nullable: true
               additionalProperties: false
           application/*+json:
@@ -33420,102 +33411,30 @@ paths:
                 id:
                   type: string
                   nullable: true
-                note:
+                integrationId:
                   type: string
                   nullable: true
-                placementNotes:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      subject:
-                        type: string
-                        nullable: true
-                      body:
-                        type: string
-                        nullable: true
-                    additionalProperties: false
+                system:
+                  enum:
+                    - None
+                    - Resware
+                    - AtClose
+                    - Softpro
+                    - eAgency
+                    - Closepin
+                    - Encompass
+                    - X1
+                    - Stacx
+                    - RamQuest
+                    - BlackKnight
+                    - ManualEntry
+                    - SellerNetSheet
+                    - Inkd
+                    - BuyerCostEstimate
+                  type: string
+                product:
+                  type: string
                   nullable: true
-                orderDetails:
-                  type: object
-                  properties:
-                    additionalAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    earnestMoney:
-                      type: number
-                      format: double
-                      nullable: true
-                    cashoutAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    clientFileNumber:
-                      type: string
-                      nullable: true
-                    clientId:
-                      type: integer
-                      format: int32
-                      nullable: true
-                    estimatedSettlementDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    disbursementDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    closedDate:
-                      type: string
-                      format: date-time
-                      nullable: true
-                    isAllPartiesAttending:
-                      type: boolean
-                    isSectionStarted:
-                      type: boolean
-                    isValidated:
-                      type: boolean
-                    newLoanAmount:
-                      type: number
-                      format: double
-                      nullable: true
-                    interestRate:
-                      type: number
-                      format: double
-                      nullable: true
-                    newLoanNumber:
-                      type: string
-                      nullable: true
-                    newLoanType:
-                      type: string
-                      nullable: true
-                    newLoanPurpose:
-                      type: string
-                      nullable: true
-                    newLoanDescription:
-                      type: string
-                      nullable: true
-                    productTypeDesc:
-                      type: string
-                      nullable: true
-                    productTypeId:
-                      type: integer
-                      format: int32
-                    salesPrice:
-                      type: number
-                      format: double
-                      nullable: true
-                    transactionTypeDesc:
-                      type: string
-                      nullable: true
-                    transactionTypeId:
-                      type: integer
-                      format: int32
-                    additionalReference:
-                      type: string
-                      nullable: true
-                  additionalProperties: false
                 parties:
                   type: object
                   properties:
@@ -34377,6 +34296,89 @@ paths:
                       type: string
                       nullable: true
                   additionalProperties: false
+                note:
+                  type: string
+                  nullable: true
+                orderDetails:
+                  type: object
+                  properties:
+                    additionalAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    earnestMoney:
+                      type: number
+                      format: double
+                      nullable: true
+                    cashoutAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    clientFileNumber:
+                      type: string
+                      nullable: true
+                    clientId:
+                      type: integer
+                      format: int32
+                      nullable: true
+                    estimatedSettlementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    disbursementDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    closedDate:
+                      type: string
+                      format: date-time
+                      nullable: true
+                    isAllPartiesAttending:
+                      type: boolean
+                    isSectionStarted:
+                      type: boolean
+                    isValidated:
+                      type: boolean
+                    newLoanAmount:
+                      type: number
+                      format: double
+                      nullable: true
+                    interestRate:
+                      type: number
+                      format: double
+                      nullable: true
+                    newLoanNumber:
+                      type: string
+                      nullable: true
+                    newLoanType:
+                      type: string
+                      nullable: true
+                    newLoanPurpose:
+                      type: string
+                      nullable: true
+                    newLoanDescription:
+                      type: string
+                      nullable: true
+                    productTypeDesc:
+                      type: string
+                      nullable: true
+                    productTypeId:
+                      type: integer
+                      format: int32
+                    salesPrice:
+                      type: number
+                      format: double
+                      nullable: true
+                    transactionTypeDesc:
+                      type: string
+                      nullable: true
+                    transactionTypeId:
+                      type: integer
+                      format: int32
+                    additionalReference:
+                      type: string
+                      nullable: true
+                  additionalProperties: false
                 additionalServices:
                   type: array
                   items:
@@ -34407,29 +34409,18 @@ paths:
                         format: int32
                     additionalProperties: false
                   nullable: true
-                system:
-                  enum:
-                    - None
-                    - Resware
-                    - AtClose
-                    - Softpro
-                    - eAgency
-                    - Closepin
-                    - Encompass
-                    - X1
-                    - Stacx
-                    - RamQuest
-                    - BlackKnight
-                    - ManualEntry
-                    - SellerNetSheet
-                    - Inkd
-                    - BuyerCostEstimate
-                  type: string
-                integrationId:
-                  type: string
-                  nullable: true
-                product:
-                  type: string
+                placementNotes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      subject:
+                        type: string
+                        nullable: true
+                      body:
+                        type: string
+                        nullable: true
+                    additionalProperties: false
                   nullable: true
               additionalProperties: false
       responses:
@@ -50299,6 +50290,14 @@ paths:
                         - 1
                       type: integer
                       format: int32
+                    limit:
+                      type: integer
+                      format: int32
+                      nullable: true
+                    daysUntilExpiration:
+                      type: integer
+                      format: int32
+                      nullable: true
                   additionalProperties: false
             application/json:
               schema:
@@ -50329,6 +50328,14 @@ paths:
                         - 1
                       type: integer
                       format: int32
+                    limit:
+                      type: integer
+                      format: int32
+                      nullable: true
+                    daysUntilExpiration:
+                      type: integer
+                      format: int32
+                      nullable: true
                   additionalProperties: false
             text/json:
               schema:
@@ -50359,6 +50366,14 @@ paths:
                         - 1
                       type: integer
                       format: int32
+                    limit:
+                      type: integer
+                      format: int32
+                      nullable: true
+                    daysUntilExpiration:
+                      type: integer
+                      format: int32
+                      nullable: true
                   additionalProperties: false
         '400':
           description: Bad Request
@@ -59721,6 +59736,9 @@ paths:
                 fileId:
                   type: integer
                   format: int32
+                ipAddress:
+                  type: string
+                  nullable: true
               additionalProperties: false
           text/json:
             schema:
@@ -59732,6 +59750,9 @@ paths:
                 fileId:
                   type: integer
                   format: int32
+                ipAddress:
+                  type: string
+                  nullable: true
               additionalProperties: false
           application/*+json:
             schema:
@@ -59743,6 +59764,9 @@ paths:
                 fileId:
                   type: integer
                   format: int32
+                ipAddress:
+                  type: string
+                  nullable: true
               additionalProperties: false
       responses:
         '200':
