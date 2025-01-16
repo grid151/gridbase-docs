@@ -25,6 +25,7 @@ Once you have all of this information, you are ready to perform the upgrade.
 - Stop the application pool for the web connector site.
 - Delete the bin folder from the `Web Connector Directory`.
 - Copy the new `resware-connector-web\bin` folder from the extracted zip file to the `Web Connector Directory`.
+- Copy the new `resware-connector-web\default.htm` folder from the extracted zip file to the `Web Connector Directory`.
 - Start the application pool for the web connector site.
  
 ## Update Stored Procedures
