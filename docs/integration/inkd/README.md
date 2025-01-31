@@ -212,9 +212,9 @@ Example:
 									</CONTACT_POINT>
 								</CONTACT_POINTS>
 								<NAME>
-									<FirstName>Sameera</FirstName>
-									<FullName>Sameera Chennamaneni</FullName>
-									<LastName>Chennamaneni</LastName>
+									<FirstName>Mickey</FirstName>
+									<FullName>Mickey Mouse</FullName>
+									<LastName>Mouse</LastName>
 								</NAME>
 							</INDIVIDUAL>
 							<ADDRESSES>
@@ -540,9 +540,9 @@ Example:
 									</CONTACT_POINT>
 								</CONTACT_POINTS>
 								<NAME>
-									<FirstName>Teody</FirstName>
-									<FullName>Teody Sioson</FullName>
-									<LastName>Sioson</LastName>
+									<FirstName>Mickey</FirstName>
+									<FullName>Mickey Mouse</FullName>
+									<LastName>Mouse</LastName>
 									<MiddleName/>
 								</NAME>
 							</INDIVIDUAL>
@@ -584,9 +584,9 @@ Example:
 									</CONTACT_POINT>
 								</CONTACT_POINTS>
 								<NAME>
-									<FirstName>Jaci</FirstName>
-									<FullName>Jaci Rufus</FullName>
-									<LastName>Rufus</LastName>
+									<FirstName>Mickey</FirstName>
+									<FullName>Mickey Mouse</FullName>
+									<LastName>Mouse</LastName>
 								</NAME>
 							</INDIVIDUAL>
 							<ADDRESSES>
