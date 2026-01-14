@@ -1,7 +1,16 @@
-
 # RamQuest Integration
 
 This README file describes several API endpoints for integrating with RamQuest, a real estate and title insurance software company. The document provides detailed information on the required fields for each endpoint, including validation rules.
+
+## Workflow Summary
+
+1. **Stage Order** — create the order draft in GridBase
+2. **(Optional) Update Order** — adjust the staged order fields
+3. **Place Order** — submit the staged order to RamQuest (required to actually send it)
+4. **(Optional) Add Document / Add Note**
+5. **(Optional) Cancel Order**
+
+---
 
 ## Stage Order
 
@@ -11,21 +20,21 @@ This README file describes several API endpoints for integrating with RamQuest, 
 
 ### Required fields and validation
 
-| Field Name                       | Field Description                                                                | Data Type | Validation                                                                 |
-| -------------------------------- | -------------------------------------------------------------------------------- | --------- | -------------------------------------------------------------------------- |
-| orderDetails.ProductTypeDesc     | Products Available to order                                                      | string    | Max 100 characters                                                         |
-| orderDetails.transactionTypeDesc | Transaction Type                                                                 | string    | Max 100 characters                                                         |
-| orderDetails.NewLoanType         | Type of new loan                                                                 | string    | Max 50 characters                                                          |
-| orderDetails.NewLoanNumber       | New loan number                                                                  | string    | Max 30 characters                                                          |
-| parties.buyers.lastName          | Buyers Last Name                                                                 | string    | Max 50 characters, required                                                |
-| parties.buyers.firstName         | Buyers First Name                                                                | string    | Max 30 characters, required                                                |
-| parties.lender.companyName       | Lender Company Name                                                              | string    | Max 250 characters, required                                               |
-| property.address.street          | Property Address 1                                                               | string    | Max 100 characters, required                                               |
-| property.address.cityDesc        | Property City Description                                                        | string    | Max 30 characters, required                                                |
-| property.address.stateId         | Property State                                                                   | string    | Max 2 characters, required                                                 |
-| property.address.zip             | Property Zip                                                                     | string    | Max 10 characters, required                                                |
-| integrationId                    | Integration ID (use the ID of the partner/title agent to send the order to)       | string    | Required                                                                   |
-| System                           | System integration type                                                          | enum      | Required, must be "RamQuest"                                               |
+| Field Name                       | Field Description                                                           | Data Type | Validation                     |
+| -------------------------------- | --------------------------------------------------------------------------- | --------- | ------------------------------ |
+| orderDetails.ProductTypeDesc     | Products Available to order                                                 | string    | Max 100 characters             |
+| orderDetails.transactionTypeDesc | Transaction Type                                                            | string    | Max 100 characters             |
+| orderDetails.NewLoanType         | Type of new loan                                                            | string    | Max 50 characters              |
+| orderDetails.NewLoanNumber       | New loan number                                                             | string    | Max 30 characters              |
+| parties.buyers.lastName          | Buyers Last Name                                                            | string    | Max 50 characters, required    |
+| parties.buyers.firstName         | Buyers First Name                                                           | string    | Max 30 characters, required    |
+| parties.lender.companyName       | Lender Company Name                                                         | string    | Max 250 characters, required   |
+| property.address.street          | Property Address 1                                                          | string    | Max 100 characters, required   |
+| property.address.cityDesc        | Property City Description                                                   | string    | Max 30 characters, required    |
+| property.address.stateId         | Property State                                                              | string    | Max 2 characters, required     |
+| property.address.zip             | Property Zip                                                                | string    | Max 10 characters, required    |
+| integrationId                    | Integration ID (use the ID of the partner/title agent to send the order to) | string    | Required                       |
+| System                           | System integration type                                                     | enum      | Required, must be `"RamQuest"` |
 
 ### Request body example
 
@@ -61,6 +70,44 @@ This README file describes several API endpoints for integrating with RamQuest, 
 }
 ```
 
+---
+
+## Place Order (Required)
+
+After successfully staging an order, you **must** place it to actually submit the order to RamQuest.
+
+### Endpoint
+
+`PUT https://app.gridbase.io/v1/orders/place/{orderId}`
+
+### Path parameters
+
+| Parameter | Description                    |
+| --------- | ------------------------------ |
+| orderId   | The GridBase Order ID to place |
+
+### Notes
+
+* Call **Place Order** only after the order has been **staged** successfully.
+* If you make changes after staging (via **Update Order**), place the order after the final update.
+* Placing is the step that triggers transmission to the destination system (**RamQuest**).
+
+### Request body example
+
+Most implementations do not require a request body:
+
+```http
+PUT /v1/orders/place/63f---------------443413
+```
+
+(If your API gateway requires a body, use an empty JSON object:)
+
+```json
+{}
+```
+
+---
+
 ## Update Order
 
 ### Endpoint
@@ -71,19 +118,19 @@ This README file describes several API endpoints for integrating with RamQuest, 
 
 > Updates will take the full order, anything left null should not replace an existing value.
 
-| Field Name                       | Field Description                                                                | Data Type | Validation                                                                 |
-| -------------------------------- | -------------------------------------------------------------------------------- | --------- | -------------------------------------------------------------------------- |
-| orderDetails.ProductTypeDesc     | Products Available to order                                                      | string    | Max 100 characters                                                         |
-| orderDetails.transactionTypeDesc | Transaction Type                                                                 | string    | Max 100 characters                                                         |
-| orderDetails.NewLoanType         | Type of new loan                                                                 | string    | Max 50 characters                                                          |
-| orderDetails.NewLoanNumber       | New loan number                                                                  | string    | Max 30 characters                                                          |
-| parties.buyers.lastName          | Buyers Last Name                                                                 | string    | Max 50 characters, required                                                |
-| parties.buyers.firstName         | Buyers First Name                                                                | string    | Max 30 characters, required                                                |
-| parties.lender.companyName       | Lender Company Name                                                              | string    | Max 250 characters, required                                               |
-| property.address.street          | Property Address 1                                                               | string    | Max 100 characters, required                                               |
-| property.address.cityDesc        | Property City Description                                                        | string    | Max 30 characters, required                                                |
-| property.address.stateId         | Property State                                                                   | string    | Max 2 characters, required                                                 |
-| property.address.zip             | Property Zip                                                                     | string    | Max 10 characters, required                                                |
+| Field Name                       | Field Description           | Data Type | Validation                   |
+| -------------------------------- | --------------------------- | --------- | ---------------------------- |
+| orderDetails.ProductTypeDesc     | Products Available to order | string    | Max 100 characters           |
+| orderDetails.transactionTypeDesc | Transaction Type            | string    | Max 100 characters           |
+| orderDetails.NewLoanType         | Type of new loan            | string    | Max 50 characters            |
+| orderDetails.NewLoanNumber       | New loan number             | string    | Max 30 characters            |
+| parties.buyers.lastName          | Buyers Last Name            | string    | Max 50 characters, required  |
+| parties.buyers.firstName         | Buyers First Name           | string    | Max 30 characters, required  |
+| parties.lender.companyName       | Lender Company Name         | string    | Max 250 characters, required |
+| property.address.street          | Property Address 1          | string    | Max 100 characters, required |
+| property.address.cityDesc        | Property City Description   | string    | Max 30 characters, required  |
+| property.address.stateId         | Property State              | string    | Max 2 characters, required   |
+| property.address.zip             | Property Zip                | string    | Max 10 characters, required  |
 
 ### Request body example
 
@@ -117,6 +164,8 @@ This README file describes several API endpoints for integrating with RamQuest, 
 }
 ```
 
+---
+
 ## Add Document
 
 ### Endpoint
@@ -125,11 +174,11 @@ This README file describes several API endpoints for integrating with RamQuest, 
 
 ### Required fields and validation
 
-| Field Name   | Field Description                             | Data Type | Validation                                                |
-| ------------ | --------------------------------------------- | --------- | --------------------------------------------------------- |
-| fileName     | Name of file without extension                | string    | Required, Max 50 characters                               |
-| documentBody | Document as a Base64 string                   | string    | Required, Must be Base64 format                           |
-| extension    | Extension of the uploaded file (txt, pdf, etc.) | string    | Required, Max 10 characters                               |
+| Field Name   | Field Description                               | Data Type | Validation                      |
+| ------------ | ----------------------------------------------- | --------- | ------------------------------- |
+| fileName     | Name of file without extension                  | string    | Required, Max 50 characters     |
+| documentBody | Document as a Base64 string                     | string    | Required, Must be Base64 format |
+| extension    | Extension of the uploaded file (txt, pdf, etc.) | string    | Required, Max 10 characters     |
 
 ### Request body example
 
@@ -141,6 +190,8 @@ This README file describes several API endpoints for integrating with RamQuest, 
 }
 ```
 
+---
+
 ## Add Note
 
 ### Endpoint
@@ -149,12 +200,12 @@ This README file describes several API endpoints for integrating with RamQuest, 
 
 ### Required fields and validation
 
-| Field Name  | Field Description    | Data Type | Validation                                                |
-| ----------- | -------------------- | --------- | --------------------------------------------------------- |
-| noteSubject | Note Subject         | string    | Max 100 characters, required                              |
-| noteBody    | Note Body            | string    | Max 500 characters, required                              |
-| description | Additional details   | string    | Optional                                                  |
-| documentId  | Related Document ID  | string    | Optional                                                  |
+| Field Name  | Field Description   | Data Type | Validation                   |
+| ----------- | ------------------- | --------- | ---------------------------- |
+| noteSubject | Note Subject        | string    | Max 100 characters, required |
+| noteBody    | Note Body           | string    | Max 500 characters, required |
+| description | Additional details  | string    | Optional                     |
+| documentId  | Related Document ID | string    | Optional                     |
 
 ### Request body example
 
@@ -167,6 +218,8 @@ This README file describes several API endpoints for integrating with RamQuest, 
 }
 ```
 
+---
+
 ## Cancel Order
 
 ### Endpoint
@@ -175,10 +228,10 @@ This README file describes several API endpoints for integrating with RamQuest, 
 
 ### Required fields and validation
 
-| Field Name   | Field Description              | Data Type | Validation                                                |
-| ------------ | ------------------------------ | --------- | --------------------------------------------------------- |
-| orderId      | Unique identifier of the order | string    | Required                                                  |
-| cancelReason | Reason for cancelling order    | string    | Required                                                  |
+| Field Name   | Field Description              | Data Type | Validation |
+| ------------ | ------------------------------ | --------- | ---------- |
+| orderId      | Unique identifier of the order | string    | Required   |
+| cancelReason | Reason for cancelling order    | string    | Required   |
 
 ### Request body example
 
